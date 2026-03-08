@@ -40,12 +40,11 @@ pytest -q
 
 1. この一式を **public repository** として GitHub に push する。
 2. GitHub の **Settings → Pages** を開く。
-3. **Build and deployment** を `Deploy from a branch` にする。
-4. Branch を `main`、Folder を `/docs` にする。
-5. **Actions** を有効にする。
-6. `hourly-update` workflow を一度手動実行するか、次の定期実行を待つ。
+3. **Build and deployment** の **Source** を `GitHub Actions` にする。
+4. **Actions** を有効にする。
+5. `hourly-update` workflow を一度手動実行するか、次の定期実行を待つ。
 
-これで `docs/` 以下が毎時間更新され、GitHub Pages で公開されます。
+これで毎時間 `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
 
 ## ファイル構成
 
@@ -56,9 +55,10 @@ pytest -q
 
 ## 注意
 
-- GitHub Pages で無料公開する場合、個人アカウントでは通常 **public repository** が必要です。
+- GitHub Free では GitHub Pages は **public repository** で使うのが基本です。private repository で使う場合はプラン条件を確認してください。
 - 取得対象は公開ランキングページです。
 - `data/state.json` は毎時間更新される履歴ファイルなので、長期運用で大きくなります。必要なら `prune_snapshots()` の日数を調整してください。
+- GitHub Actions の `GITHUB_TOKEN` で push された commit は Pages の branch build を起こさないため、この repository では branch 公開ではなく Actions deploy を使っています。
 
 ## 変更したい設定
 
