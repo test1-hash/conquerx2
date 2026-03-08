@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="card-grid">
+    <article class="card stat-card">
+      <div class="stat-label">プレイヤー</div>
+      <div class="stat-value">{{ player.player_name }}</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">初回観測</div>
+      <div class="stat-value small">{{ jst_string(player.first_seen_at_utc) }}</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">最終観測</div>
+      <div class="stat-value small">{{ jst_string(player.last_seen_at_utc) }}</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">最高順位</div>
+      <div class="stat-value">{{ best_rank if best_rank is not none else '-' }}</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">最大ポイント</div>
+      <div class="stat-value">{{ fmt_int(max_points) }}</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">総増加</div>
+      <div class="stat-value">{{ fmt_signed(total_gain) }}</div>
+    </article>
+  </section>
+
+  {% if latest_point %}
+    <section class="card-grid two-up">
+      <article class="card chart-card">
+        <div class="section-head"><h2>ポイント推移</h2></div>
+        {{ points_chart }}
+      </article>
+      <article class="card chart-card">
+        <div class="section-head"><h2>順位推移</h2></div>
+        {{ rank_chart }}
+      </article>
+    </section>
+  {% endif %}
+
+  <section class="card">
+    <div class="section-head">
+      <h2>履歴</h2>
+      <p class="muted">観測回数: {{ history|length }}</p>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table compact-table">
+        <thead>
+          <tr>
+            <th>時刻</th>
+            <th>順位</th>
+            <th>称号</th>
+            <th>帝国</th>
+            <th>Lv</th>
+            <th>惑星</th>
+            <th>ポイント</th>
+            <th>平均</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for point in history|reverse %}
+            <tr>
+              <td>{{ jst_string(point.captured_at_utc) }}</td>
+              <td class="num">{{ point.rank_position }}</td>
+              <td>{{ point.title }}</td>
+              <td>{{ point.empire_name or '-' }}</td>
+              <td class="num">{{ point.level }}</td>
+              <td class="num">{{ fmt_int(point.planets) }}</td>
+              <td class="num strong">{{ fmt_int(point.points) }}</td>
+              <td class="num">{{ fmt_int(point.avg_points) }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </section>
+{% endblock %}

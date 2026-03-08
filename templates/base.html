@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ page_title }}</title>
+    <link rel="stylesheet" href="{{ 'static/style.css' if current_page != 'player' else '../static/style.css' }}">
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">CONQUERX2 Rankwatch</div>
+          <h1>{{ server_label }}</h1>
+        </div>
+        <nav class="site-nav">
+          {% set root = '.' if current_page != 'player' else '..' %}
+          <a href="{{ root }}/index.html" class="{% if current_page == 'index' %}is-active{% endif %}">最新ランキング</a>
+          <a href="{{ root }}/growth-24h.html" class="{% if current_page == 'growth' %}is-active{% endif %}">成長率</a>
+          <a href="{{ root }}/changes.html" class="{% if current_page == 'changes' %}is-active{% endif %}">出入り・変化</a>
+          <a href="{{ root }}/data/latest.json">JSON</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap main-content">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>

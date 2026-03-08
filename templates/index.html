@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+{% block extra_head %}
+  <script defer src="static/index.js"></script>
+{% endblock %}
+{% block content %}
+  {% if latest %}
+    <section class="card-grid">
+      <article class="card stat-card">
+        <div class="stat-label">最新取得</div>
+        <div class="stat-value">{{ jst_string(latest['captured_at_utc']) }}</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">最新件数</div>
+        <div class="stat-value">{{ latest['row_count'] }}</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">比較可能な期間</div>
+        <div class="stat-value small">
+          {% for hours in windows %}
+            {% if comparison_snapshots.get(hours) %}
+              {{ hours }}h
+            {% else %}
+              <span class="muted">{{ hours }}h</span>
+            {% endif %}
+            {% if not loop.last %} / {% endif %}
+          {% endfor %}
+        </div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">公開元</div>
+        <div class="stat-value small"><a href="{{ server_rank_url }}">公式ランキング</a></div>
+      </article>
+    </section>
+
+    <section class="card controls-card">
+      <form class="controls-form" id="table-controls">
+        <input type="text" id="search-input" placeholder="プレイヤー名・帝国名・称号で検索">
+        <select id="sort-select">
+          <option value="rank">順位順</option>
+          <option value="points">ポイント順</option>
+          <option value="level">レベル順</option>
+          <option value="1h">1h増加順</option>
+          <option value="24h">24h増加順</option>
+          <option value="168h">7d増加順</option>
+          <option value="name">名前順</option>
+        </select>
+        <button type="submit">反映</button>
+      </form>
+      <p class="muted" id="visible-count">表示件数: {{ board|length }}</p>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>最新ランキング</h2>
+        <p class="muted">静的サイトなので絞り込み・並び替えはブラウザ内で動きます。</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table compact-table" id="ranking-table">
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>称号 / プレイヤー</th>
+              <th>帝国</th>
+              <th>Lv</th>
+              <th>惑星</th>
+              <th>ポイント</th>
+              <th>平均</th>
+              <th>1h</th>
+              <th>24h</th>
+              <th>7d</th>
+              <th>新規</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in board %}
+              {% set comp1 = row.comparisons.get(1) %}
+              {% set comp24 = row.comparisons.get(24) %}
+              {% set comp168 = row.comparisons.get(168) %}
+              <tr
+                data-search="{{ (row.player_name ~ ' ' ~ row.title ~ ' ' ~ (row.empire_name or '')) | lower }}"
+                data-name="{{ row.player_name | lower }}"
+                data-rank="{{ row.rank_position }}"
+                data-points="{{ row.points }}"
+                data-level="{{ row.level }}"
+                data-1h="{{ comp1.delta_points if comp1 else -999999999 }}"
+                data-24h="{{ comp24.delta_points if comp24 else -999999999 }}"
+                data-168h="{{ comp168.delta_points if comp168 else -999999999 }}"
+              >
+                <td class="num">{{ row.rank_position }}</td>
+                <td>
+                  <div class="player-title">{{ row.title }}</div>
+                  <div class="player-name"><a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a></div>
+                </td>
+                <td>{{ row.empire_name or '-' }}</td>
+                <td class="num">{{ row.level }}</td>
+                <td class="num">{{ fmt_int(row.planets) }}</td>
+                <td class="num strong">{{ fmt_int(row.points) }}</td>
+                <td class="num">{{ fmt_int(row.avg_points) }}</td>
+                <td class="num {{ 'pos' if comp1 and comp1.delta_points > 0 else 'muted' if not comp1 else 'neg' if comp1.delta_points < 0 else '' }}">{{ fmt_signed(comp1.delta_points if comp1 else None) }}</td>
+                <td class="num {{ 'pos' if comp24 and comp24.delta_points > 0 else 'muted' if not comp24 else 'neg' if comp24.delta_points < 0 else '' }}">{{ fmt_signed(comp24.delta_points if comp24 else None) }}</td>
+                <td class="num {{ 'pos' if comp168 and comp168.delta_points > 0 else 'muted' if not comp168 else 'neg' if comp168.delta_points < 0 else '' }}">{{ fmt_signed(comp168.delta_points if comp168 else None) }}</td>
+                <td>{% if row.is_new_since_previous %}<span class="badge new">NEW</span>{% else %}-{% endif %}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>直近の取得ログ</h2>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>開始</th>
+              <th>状態</th>
+              <th>件数</th>
+              <th>HTTP</th>
+              <th>メモ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for run in fetch_runs %}
+              <tr>
+                <td>{{ jst_string(run['started_at_utc']) }}</td>
+                <td>{% if run['status'] == 'ok' %}<span class="badge ok">OK</span>{% else %}<span class="badge err">ERR</span>{% endif %}</td>
+                <td class="num">{{ run['row_count'] if run['row_count'] is not none else '-' }}</td>
+                <td class="num">{{ run['http_status'] if run['http_status'] is not none else '-' }}</td>
+                <td>{{ run['message'] or '-' }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  {% else %}
+    <section class="card empty-state">
+      <h2>まだデータがありません</h2>
+      <p><code>python manage.py update</code> か <code>python manage.py import-fixture sample_data/...</code> を実行してください。</p>
+    </section>
+  {% endif %}
+{% endblock %}

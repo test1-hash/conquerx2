@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="card">
+    <div class="section-head">
+      <h2>前回取得との差分</h2>
+      {% if latest and previous %}
+        <p class="muted">{{ jst_string(previous['captured_at_utc']) }} → {{ jst_string(latest['captured_at_utc']) }}</p>
+      {% endif %}
+    </div>
+
+    <div class="change-grid">
+      <article class="subcard">
+        <h3>新規ランクイン</h3>
+        {% if changeset.entered %}
+          <ul class="simple-list">
+            {% for row in changeset.entered %}
+              <li>#{{ row.rank_position }} <a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="muted">なし</p>
+        {% endif %}
+      </article>
+
+      <article class="subcard">
+        <h3>圏外へ</h3>
+        {% if changeset.dropped %}
+          <ul class="simple-list">
+            {% for row in changeset.dropped %}
+              <li>前回 #{{ row.rank_position }} {{ row.player_name }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="muted">なし</p>
+        {% endif %}
+      </article>
+
+      <article class="subcard">
+        <h3>帝国変更</h3>
+        {% if changeset.empire_changed %}
+          <ul class="simple-list">
+            {% for item in changeset.empire_changed %}
+              <li>#{{ item.rank_position }} <a href="players/{{ item.player_key }}.html">{{ item.player_name }}</a>: {{ item.old_empire or '-' }} → {{ item.new_empire or '-' }}</li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p class="muted">なし</p>
+        {% endif %}
+      </article>
+    </div>
+  </section>
+{% endblock %}

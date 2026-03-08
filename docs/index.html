@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jupiter-002 Rankwatch</title>
+    <link rel="stylesheet" href="static/style.css">
+    
+  <script defer src="static/index.js"></script>
+
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">CONQUERX2 Rankwatch</div>
+          <h1>Jupiter-002</h1>
+        </div>
+        <nav class="site-nav">
+          
+          <a href="./index.html" class="is-active">最新ランキング</a>
+          <a href="./growth-24h.html" class="">成長率</a>
+          <a href="./changes.html" class="">出入り・変化</a>
+          <a href="./data/latest.json">JSON</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap main-content">
+      
+  
+    <section class="card empty-state">
+      <h2>まだデータがありません</h2>
+      <p><code>python manage.py update</code> か <code>python manage.py import-fixture sample_data/...</code> を実行してください。</p>
+    </section>
+  
+
+    </main>
+  </body>
+</html>

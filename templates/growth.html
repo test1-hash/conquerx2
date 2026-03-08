@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block content %}
+  <section class="card controls-card">
+    <div class="page-tabs">
+      {% for candidate in [1, 6, 24, 168] %}
+        <a href="growth-{{ candidate }}h.html" class="tab {% if candidate == window %}is-active{% endif %}">{{ candidate }}時間</a>
+      {% endfor %}
+    </div>
+    {% if latest and comparison_snapshot %}
+      <p class="muted">比較: {{ jst_string(comparison_snapshot['captured_at_utc']) }} → {{ jst_string(latest['captured_at_utc']) }}</p>
+    {% endif %}
+  </section>
+
+  <section class="card">
+    <div class="section-head">
+      <h2>{{ window }}時間 成長ランキング</h2>
+      <p class="muted">ポイント増加順</p>
+    </div>
+    {% if rows %}
+      <div class="table-wrap">
+        <table class="data-table compact-table">
+          <thead>
+            <tr>
+              <th>現在順位</th>
+              <th>プレイヤー</th>
+              <th>ポイント</th>
+              <th>増加</th>
+              <th>pt/h</th>
+              <th>順位変化</th>
+              <th>Lv変化</th>
+              <th>惑星変化</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in rows %}
+              {% set comp = row.comparisons.get(window) %}
+              <tr>
+                <td class="num">{{ row.rank_position }}</td>
+                <td><a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a></td>
+                <td class="num strong">{{ fmt_int(row.points) }}</td>
+                <td class="num pos">{{ fmt_signed(comp.delta_points) }}</td>
+                <td class="num">{{ fmt_signed_float(comp.points_per_hour) }}</td>
+                <td class="num {{ 'pos' if comp.delta_rank > 0 else 'neg' if comp.delta_rank < 0 else '' }}">{{ fmt_signed(comp.delta_rank) }}</td>
+                <td class="num">{{ fmt_signed(comp.delta_level) }}</td>
+                <td class="num">{{ fmt_signed(comp.delta_planets) }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    {% else %}
+      <p class="muted">この期間を比較できる履歴がまだありません。</p>
+    {% endif %}
+  </section>
+{% endblock %}
