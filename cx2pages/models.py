@@ -14,6 +14,7 @@ class RankRow:
     planets: int
     points: int
     avg_points: int
+    fleet_score: Optional[int] = None
     empire_name: Optional[str] = None
 
 

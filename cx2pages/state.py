@@ -32,6 +32,7 @@ def rankrow_to_dict(row: RankRow) -> dict[str, Any]:
         "planets": row.planets,
         "points": row.points,
         "avg_points": row.avg_points,
+        "fleet_score": row.fleet_score,
         "empire_name": row.empire_name,
     }
 

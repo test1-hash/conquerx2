@@ -52,12 +52,33 @@ def _rows_by_name(snapshot: dict[str, Any] | None) -> dict[str, dict[str, Any]]:
     return {row["player_name"]: row for row in snapshot["rows"]}
 
 
+def _normalize_row(row: dict[str, Any]) -> dict[str, Any]:
+    return {
+        **row,
+        "fleet_score": row.get("fleet_score"),
+    }
+
+
 def _has_title(rows: list[dict[str, Any]]) -> bool:
     return any(row.get("title") for row in rows)
 
 
 def _has_level(rows: list[dict[str, Any]]) -> bool:
     return any(row.get("level") is not None for row in rows)
+
+
+def _has_fleet(rows: list[dict[str, Any]]) -> bool:
+    return any(row.get("fleet_score") is not None for row in rows)
+
+
+def _fleet_window_availability(rows: list[dict[str, Any]], *, windows: tuple[int, ...] = DEFAULT_WINDOWS) -> dict[int, bool]:
+    return {
+        hours: any(
+            row["comparisons"].get(hours, {}).get("delta_fleet") is not None
+            for row in rows
+        )
+        for hours in windows
+    }
 
 
 def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WINDOWS) -> tuple[dict[str, Any] | None, list[dict[str, Any]], dict[int, dict[str, Any]]]:
@@ -79,7 +100,9 @@ def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WIN
 
     board: list[dict[str, Any]] = []
     for row in latest["rows"]:
+        normalized_row = _normalize_row(row)
         player_name = row["player_name"]
+        fleet_score = normalized_row["fleet_score"]
         comparisons: dict[int, dict[str, Any]] = {}
         for hours in windows:
             snap = comparison_snapshots.get(hours)
@@ -93,6 +116,11 @@ def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WIN
             if row.get("level") is not None and old_row.get("level") is not None:
                 delta_level = row["level"] - old_row["level"]
             delta_planets = row["planets"] - old_row["planets"]
+            delta_fleet = None
+            fleet_per_hour = None
+            if fleet_score is not None and old_row.get("fleet_score") is not None:
+                delta_fleet = fleet_score - old_row["fleet_score"]
+                fleet_per_hour = delta_fleet / elapsed_hours if elapsed_hours > 0 else 0.0
             comparisons[hours] = {
                 "snapshot_time_utc": snap["captured_at_utc"],
                 "elapsed_hours": elapsed_hours,
@@ -100,14 +128,17 @@ def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WIN
                 "delta_rank": delta_rank,
                 "delta_level": delta_level,
                 "delta_planets": delta_planets,
+                "delta_fleet": delta_fleet,
+                "fleet_per_hour": fleet_per_hour,
                 "points_per_hour": delta_points / elapsed_hours if elapsed_hours > 0 else 0.0,
             }
 
         board.append(
             {
-                **row,
+                **normalized_row,
                 "player_key": player_key(player_name),
                 "comparisons": comparisons,
+                "fleet_share": fleet_score / row["points"] if fleet_score is not None and row["points"] > 0 else None,
                 "is_new_since_previous": bool(previous is not None and player_name not in previous_by_name),
             }
         )
@@ -124,6 +155,22 @@ def get_growth_rows(state: dict[str, Any], window_hours: int) -> tuple[dict[str,
     return latest, rows, comparison
 
 
+def get_fleet_rows(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WINDOWS) -> tuple[dict[str, Any] | None, list[dict[str, Any]], dict[int, dict[str, Any]]]:
+    latest, board, comparison_snapshots = build_board(state, windows=windows)
+    fleet_rows = [row for row in board if row.get("fleet_score") is not None]
+    fleet_rows.sort(
+        key=lambda item: (-item["fleet_score"], item["rank_position"], item["player_name"].casefold())
+    )
+    ranked_rows = [
+        {
+            **row,
+            "fleet_rank_position": index,
+        }
+        for index, row in enumerate(fleet_rows, start=1)
+    ]
+    return latest, ranked_rows, comparison_snapshots
+
+
 def get_recent_changes(state: dict[str, Any]) -> tuple[dict[str, Any] | None, dict[str, Any] | None, dict[str, list[dict[str, Any]]]]:
     latest = latest_snapshot(state)
     previous = previous_snapshot(state)
@@ -136,10 +183,10 @@ def get_recent_changes(state: dict[str, Any]) -> tuple[dict[str, Any] | None, di
 
     for name, row in latest_by_name.items():
         if name not in previous_by_name:
-            changes["entered"].append({**row, "player_key": player_key(name)})
+            changes["entered"].append({**_normalize_row(row), "player_key": player_key(name)})
     for name, row in previous_by_name.items():
         if name not in latest_by_name:
-            changes["dropped"].append({**row, "player_key": player_key(name)})
+            changes["dropped"].append({**_normalize_row(row), "player_key": player_key(name)})
     for name, row in latest_by_name.items():
         if name in previous_by_name:
             old_row = previous_by_name[name]
@@ -166,7 +213,7 @@ def get_player_history(state: dict[str, Any], player_name: str) -> list[dict[str
         for row in snapshot["rows"]:
             if row["player_name"] == player_name:
                 history.append({
-                    **row,
+                    **_normalize_row(row),
                     "captured_at_utc": snapshot["captured_at_utc"],
                 })
     history.sort(key=lambda item: item["captured_at_utc"])
@@ -188,6 +235,16 @@ def export_data_json(out_dir: Path, settings: Settings, state: dict[str, Any]) -
         "rows": board,
     }
     (data_dir / "latest.json").write_text(json.dumps(latest_payload, ensure_ascii=False, indent=2), encoding="utf-8")
+
+    latest_fleet, fleet_rows, fleet_comparison_snapshots = get_fleet_rows(state)
+    fleet_payload = {
+        "server_label": settings.server_label,
+        "server_rank_url": settings.server_rank_url,
+        "latest": latest_fleet,
+        "comparison_snapshots": fleet_comparison_snapshots,
+        "rows": fleet_rows,
+    }
+    (data_dir / "fleet.json").write_text(json.dumps(fleet_payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
     fetch_runs = state.get("fetch_runs", [])[:50]
     (data_dir / "fetch_runs.json").write_text(json.dumps(fetch_runs, ensure_ascii=False, indent=2), encoding="utf-8")
@@ -235,6 +292,7 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
     shutil.copytree(assets_dir, out_dir / "static")
 
     latest, board, comparison_snapshots = build_board(state)
+    latest_fleet, fleet_rows, fleet_comparison_snapshots = get_fleet_rows(state)
     fetch_runs = state.get("fetch_runs", [])[:50]
 
     context_base = {
@@ -250,10 +308,22 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         board=board,
         show_title=_has_title(board),
         show_level=_has_level(board),
+        show_fleet=_has_fleet(board),
         comparison_snapshots=comparison_snapshots,
         fetch_runs=fetch_runs,
     )
     (out_dir / "index.html").write_text(index_html, encoding="utf-8")
+
+    fleet_html = env.get_template("fleet.html").render(
+        **context_base,
+        page_title=f"{settings.server_label} Fleet",
+        current_page="fleet",
+        latest=latest_fleet,
+        rows=fleet_rows,
+        top_row=fleet_rows[0] if fleet_rows else None,
+        fleet_available_windows=_fleet_window_availability(fleet_rows),
+    )
+    (out_dir / "fleet.html").write_text(fleet_html, encoding="utf-8")
 
     for window in DEFAULT_WINDOWS:
         latest_g, rows, comparison = get_growth_rows(state, window)
@@ -293,6 +363,7 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         total_gain = history[-1]["points"] - history[0]["points"] if len(history) >= 2 else None
         best_rank = min((point["rank_position"] for point in history), default=None)
         max_points = max((point["points"] for point in history), default=None)
+        max_fleet = max((point["fleet_score"] for point in history if point.get("fleet_score") is not None), default=None)
         player_html = env.get_template("player.html").render(
             **context_base,
             page_title=f"{player_name} | {settings.server_label}",
@@ -305,11 +376,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
             },
             show_title=_has_title(history),
             show_level=_has_level(history),
+            show_fleet=_has_fleet(history),
             history=[{**point, "captured_at_utc": parse_iso_datetime(point["captured_at_utc"])} for point in history],
             latest_point=latest_point,
             total_gain=total_gain,
             best_rank=best_rank,
             max_points=max_points,
+            max_fleet=max_fleet,
             points_chart=sparkline_svg([point["points"] for point in history], title="Points history"),
             rank_chart=sparkline_svg([point["rank_position"] for point in history], invert=True, title="Rank history"),
         )

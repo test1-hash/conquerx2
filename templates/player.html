@@ -25,6 +25,16 @@
       <div class="stat-label">総増加</div>
       <div class="stat-value">{{ fmt_signed(total_gain) }}</div>
     </article>
+    {% if show_fleet %}
+      <article class="card stat-card">
+        <div class="stat-label">最新戦力</div>
+        <div class="stat-value">{{ fmt_int(latest_point.fleet_score if latest_point else None) }}</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">最大戦力</div>
+        <div class="stat-value">{{ fmt_int(max_fleet) }}</div>
+      </article>
+    {% endif %}
   </section>
 
   {% if latest_point %}
@@ -56,6 +66,7 @@
             {% if show_level %}<th>Lv</th>{% endif %}
             <th>惑星</th>
             <th>ポイント</th>
+            {% if show_fleet %}<th>戦力</th>{% endif %}
             <th>平均</th>
           </tr>
         </thead>
@@ -69,6 +80,7 @@
               {% if show_level %}<td class="num">{{ fmt_int(point.level) }}</td>{% endif %}
               <td class="num">{{ fmt_int(point.planets) }}</td>
               <td class="num strong">{{ fmt_int(point.points) }}</td>
+              {% if show_fleet %}<td class="num">{{ fmt_int(point.fleet_score) }}</td>{% endif %}
               <td class="num">{{ fmt_int(point.avg_points) }}</td>
             </tr>
           {% endfor %}

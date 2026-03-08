@@ -38,6 +38,7 @@
         <select id="sort-select">
           <option value="rank">順位順</option>
           <option value="points">ポイント順</option>
+          {% if show_fleet %}<option value="fleet">戦力順</option>{% endif %}
           {% if show_level %}<option value="level">レベル順</option>{% endif %}
           <option value="1h">1h増加順</option>
           <option value="24h">24h増加順</option>
@@ -81,6 +82,7 @@
                 data-name="{{ row.player_name | lower }}"
                 data-rank="{{ row.rank_position }}"
                 data-points="{{ row.points }}"
+                data-fleet="{{ row.fleet_score if row.fleet_score is not none else -1 }}"
                 data-level="{{ row.level if row.level is not none else -1 }}"
                 data-1h="{{ comp1.delta_points if comp1 else -999999999 }}"
                 data-24h="{{ comp24.delta_points if comp24 else -999999999 }}"

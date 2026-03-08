@@ -64,6 +64,7 @@ class ParserTest(unittest.TestCase):
         self.assertEqual(rows[0].rank_position, 1)
         self.assertEqual(rows[0].planets, 3)
         self.assertEqual(rows[0].avg_points, 3936)
+        self.assertEqual(rows[0].fleet_score, 1035)
         self.assertIsNone(rows[0].level)
         self.assertEqual(rows[2].empire_name, 'スペースストーム')
 

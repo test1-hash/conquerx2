@@ -17,6 +17,7 @@
         <nav class="site-nav">
           {% set root = '.' if current_page != 'player' else '..' %}
           <a href="{{ root }}/index.html" class="{% if current_page == 'index' %}is-active{% endif %}">最新ランキング</a>
+          <a href="{{ root }}/fleet.html" class="{% if current_page == 'fleet' %}is-active{% endif %}">戦力</a>
           <a href="{{ root }}/growth-24h.html" class="{% if current_page == 'growth' %}is-active{% endif %}">成長率</a>
           <a href="{{ root }}/changes.html" class="{% if current_page == 'changes' %}is-active{% endif %}">出入り・変化</a>
           <a href="{{ root }}/data/latest.json">JSON</a>

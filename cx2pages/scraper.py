@@ -92,6 +92,7 @@ def _parse_row_line(line: str) -> RankRow | None:
         planets=int(planets_token.replace(",", "")),
         points=int(points_token.replace(",", "")),
         avg_points=int(avg_points_token.replace(",", "")),
+        fleet_score=None,
         empire_name=" ".join(empire_tokens) if empire_tokens else None,
     )
 
@@ -134,6 +135,7 @@ def _parse_rank_rows_from_html(text: str, server_label: str) -> list[RankRow]:
                 planets=int(values[4].replace(",", "")),
                 points=int(values[5].replace(",", "")),
                 avg_points=int(values[6].replace(",", "")),
+                fleet_score=None,
                 empire_name=empire_name,
             )
         )
@@ -213,6 +215,7 @@ def parse_rank_rows_from_export(users_text: str, planets_text: str, empires_text
                 planets=planets,
                 points=user.score,
                 avg_points=user.score // planets if planets > 0 else user.score,
+                fleet_score=user.fleet_score,
                 empire_name=empires.get(user.empire_index) if user.empire_index > 0 else None,
             )
         )
