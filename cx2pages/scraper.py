@@ -26,12 +26,16 @@ class FetchResult:
     content_sha256: str
 
 
+def _clean_text(value: str) -> str:
+    return " ".join(value.split())
+
+
 def _normalize_lines(text: str) -> list[str]:
     soup = BeautifulSoup(text, "html.parser")
     visible = soup.get_text("\n")
     lines: list[str] = []
     for raw_line in visible.splitlines():
-        line = " ".join(raw_line.split())
+        line = _clean_text(raw_line)
         if line:
             lines.append(line)
     return lines
@@ -82,7 +86,51 @@ def _parse_row_line(line: str) -> RankRow | None:
     )
 
 
-def parse_rank_rows_from_text(text: str, server_label: str) -> list[RankRow]:
+def _table_near_server_label(soup: BeautifulSoup, server_label: str):
+    header_line = f"{server_label} サーバー"
+    for node in soup.find_all(string=lambda value: value and header_line in _clean_text(value)):
+        current = node.parent
+        while current is not None:
+            table = current.find("table", class_="rank")
+            if table is not None:
+                return table
+            current = current.parent
+    return None
+
+
+def _parse_rank_rows_from_html(text: str, server_label: str) -> list[RankRow]:
+    soup = BeautifulSoup(text, "html.parser")
+    table = _table_near_server_label(soup, server_label)
+    if table is None:
+        return []
+
+    rows: list[RankRow] = []
+    for tr in table.find_all("tr"):
+        cells = tr.find_all("td")
+        if len(cells) < 7:
+            continue
+
+        values = [_clean_text(cell.get_text(" ", strip=True)) for cell in cells]
+        if not values or not values[0].isdigit():
+            continue
+
+        empire_name = values[7] if len(values) >= 8 and values[7] else None
+        rows.append(
+            RankRow(
+                rank_position=int(values[0].replace(",", "")),
+                title=values[1],
+                player_name=values[2],
+                level=int(values[3].replace(",", "")),
+                planets=int(values[4].replace(",", "")),
+                points=int(values[5].replace(",", "")),
+                avg_points=int(values[6].replace(",", "")),
+                empire_name=empire_name,
+            )
+        )
+    return rows
+
+
+def _parse_rank_rows_from_text_lines(text: str, server_label: str) -> list[RankRow]:
     lines = _normalize_lines(text)
     header_line = f"{server_label} サーバー"
 
@@ -104,6 +152,13 @@ def parse_rank_rows_from_text(text: str, server_label: str) -> list[RankRow]:
         parsed = _parse_row_line(line)
         if parsed is not None:
             rows.append(parsed)
+    return rows
+
+
+def parse_rank_rows_from_text(text: str, server_label: str) -> list[RankRow]:
+    rows = _parse_rank_rows_from_html(text, server_label)
+    if not rows:
+        rows = _parse_rank_rows_from_text_lines(text, server_label)
 
     if not rows:
         raise ParseError(f"no ranking rows found for server {server_label}")
