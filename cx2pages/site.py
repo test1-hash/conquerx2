@@ -52,6 +52,14 @@ def _rows_by_name(snapshot: dict[str, Any] | None) -> dict[str, dict[str, Any]]:
     return {row["player_name"]: row for row in snapshot["rows"]}
 
 
+def _has_title(rows: list[dict[str, Any]]) -> bool:
+    return any(row.get("title") for row in rows)
+
+
+def _has_level(rows: list[dict[str, Any]]) -> bool:
+    return any(row.get("level") is not None for row in rows)
+
+
 def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WINDOWS) -> tuple[dict[str, Any] | None, list[dict[str, Any]], dict[int, dict[str, Any]]]:
     latest = latest_snapshot(state)
     if latest is None:
@@ -81,7 +89,9 @@ def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WIN
             elapsed_hours = hours_between(latest_dt, parse_iso_datetime(snap["captured_at_utc"]))
             delta_points = row["points"] - old_row["points"]
             delta_rank = old_row["rank_position"] - row["rank_position"]
-            delta_level = row["level"] - old_row["level"]
+            delta_level = None
+            if row.get("level") is not None and old_row.get("level") is not None:
+                delta_level = row["level"] - old_row["level"]
             delta_planets = row["planets"] - old_row["planets"]
             comparisons[hours] = {
                 "snapshot_time_utc": snap["captured_at_utc"],
@@ -238,6 +248,8 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         current_page="index",
         latest=latest,
         board=board,
+        show_title=_has_title(board),
+        show_level=_has_level(board),
         comparison_snapshots=comparison_snapshots,
         fetch_runs=fetch_runs,
     )
@@ -251,6 +263,11 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
             current_page="growth",
             latest=latest_g,
             rows=rows,
+            show_level=any(
+                row["comparisons"][window].get("delta_level") is not None
+                for row in rows
+                if row["comparisons"].get(window)
+            ),
             window=window,
             comparison_snapshot=comparison,
         )
@@ -286,6 +303,8 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
                 "first_seen_at_utc": parse_iso_datetime(history[0]["captured_at_utc"]) if history else None,
                 "last_seen_at_utc": parse_iso_datetime(history[-1]["captured_at_utc"]) if history else None,
             },
+            show_title=_has_title(history),
+            show_level=_has_level(history),
             history=[{**point, "captured_at_utc": parse_iso_datetime(point["captured_at_utc"])} for point in history],
             latest_point=latest_point,
             total_gain=total_gain,

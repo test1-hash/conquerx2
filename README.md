@@ -1,11 +1,11 @@
 # CX2 Jupiter-002 Rankwatch
 
-ConquerX2 の **Jupiter-002 公開ランキング** を定期取得し、
+ConquerX2 の **Jupiter-002 export データ** を定期取得し、
 GitHub Pages でそのまま公開できる静的サイト一式です。
 
 ## できること
 
-- 毎時間の公開ランキング取得
+- 5分ごとの export データ取得
 - 最新ランキング表示
 - 1h / 6h / 24h / 7d 成長率ページ
 - 新規ランクイン / 圏外落ち / 帝国変更
@@ -44,19 +44,19 @@ pytest -q
 4. **Actions** を有効にする。
 5. `hourly-update` workflow を一度手動実行するか、次の定期実行を待つ。
 
-これで毎時間 `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
+これで 5 分ごとに `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
 
 ## ファイル構成
 
 - `manage.py` : 取得・再生成コマンド
 - `data/state.json` : 取得履歴のテキスト保存先
 - `docs/` : 公開される静的サイト
-- `.github/workflows/hourly-update.yml` : 毎時更新
+- `.github/workflows/hourly-update.yml` : 5分ごと更新
 
 ## 注意
 
 - GitHub Free では GitHub Pages は **public repository** で使うのが基本です。private repository で使う場合はプラン条件を確認してください。
-- 取得対象は公開ランキングページです。
+- 取得対象は `users.txt / planets.txt / empires.txt / conquest.txt` を含む export データです。
 - `data/state.json` は毎時間更新される履歴ファイルなので、長期運用で大きくなります。必要なら `prune_snapshots()` の日数を調整してください。
 - GitHub Actions の `GITHUB_TOKEN` で push された commit は Pages の branch build を起こさないため、この repository では branch 公開ではなく Actions deploy を使っています。
 
@@ -65,7 +65,8 @@ pytest -q
 環境変数で変更できます。
 
 - `CX2_SERVER_LABEL` (既定: `Jupiter-002`)
-- `CX2_SERVER_RANK_URL` (既定: `https://jp.conquerx2.com/page/rank&view=personal&sid=212`)
+- `CX2_EXPORT_BASE_URL` (既定: `https://jp.conquerx2.com/export/game-jp-02.conquerx2.com`)
+- `CX2_SERVER_RANK_URL` (既定: `<export base>/users.txt`)
 - `USER_AGENT`
 - `HTTP_TIMEOUT_SECONDS`
 

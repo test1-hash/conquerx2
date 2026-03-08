@@ -27,7 +27,7 @@
               <th>増加</th>
               <th>pt/h</th>
               <th>順位変化</th>
-              <th>Lv変化</th>
+              {% if show_level %}<th>Lv変化</th>{% endif %}
               <th>惑星変化</th>
             </tr>
           </thead>
@@ -41,7 +41,7 @@
                 <td class="num pos">{{ fmt_signed(comp.delta_points) }}</td>
                 <td class="num">{{ fmt_signed_float(comp.points_per_hour) }}</td>
                 <td class="num {{ 'pos' if comp.delta_rank > 0 else 'neg' if comp.delta_rank < 0 else '' }}">{{ fmt_signed(comp.delta_rank) }}</td>
-                <td class="num">{{ fmt_signed(comp.delta_level) }}</td>
+                {% if show_level %}<td class="num">{{ fmt_signed(comp.delta_level) }}</td>{% endif %}
                 <td class="num">{{ fmt_signed(comp.delta_planets) }}</td>
               </tr>
             {% endfor %}

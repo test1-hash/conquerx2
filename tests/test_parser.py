@@ -1,7 +1,7 @@
 from pathlib import Path
 import unittest
 
-from cx2pages.scraper import parse_rank_rows_from_text
+from cx2pages.scraper import parse_rank_rows_from_export, parse_rank_rows_from_text
 
 
 class ParserTest(unittest.TestCase):
@@ -37,6 +37,35 @@ class ParserTest(unittest.TestCase):
         self.assertIsNone(rows[0].empire_name)
         self.assertEqual(rows[1].title, '帝国の一員')
         self.assertEqual(rows[1].empire_name, 'スペースストーム')
+
+    def test_parse_export_files(self):
+        users_text = '''
+        [User List]
+        62868,0,10851,1733,aaaa,1772690454
+        62869,0,11810,1035,だいあん,1772715656
+        62875,2666,5497,177,TK,1772693992
+        '''
+        planets_text = '''
+        [Planet List]
+        1,1,10,62868,0,1
+        1,2,10,62868,0,1
+        1,3,10,62869,0,1
+        1,4,10,62869,0,1
+        1,5,10,62869,0,1
+        1,6,10,62875,2666,1
+        '''
+        empires_text = '''
+        [Empire List]
+        2666,15590,スペースストーム
+        '''
+        rows = parse_rank_rows_from_export(users_text, planets_text, empires_text)
+        self.assertEqual(len(rows), 3)
+        self.assertEqual(rows[0].player_name, 'だいあん')
+        self.assertEqual(rows[0].rank_position, 1)
+        self.assertEqual(rows[0].planets, 3)
+        self.assertEqual(rows[0].avg_points, 3936)
+        self.assertIsNone(rows[0].level)
+        self.assertEqual(rows[2].empire_name, 'スペースストーム')
 
 
 if __name__ == '__main__':

@@ -51,9 +51,9 @@
           <tr>
             <th>時刻</th>
             <th>順位</th>
-            <th>称号</th>
+            {% if show_title %}<th>称号</th>{% endif %}
             <th>帝国</th>
-            <th>Lv</th>
+            {% if show_level %}<th>Lv</th>{% endif %}
             <th>惑星</th>
             <th>ポイント</th>
             <th>平均</th>
@@ -64,9 +64,9 @@
             <tr>
               <td>{{ jst_string(point.captured_at_utc) }}</td>
               <td class="num">{{ point.rank_position }}</td>
-              <td>{{ point.title }}</td>
+              {% if show_title %}<td>{{ point.title or '-' }}</td>{% endif %}
               <td>{{ point.empire_name or '-' }}</td>
-              <td class="num">{{ point.level }}</td>
+              {% if show_level %}<td class="num">{{ fmt_int(point.level) }}</td>{% endif %}
               <td class="num">{{ fmt_int(point.planets) }}</td>
               <td class="num strong">{{ fmt_int(point.points) }}</td>
               <td class="num">{{ fmt_int(point.avg_points) }}</td>

@@ -9,7 +9,7 @@ on:
       - 'data/**'
   workflow_dispatch:
   schedule:
-    - cron: '7 * * * *'
+    - cron: '*/5 * * * *'
 
 permissions:
   contents: write

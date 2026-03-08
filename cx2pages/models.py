@@ -8,9 +8,9 @@ from typing import Optional
 @dataclass(slots=True)
 class RankRow:
     rank_position: int
-    title: str
+    title: Optional[str]
     player_name: str
-    level: int
+    level: Optional[int]
     planets: int
     points: int
     avg_points: int

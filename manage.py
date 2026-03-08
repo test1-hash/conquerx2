@@ -14,7 +14,8 @@ from cx2pages.utils import JST, to_utc, utcnow
 
 
 DEFAULT_SERVER_LABEL = os.getenv("CX2_SERVER_LABEL", "Jupiter-002")
-DEFAULT_SERVER_URL = os.getenv("CX2_SERVER_RANK_URL", "https://jp.conquerx2.com/page/rank&view=personal&sid=212")
+DEFAULT_SOURCE_URL = os.getenv("CX2_EXPORT_BASE_URL", "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com")
+DEFAULT_SITE_LINK_URL = os.getenv("CX2_SERVER_RANK_URL", f"{DEFAULT_SOURCE_URL.rstrip('/')}/users.txt")
 DEFAULT_USER_AGENT = os.getenv(
     "USER_AGENT",
     "cx2-rankwatch-pages/1.0 (+https://github.com/; public ranking collector)",
@@ -26,7 +27,7 @@ DOCS_DIR = PROJECT_ROOT / "docs"
 
 
 def _site_settings() -> SiteSettings:
-    return SiteSettings(server_label=DEFAULT_SERVER_LABEL, server_rank_url=DEFAULT_SERVER_URL)
+    return SiteSettings(server_label=DEFAULT_SERVER_LABEL, server_rank_url=DEFAULT_SITE_LINK_URL)
 
 
 def command_build() -> int:
@@ -49,7 +50,7 @@ def command_import_fixture(path: str, captured_at: str) -> int:
     snapshot = Snapshot(
         captured_at_utc=captured_at_utc,
         rows=rows,
-        source_url=DEFAULT_SERVER_URL,
+        source_url=DEFAULT_SITE_LINK_URL,
         http_status=200,
         content_sha256=None,
     )
@@ -62,7 +63,7 @@ def command_import_fixture(path: str, captured_at: str) -> int:
             row_count=len(rows),
             http_status=200,
             message="fixture import",
-            url=DEFAULT_SERVER_URL,
+            url=DEFAULT_SITE_LINK_URL,
         ),
     )
     prune_snapshots(state)
@@ -78,7 +79,7 @@ def command_update() -> int:
     try:
         result = fetch_ranking(
             server_label=DEFAULT_SERVER_LABEL,
-            url=DEFAULT_SERVER_URL,
+            url=DEFAULT_SOURCE_URL,
             user_agent=DEFAULT_USER_AGENT,
             timeout_seconds=DEFAULT_TIMEOUT,
         )
@@ -115,7 +116,7 @@ def command_update() -> int:
                 row_count=None,
                 http_status=None,
                 message=str(exc),
-                url=DEFAULT_SERVER_URL,
+                url=DEFAULT_SOURCE_URL,
             ),
         )
         save_state(STATE_PATH, state)
