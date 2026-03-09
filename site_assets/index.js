@@ -13,6 +13,7 @@
   const initialSort = params.get('sort') || 'rank';
   searchInput.value = initialQ;
   sortSelect.value = initialSort;
+  if (!sortSelect.value) sortSelect.value = 'rank';
 
   const compare = (a, b, key) => {
     if (key === 'name') {
@@ -29,7 +30,7 @@
 
   const apply = () => {
     const q = searchInput.value.trim().toLowerCase();
-    const sort = sortSelect.value;
+    const sort = sortSelect.value || 'rank';
     let visible = 0;
     rows.forEach((row) => {
       const matched = !q || row.dataset.search.includes(q);

@@ -65,6 +65,8 @@
               {% if show_level %}<th>Lv</th>{% endif %}
               <th>惑星</th>
               <th>ポイント</th>
+              {% if show_fleet %}<th>戦力</th>{% endif %}
+              {% if show_fleet %}<th>戦力/pt</th>{% endif %}
               <th>平均</th>
               <th>1h</th>
               <th>24h</th>
@@ -97,6 +99,8 @@
                 {% if show_level %}<td class="num">{{ fmt_int(row.level) }}</td>{% endif %}
                 <td class="num">{{ fmt_int(row.planets) }}</td>
                 <td class="num strong">{{ fmt_int(row.points) }}</td>
+                {% if show_fleet %}<td class="num">{{ fmt_int(row.fleet_score) }}</td>{% endif %}
+                {% if show_fleet %}<td class="num">{{ ((row.fleet_share * 100) | round(1)) ~ '%' if row.fleet_share is not none else '-' }}</td>{% endif %}
                 <td class="num">{{ fmt_int(row.avg_points) }}</td>
                 <td class="num {{ 'pos' if comp1 and comp1.delta_points > 0 else 'muted' if not comp1 else 'neg' if comp1.delta_points < 0 else '' }}">{{ fmt_signed(comp1.delta_points if comp1 else None) }}</td>
                 <td class="num {{ 'pos' if comp24 and comp24.delta_points > 0 else 'muted' if not comp24 else 'neg' if comp24.delta_points < 0 else '' }}">{{ fmt_signed(comp24.delta_points if comp24 else None) }}</td>

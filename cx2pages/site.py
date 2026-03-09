@@ -81,6 +81,13 @@ def _fleet_window_availability(rows: list[dict[str, Any]], *, windows: tuple[int
     }
 
 
+def _has_fleet_delta(rows: list[dict[str, Any]], window: int) -> bool:
+    return any(
+        row["comparisons"].get(window, {}).get("delta_fleet") is not None
+        for row in rows
+    )
+
+
 def build_board(state: dict[str, Any], *, windows: tuple[int, ...] = DEFAULT_WINDOWS) -> tuple[dict[str, Any] | None, list[dict[str, Any]], dict[int, dict[str, Any]]]:
     latest = latest_snapshot(state)
     if latest is None:
@@ -333,6 +340,8 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
             current_page="growth",
             latest=latest_g,
             rows=rows,
+            show_fleet=_has_fleet(rows),
+            show_fleet_delta=_has_fleet_delta(rows, window),
             show_level=any(
                 row["comparisons"][window].get("delta_level") is not None
                 for row in rows
@@ -364,6 +373,7 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         best_rank = min((point["rank_position"] for point in history), default=None)
         max_points = max((point["points"] for point in history), default=None)
         max_fleet = max((point["fleet_score"] for point in history if point.get("fleet_score") is not None), default=None)
+        fleet_history = [point["fleet_score"] for point in history if point.get("fleet_score") is not None]
         player_html = env.get_template("player.html").render(
             **context_base,
             page_title=f"{player_name} | {settings.server_label}",
@@ -385,6 +395,7 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
             max_fleet=max_fleet,
             points_chart=sparkline_svg([point["points"] for point in history], title="Points history"),
             rank_chart=sparkline_svg([point["rank_position"] for point in history], invert=True, title="Rank history"),
+            fleet_chart=sparkline_svg(fleet_history, title="Fleet history") if fleet_history else None,
         )
         (players_dir / f"{player_key(player_name)}.html").write_text(player_html, encoding="utf-8")
 

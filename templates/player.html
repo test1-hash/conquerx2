@@ -47,6 +47,12 @@
         <div class="section-head"><h2>順位推移</h2></div>
         {{ rank_chart }}
       </article>
+      {% if fleet_chart %}
+        <article class="card chart-card">
+          <div class="section-head"><h2>戦力推移</h2></div>
+          {{ fleet_chart }}
+        </article>
+      {% endif %}
     </section>
   {% endif %}
 

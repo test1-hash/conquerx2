@@ -78,9 +78,31 @@ class SiteBuildTest(unittest.TestCase):
             player_html = next((out / 'players').glob('*.html')).read_text(encoding='utf-8')
             self.assertIn('aaaa', index_html)
             self.assertNotIn('称号 / プレイヤー', index_html)
+            self.assertIn('戦力/pt', index_html)
             self.assertIn('戦力ランキング', fleet_html)
             self.assertIn('1,733', fleet_html)
             self.assertIn('最新戦力', player_html)
+            self.assertIn('戦力推移', player_html)
+
+    def test_render_growth_with_fleet_columns(self):
+        rows1 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1000, avg_points=250, fleet_score=120, empire_name='A'),
+            RankRow(rank_position=2, title=None, player_name='bbbb', level=None, planets=3, points=900, avg_points=300, fleet_score=160, empire_name='B'),
+        ]
+        rows2 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1100, avg_points=275, fleet_score=150, empire_name='A'),
+            RankRow(rank_position=2, title=None, player_name='bbbb', level=None, planets=3, points=950, avg_points=316, fleet_score=140, empire_name='B'),
+        ]
+        state = {'version': 1, 'generated_at_utc': None, 'snapshots': [], 'fetch_runs': []}
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T00:00:00+09:00')), rows=rows1, source_url='x'))
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T01:00:00+09:00')), rows=rows2, source_url='x'))
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'docs'
+            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x'), state)
+            growth_html = (out / 'growth-1h.html').read_text(encoding='utf-8')
+            self.assertIn('戦力</th>', growth_html)
+            self.assertIn('戦力変化', growth_html)
+            self.assertIn('艦/h', growth_html)
 
 
 if __name__ == '__main__':

@@ -14,7 +14,7 @@
   <section class="card">
     <div class="section-head">
       <h2>{{ window }}時間 成長ランキング</h2>
-      <p class="muted">ポイント増加順</p>
+      <p class="muted">ポイント増加順{% if show_fleet %} / 戦力も併記{% endif %}</p>
     </div>
     {% if rows %}
       <div class="table-wrap">
@@ -24,8 +24,11 @@
               <th>現在順位</th>
               <th>プレイヤー</th>
               <th>ポイント</th>
+              {% if show_fleet %}<th>戦力</th>{% endif %}
               <th>増加</th>
               <th>pt/h</th>
+              {% if show_fleet_delta %}<th>戦力変化</th>{% endif %}
+              {% if show_fleet_delta %}<th>艦/h</th>{% endif %}
               <th>順位変化</th>
               {% if show_level %}<th>Lv変化</th>{% endif %}
               <th>惑星変化</th>
@@ -38,8 +41,11 @@
                 <td class="num">{{ row.rank_position }}</td>
                 <td><a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a></td>
                 <td class="num strong">{{ fmt_int(row.points) }}</td>
+                {% if show_fleet %}<td class="num">{{ fmt_int(row.fleet_score) }}</td>{% endif %}
                 <td class="num pos">{{ fmt_signed(comp.delta_points) }}</td>
                 <td class="num">{{ fmt_signed_float(comp.points_per_hour) }}</td>
+                {% if show_fleet_delta %}<td class="num {{ 'pos' if comp.delta_fleet is not none and comp.delta_fleet > 0 else 'neg' if comp.delta_fleet is not none and comp.delta_fleet < 0 else '' }}">{{ fmt_signed(comp.delta_fleet) }}</td>{% endif %}
+                {% if show_fleet_delta %}<td class="num">{{ fmt_signed_float(comp.fleet_per_hour) }}</td>{% endif %}
                 <td class="num {{ 'pos' if comp.delta_rank > 0 else 'neg' if comp.delta_rank < 0 else '' }}">{{ fmt_signed(comp.delta_rank) }}</td>
                 {% if show_level %}<td class="num">{{ fmt_signed(comp.delta_level) }}</td>{% endif %}
                 <td class="num">{{ fmt_signed(comp.delta_planets) }}</td>
