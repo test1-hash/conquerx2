@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-03-11T23:27:42.074634+00:00",
+  "generated_at_utc": "2026-03-11T23:48:12.823673+00:00",
   "snapshots": [
     {
       "captured_at_utc": "2026-03-08T08:56:48.895079+00:00",
@@ -32794,11 +32794,11 @@
       ]
     },
     {
-      "captured_at_utc": "2026-03-11T23:27:34.948302+00:00",
+      "captured_at_utc": "2026-03-11T23:48:05.397467+00:00",
       "captured_hour_utc": "2026-03-11T23:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "5f49225e89d9bd438fcff2c406cf9e3ead75226ba3d67fba19aecf00d8317c80",
+      "content_sha256": "dd2439d2d34add01d6618a6be89f938098c7cb781d46ee0fa5814439f635b2f4",
       "row_count": 41,
       "rows": [
         {
@@ -32817,9 +32817,9 @@
           "title": "初心者",
           "player_name": "だいあん",
           "level": 21,
-          "planets": 24,
+          "planets": 25,
           "points": 49641,
-          "avg_points": 2068,
+          "avg_points": 1985,
           "fleet_score": 5643,
           "empire_name": "アシリア"
         },
@@ -33256,6 +33256,14 @@
     }
   ],
   "fetch_runs": [
+    {
+      "started_at_utc": "2026-03-11T23:48:05.397467+00:00",
+      "status": "ok",
+      "row_count": 41,
+      "http_status": 200,
+      "message": null,
+      "url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0"
+    },
     {
       "started_at_utc": "2026-03-11T23:27:34.948302+00:00",
       "status": "ok",
