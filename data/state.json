@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-03-11T17:06:46.901077+00:00",
+  "generated_at_utc": "2026-03-11T17:57:42.612338+00:00",
   "snapshots": [
     {
       "captured_at_utc": "2026-03-08T08:56:48.895079+00:00",
@@ -30028,11 +30028,11 @@
       ]
     },
     {
-      "captured_at_utc": "2026-03-11T17:06:38.940863+00:00",
+      "captured_at_utc": "2026-03-11T17:57:35.356602+00:00",
       "captured_hour_utc": "2026-03-11T17:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "bfe14f4540d33301d631a734a33ab1cd43666b8b2bae3de3043da8f2a78a398e",
+      "content_sha256": "f4d6aaab85fc5d43f1c1a87d2c3dcb49d82fdc78c004bed3e79da22d93a79e83",
       "row_count": 41,
       "rows": [
         {
@@ -30062,9 +30062,9 @@
           "title": "匠の業",
           "player_name": "azsxx",
           "level": 20,
-          "planets": 25,
+          "planets": 26,
           "points": 43116,
-          "avg_points": 1724,
+          "avg_points": 1658,
           "fleet_score": 2796,
           "empire_name": null
         },
@@ -30073,9 +30073,9 @@
           "title": "初心者",
           "player_name": "TK",
           "level": 18,
-          "planets": 14,
+          "planets": 15,
           "points": 25782,
-          "avg_points": 1841,
+          "avg_points": 1718,
           "fleet_score": 1839,
           "empire_name": "スペースストーム"
         },
@@ -30095,9 +30095,9 @@
           "title": "初心者",
           "player_name": "chrysoal",
           "level": 15,
-          "planets": 7,
+          "planets": 8,
           "points": 12095,
-          "avg_points": 1727,
+          "avg_points": 1511,
           "fleet_score": 1457,
           "empire_name": null
         },
@@ -30490,6 +30490,14 @@
     }
   ],
   "fetch_runs": [
+    {
+      "started_at_utc": "2026-03-11T17:57:35.356602+00:00",
+      "status": "ok",
+      "row_count": 41,
+      "http_status": 200,
+      "message": null,
+      "url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0"
+    },
     {
       "started_at_utc": "2026-03-11T17:06:38.940863+00:00",
       "status": "ok",
