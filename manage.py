@@ -21,13 +21,20 @@ def _env_or_none(name: str) -> str | None:
     return value or None
 
 
+def _env_int(name: str, default: int) -> int:
+    value = _env_or_none(name)
+    if value is None:
+        return default
+    return int(value)
+
+
 DEFAULT_SERVER_LABEL = os.getenv("CX2_SERVER_LABEL", "Jupiter-002")
 DEFAULT_GAME_COOKIE = _env_or_none("CX2_GAME_COOKIE")
 DEFAULT_GAME_USERID = _env_or_none("CX2_GAME_USERID")
 DEFAULT_GAME_PASSWORD = _env_or_none("CX2_GAME_PASSWORD")
-DEFAULT_GAME_SERVER_ID = int(os.getenv("CX2_GAME_SERVER_ID", "212"))
+DEFAULT_GAME_SERVER_ID = _env_int("CX2_GAME_SERVER_ID", 212)
 DEFAULT_GAME_NICKNAME = _env_or_none("CX2_GAME_NICKNAME")
-DEFAULT_GAME_DIRECTION = int(os.getenv("CX2_GAME_DIRECTION", "0"))
+DEFAULT_GAME_DIRECTION = _env_int("CX2_GAME_DIRECTION", 0)
 DEFAULT_GAME_PREFER_BRANCH = os.getenv("CX2_GAME_PREFER_BRANCH", "1").strip().lower() not in {
     "0",
     "false",
@@ -53,7 +60,7 @@ DEFAULT_USER_AGENT = os.getenv(
     "USER_AGENT",
     "cx2-rankwatch-pages/1.0 (+https://github.com/; public ranking collector)",
 )
-DEFAULT_TIMEOUT = int(os.getenv("HTTP_TIMEOUT_SECONDS", "30"))
+DEFAULT_TIMEOUT = _env_int("HTTP_TIMEOUT_SECONDS", 30)
 PROJECT_ROOT = Path(__file__).resolve().parent
 STATE_PATH = PROJECT_ROOT / "data" / "state.json"
 DOCS_DIR = PROJECT_ROOT / "docs"
