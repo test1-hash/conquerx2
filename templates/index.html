@@ -28,7 +28,13 @@
       </article>
       <article class="card stat-card">
         <div class="stat-label">データ元</div>
-        <div class="stat-value small"><a href="{{ server_rank_url }}">export users.txt</a></div>
+        <div class="stat-value small">
+          {% if server_rank_url %}
+            <a href="{{ server_rank_url }}">{{ source_label }}</a>
+          {% else %}
+            {{ source_label }}
+          {% endif %}
+        </div>
       </article>
     </section>
 

@@ -41,6 +41,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Update ranking and build static site
+        env:
+          CX2_GAME_COOKIE: ${{ secrets.CX2_GAME_COOKIE }}
+          CX2_GAME_SOURCE_URL: ${{ secrets.CX2_GAME_SOURCE_URL }}
+          CX2_SOURCE_URL: ${{ secrets.CX2_SOURCE_URL }}
+          CX2_SERVER_RANK_URL: ${{ secrets.CX2_SERVER_RANK_URL }}
         run: python manage.py update
 
       - name: Commit and push changes

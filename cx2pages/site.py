@@ -28,7 +28,8 @@ DEFAULT_WINDOWS = (1, 6, 24, 168)
 @dataclass(slots=True)
 class Settings:
     server_label: str
-    server_rank_url: str
+    server_rank_url: str | None
+    source_label: str
 
 
 def _env(template_dir: Path) -> Environment:
@@ -305,6 +306,7 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
     context_base = {
         "server_label": settings.server_label,
         "server_rank_url": settings.server_rank_url,
+        "source_label": settings.source_label,
     }
 
     index_html = env.get_template("index.html").render(

@@ -13,9 +13,29 @@ from cx2pages.state import add_fetch_run, add_or_replace_snapshot, load_state, p
 from cx2pages.utils import JST, to_utc, utcnow
 
 
+def _env_or_none(name: str) -> str | None:
+    value = os.getenv(name)
+    if value is None:
+        return None
+    value = value.strip()
+    return value or None
+
+
 DEFAULT_SERVER_LABEL = os.getenv("CX2_SERVER_LABEL", "Jupiter-002")
-DEFAULT_SOURCE_URL = os.getenv("CX2_EXPORT_BASE_URL", "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com")
-DEFAULT_SITE_LINK_URL = os.getenv("CX2_SERVER_RANK_URL", f"{DEFAULT_SOURCE_URL.rstrip('/')}/users.txt")
+DEFAULT_GAME_COOKIE = _env_or_none("CX2_GAME_COOKIE")
+DEFAULT_GAME_SOURCE_URL = _env_or_none("CX2_GAME_SOURCE_URL") or (
+    "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0"
+)
+DEFAULT_EXPORT_BASE_URL = os.getenv(
+    "CX2_EXPORT_BASE_URL",
+    "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com",
+)
+DEFAULT_SOURCE_URL = _env_or_none("CX2_SOURCE_URL") or (
+    DEFAULT_GAME_SOURCE_URL if DEFAULT_GAME_COOKIE else DEFAULT_EXPORT_BASE_URL
+)
+DEFAULT_SITE_LINK_URL = _env_or_none("CX2_SERVER_RANK_URL") or (
+    None if "act=dispGameRank" in DEFAULT_SOURCE_URL else f"{DEFAULT_EXPORT_BASE_URL.rstrip('/')}/users.txt"
+)
 DEFAULT_USER_AGENT = os.getenv(
     "USER_AGENT",
     "cx2-rankwatch-pages/1.0 (+https://github.com/; public ranking collector)",
@@ -26,8 +46,18 @@ STATE_PATH = PROJECT_ROOT / "data" / "state.json"
 DOCS_DIR = PROJECT_ROOT / "docs"
 
 
+def _source_label() -> str:
+    if "act=dispGameRank" in DEFAULT_SOURCE_URL:
+        return "game rank (authenticated)"
+    return "export users.txt"
+
+
 def _site_settings() -> SiteSettings:
-    return SiteSettings(server_label=DEFAULT_SERVER_LABEL, server_rank_url=DEFAULT_SITE_LINK_URL)
+    return SiteSettings(
+        server_label=DEFAULT_SERVER_LABEL,
+        server_rank_url=DEFAULT_SITE_LINK_URL,
+        source_label=_source_label(),
+    )
 
 
 def command_build() -> int:
@@ -82,6 +112,7 @@ def command_update() -> int:
             url=DEFAULT_SOURCE_URL,
             user_agent=DEFAULT_USER_AGENT,
             timeout_seconds=DEFAULT_TIMEOUT,
+            cookie_header=DEFAULT_GAME_COOKIE,
         )
         snapshot = Snapshot(
             captured_at_utc=started_at,

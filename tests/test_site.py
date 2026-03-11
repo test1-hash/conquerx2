@@ -57,7 +57,7 @@ class SiteBuildTest(unittest.TestCase):
         add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T00:00:00+09:00')), rows=rows, source_url='x'))
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / 'docs'
-            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x'), state)
+            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x', source_label='test'), state)
             self.assertTrue((out / 'index.html').exists())
             self.assertTrue((out / 'fleet.html').exists())
             self.assertTrue((out / 'data' / 'latest.json').exists())
@@ -72,7 +72,7 @@ class SiteBuildTest(unittest.TestCase):
         add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T18:00:00+09:00')), rows=rows, source_url='x'))
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / 'docs'
-            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x'), state)
+            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x', source_label='test'), state)
             index_html = (out / 'index.html').read_text(encoding='utf-8')
             fleet_html = (out / 'fleet.html').read_text(encoding='utf-8')
             player_html = next((out / 'players').glob('*.html')).read_text(encoding='utf-8')
@@ -98,7 +98,7 @@ class SiteBuildTest(unittest.TestCase):
         add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T01:00:00+09:00')), rows=rows2, source_url='x'))
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp) / 'docs'
-            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x'), state)
+            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x', source_label='test'), state)
             growth_html = (out / 'growth-1h.html').read_text(encoding='utf-8')
             self.assertIn('戦力</th>', growth_html)
             self.assertIn('戦力変化', growth_html)

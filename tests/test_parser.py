@@ -1,7 +1,12 @@
 from pathlib import Path
 import unittest
 
-from cx2pages.scraper import parse_rank_rows_from_export, parse_rank_rows_from_text
+from cx2pages.scraper import (
+    parse_game_player_detail,
+    parse_rank_rows_from_export,
+    parse_rank_rows_from_game_html,
+    parse_rank_rows_from_text,
+)
 
 
 class ParserTest(unittest.TestCase):
@@ -67,6 +72,56 @@ class ParserTest(unittest.TestCase):
         self.assertEqual(rows[0].fleet_score, 1035)
         self.assertIsNone(rows[0].level)
         self.assertEqual(rows[2].empire_name, 'スペースストーム')
+
+    def test_parse_game_rank_html(self):
+        html = '''
+        <table class="list">
+          <tr>
+            <th>順位</th><th colspan="2">ユーザー</th><th>Lv.</th><th>惑星数</th><th>ポイント</th><th>平均ポイント</th><th>所属帝国</th>
+          </tr>
+          <tr class="hodd">
+            <td>1</td>
+            <td width="24"><div class="usertitleicon20x usertitleicon20x_1" title="初心者<br>説明"></div></td>
+            <td><span class="pointer" onclick='openPlayerDialog("aaaa");'>aaaa</span></td>
+            <td>21</td><td>23</td><td>53,162</td><td>2,311</td><td></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td width="24"><div class="usertitleicon20x usertitleicon20x_2" title="匠の業<br>説明"></div></td>
+            <td><span class="pointer" onclick='openPlayerDialog("だいあん");'>だいあん</span></td>
+            <td>21</td><td>24</td><td>46,440</td><td>1,935</td><td>アシリア</td>
+          </tr>
+        </table>
+        '''
+        rows = parse_rank_rows_from_game_html(html)
+        self.assertEqual(len(rows), 2)
+        self.assertEqual(rows[0].player_name, 'aaaa')
+        self.assertEqual(rows[0].title, '初心者')
+        self.assertEqual(rows[0].points, 53162)
+        self.assertEqual(rows[1].empire_name, 'アシリア')
+
+    def test_parse_game_player_detail(self):
+        text = '''
+        {
+          "player": {
+            "usernick": "aaaa",
+            "score": 53162,
+            "score_ship": 10206,
+            "userlevel": 21,
+            "owned_planet_count": 23,
+            "empirename": null,
+            "usertitle": {
+              "titlename": "初心者"
+            }
+          }
+        }
+        '''
+        detail = parse_game_player_detail(text)
+        self.assertEqual(detail.player_name, 'aaaa')
+        self.assertEqual(detail.fleet_score, 10206)
+        self.assertEqual(detail.level, 21)
+        self.assertEqual(detail.planets, 23)
+        self.assertEqual(detail.title, '初心者')
 
 
 if __name__ == '__main__':
