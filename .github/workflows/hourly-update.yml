@@ -43,6 +43,12 @@ jobs:
       - name: Update ranking and build static site
         env:
           CX2_GAME_COOKIE: ${{ secrets.CX2_GAME_COOKIE }}
+          CX2_GAME_USERID: ${{ secrets.CX2_GAME_USERID }}
+          CX2_GAME_PASSWORD: ${{ secrets.CX2_GAME_PASSWORD }}
+          CX2_GAME_SERVER_ID: ${{ secrets.CX2_GAME_SERVER_ID }}
+          CX2_GAME_NICKNAME: ${{ secrets.CX2_GAME_NICKNAME }}
+          CX2_GAME_DIRECTION: ${{ secrets.CX2_GAME_DIRECTION }}
+          CX2_GAME_PREFER_BRANCH: ${{ secrets.CX2_GAME_PREFER_BRANCH }}
           CX2_GAME_SOURCE_URL: ${{ secrets.CX2_GAME_SOURCE_URL }}
           CX2_SOURCE_URL: ${{ secrets.CX2_SOURCE_URL }}
           CX2_SERVER_RANK_URL: ${{ secrets.CX2_SERVER_RANK_URL }}

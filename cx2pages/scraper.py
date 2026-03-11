@@ -14,6 +14,12 @@ from .models import RankRow
 
 
 _NUMERIC_TOKEN_RE = re.compile(r"^\d{1,3}(?:,\d{3})*$|^\d+$")
+_ALERT_RE = re.compile(r"""alert\((['"])(.*?)\1\)""", re.DOTALL)
+_CONNECT_AUTH_REDIRECT_RE = re.compile(
+    r"""window\.location\.href\s*=\s*['"]([^'"]+/auth/auth\.php[^'"]+)['"]"""
+)
+
+_PUBLIC_SITE_ORIGIN = "https://jp.conquerx2.com"
 
 
 class ParseError(RuntimeError):
@@ -74,12 +80,22 @@ def _parse_cookie_header(cookie_header: str | None) -> dict[str, str]:
     return cookies
 
 
-def _game_headers(user_agent: str) -> dict[str, str]:
+def _game_headers(user_agent: str, referer_url: str) -> dict[str, str]:
     return {
         "Accept": "text/html, */*; q=0.01",
-        "Referer": "https://game-jp-02.conquerx2.com/",
+        "Referer": referer_url,
         "User-Agent": user_agent,
         "X-Requested-With": "XMLHttpRequest",
+    }
+
+
+def _public_ajax_headers(user_agent: str) -> dict[str, str]:
+    return {
+        "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Content-Type": "application/json",
+        "Origin": _PUBLIC_SITE_ORIGIN,
+        "Referer": f"{_PUBLIC_SITE_ORIGIN}/",
+        "User-Agent": user_agent,
     }
 
 
@@ -430,15 +446,190 @@ def _with_query_params(url: str, **updates: int | str) -> str:
     return urlunparse(parsed._replace(query=urlencode(query)))
 
 
+def _game_root_url(url: str) -> str:
+    parsed = urlparse(url)
+    return urlunparse((parsed.scheme, parsed.netloc, "/", "", "", ""))
+
+
+def _cookie_value(
+    session: requests.Session,
+    name: str,
+    domain: str | None = None,
+) -> str | None:
+    for cookie in session.cookies:
+        if cookie.name != name:
+            continue
+        if domain is not None and cookie.domain not in {domain, f".{domain}"}:
+            continue
+        return cookie.value
+    return None
+
+
+def _extract_alert_message(text: str) -> str | None:
+    match = _ALERT_RE.search(text)
+    if not match:
+        return None
+    return _clean_text(unescape(match.group(2)))
+
+
+def extract_game_connect_auth_url(text: str) -> str:
+    match = _CONNECT_AUTH_REDIRECT_RE.search(text)
+    if not match:
+        raise ParseError("game connect auth redirect not found")
+    return match.group(1)
+
+
+def is_new_user_registration_page(text: str) -> bool:
+    lowered = text.lower()
+    return 'id="fo_register_newuser"' in lowered or "id='fo_register_newuser'" in lowered
+
+
+def _fetch_game_root(
+    session: requests.Session,
+    root_url: str,
+    user_agent: str,
+    timeout_seconds: int,
+) -> requests.Response:
+    response = session.get(
+        root_url,
+        headers={"User-Agent": user_agent, "Referer": root_url},
+        timeout=timeout_seconds,
+    )
+    response.raise_for_status()
+    response.encoding = "utf-8"
+    return response
+
+
+def _register_new_game_user(
+    session: requests.Session,
+    root_url: str,
+    nickname: str,
+    direction: int,
+    prefer_branch: bool,
+    user_agent: str,
+    timeout_seconds: int,
+) -> None:
+    form = {
+        "module": "game",
+        "module_type": "view",
+        "act": "procInsertNewUser",
+        "winid": "emptywindow",
+        "nickname": nickname,
+        "direction": str(direction),
+    }
+    if prefer_branch:
+        form["prefer_branch"] = "on"
+
+    response = session.post(
+        root_url,
+        headers={
+            "Referer": root_url,
+            "User-Agent": user_agent,
+            "X-Requested-With": "XMLHttpRequest",
+        },
+        data=form,
+        timeout=timeout_seconds,
+    )
+    response.raise_for_status()
+    response.encoding = "utf-8"
+
+    alert_message = _extract_alert_message(response.text)
+    if alert_message is not None:
+        raise ParseError(f"game new-user registration failed: {alert_message}")
+
+
+def _create_game_session_from_login(
+    source_url: str,
+    user_agent: str,
+    timeout_seconds: int,
+    userid: str,
+    password: str,
+    server_id: int,
+    nickname: str | None,
+    direction: int,
+    prefer_branch: bool,
+) -> requests.Session:
+    session = requests.Session()
+    signin_response = session.post(
+        f"{_PUBLIC_SITE_ORIGIN}/api/ajax.php",
+        headers=_public_ajax_headers(user_agent),
+        json={
+            "request": "signin_with_password",
+            "userid": userid,
+            "password": password,
+        },
+        timeout=timeout_seconds,
+    )
+    signin_response.raise_for_status()
+    signin_payload = signin_response.json()
+    if signin_payload.get("ret") != 1:
+        raise ParseError(f"public signin failed: ret={signin_payload.get('ret')}")
+
+    connect_response = session.post(
+        f"{_PUBLIC_SITE_ORIGIN}/auth/connect_gameserver.php",
+        headers={
+            "Referer": f"{_PUBLIC_SITE_ORIGIN}/",
+            "User-Agent": user_agent,
+        },
+        data={"serverid": str(server_id)},
+        timeout=timeout_seconds,
+    )
+    connect_response.raise_for_status()
+    connect_response.encoding = "utf-8"
+    auth_url = extract_game_connect_auth_url(connect_response.text)
+    auth_response = session.get(
+        auth_url,
+        headers={
+            "Referer": f"{_PUBLIC_SITE_ORIGIN}/",
+            "User-Agent": user_agent,
+        },
+        timeout=timeout_seconds,
+        allow_redirects=True,
+    )
+    auth_response.raise_for_status()
+
+    root_url = _game_root_url(source_url)
+    game_domain = urlparse(root_url).hostname
+    if not game_domain:
+        raise ParseError(f"invalid game source host: {source_url}")
+
+    public_cookie = _cookie_value(session, "CONQUERX2", domain="jp.conquerx2.com")
+    if public_cookie is None:
+        raise ParseError("public signin did not return CONQUERX2 cookie")
+    session.cookies.set("CONQUERX2", public_cookie, domain=game_domain, path="/")
+
+    root_response = _fetch_game_root(session, root_url, user_agent, timeout_seconds)
+    if is_new_user_registration_page(root_response.text):
+        if not nickname:
+            raise ParseError(
+                "game account is not initialized; set CX2_GAME_NICKNAME once or complete the first login manually"
+            )
+        _register_new_game_user(
+            session,
+            root_url,
+            nickname,
+            direction,
+            prefer_branch,
+            user_agent,
+            timeout_seconds,
+        )
+        root_response = _fetch_game_root(session, root_url, user_agent, timeout_seconds)
+        if is_new_user_registration_page(root_response.text):
+            raise ParseError("game new-user registration did not complete")
+
+    return session
+
+
 def _fetch_game_rank_page(
     session: requests.Session,
     url: str,
     user_agent: str,
     timeout_seconds: int,
 ) -> requests.Response:
+    root_url = _game_root_url(url)
     response = session.get(
         url,
-        headers=_game_headers(user_agent),
+        headers=_game_headers(user_agent, root_url),
         timeout=timeout_seconds,
     )
     response.raise_for_status()
@@ -448,21 +639,22 @@ def _fetch_game_rank_page(
 
 def _fetch_game_player_detail(
     session: requests.Session,
+    game_root_url: str,
     player_name: str,
     user_agent: str,
     timeout_seconds: int,
 ) -> tuple[GamePlayerDetail, str]:
     headers = {
-        **_game_headers(user_agent),
+        **_game_headers(user_agent, game_root_url),
         "Accept": "application/json, text/javascript, */*; q=0.01",
         "Content-Type": "application/json",
-        "Origin": "https://game-jp-02.conquerx2.com",
+        "Origin": game_root_url.rstrip("/"),
     }
     body = (
         f"usernick={player_name}&module=game&module_type=controller&act=loadTargetPlayerData"
     ).encode("utf-8")
     response = session.post(
-        "https://game-jp-02.conquerx2.com/",
+        game_root_url,
         headers=headers,
         data=body,
         timeout=timeout_seconds,
@@ -503,20 +695,44 @@ def _fetch_game_ranking(
     url: str,
     user_agent: str,
     timeout_seconds: int,
-    cookie_header: str,
+    cookie_header: str | None = None,
+    game_userid: str | None = None,
+    game_password: str | None = None,
+    game_server_id: int = 212,
+    game_nickname: str | None = None,
+    game_direction: int = 0,
+    game_prefer_branch: bool = False,
 ) -> FetchResult:
-    cookies = _parse_cookie_header(cookie_header)
-    if "PHPSESSID" not in cookies or "CONQUERX2" not in cookies:
-        raise ParseError("CX2_GAME_COOKIE must include PHPSESSID and CONQUERX2")
-
     base_url = _with_query_params(url, ranktype=0, offset=0)
+    root_url = _game_root_url(base_url)
     page_rows: list[RankRow] = []
     raw_parts: list[str] = []
     seen_pages: set[tuple[int, str]] = set()
 
-    with requests.Session() as session:
+    if game_userid and game_password:
+        session = _create_game_session_from_login(
+            source_url=base_url,
+            user_agent=user_agent,
+            timeout_seconds=timeout_seconds,
+            userid=game_userid,
+            password=game_password,
+            server_id=game_server_id,
+            nickname=game_nickname,
+            direction=game_direction,
+            prefer_branch=game_prefer_branch,
+        )
+    else:
+        if not cookie_header:
+            raise ParseError(
+                "game rank source requires CX2_GAME_COOKIE or CX2_GAME_USERID/CX2_GAME_PASSWORD"
+            )
+        cookies = _parse_cookie_header(cookie_header)
+        if "PHPSESSID" not in cookies or "CONQUERX2" not in cookies:
+            raise ParseError("CX2_GAME_COOKIE must include PHPSESSID and CONQUERX2")
+        session = requests.Session()
         session.cookies.update(cookies)
 
+    with session:
         offset = 0
         while True:
             page_url = _with_query_params(base_url, offset=offset)
@@ -543,7 +759,13 @@ def _fetch_game_ranking(
 
         details_by_name: dict[str, GamePlayerDetail] = {}
         for row in unique_rows:
-            detail, raw_text = _fetch_game_player_detail(session, row.player_name, user_agent, timeout_seconds)
+            detail, raw_text = _fetch_game_player_detail(
+                session,
+                root_url,
+                row.player_name,
+                user_agent,
+                timeout_seconds,
+            )
             details_by_name[row.player_name] = detail
             raw_parts.append(f"[detail {row.player_name}]")
             raw_parts.append(raw_text)
@@ -566,13 +788,30 @@ def fetch_ranking(
     user_agent: str,
     timeout_seconds: int,
     cookie_header: str | None = None,
+    game_userid: str | None = None,
+    game_password: str | None = None,
+    game_server_id: int = 212,
+    game_nickname: str | None = None,
+    game_direction: int = 0,
+    game_prefer_branch: bool = False,
 ) -> FetchResult:
     if "/export/" in url:
         return _fetch_export_ranking(url, user_agent, timeout_seconds)
     if "act=dispGameRank" in url:
-        if not cookie_header:
-            raise ParseError("game rank source requires CX2_GAME_COOKIE")
-        return _fetch_game_ranking(url, user_agent, timeout_seconds, cookie_header)
+        if not cookie_header and not (game_userid and game_password):
+            raise ParseError("game rank source requires CX2_GAME_COOKIE or CX2_GAME_USERID/CX2_GAME_PASSWORD")
+        return _fetch_game_ranking(
+            url,
+            user_agent,
+            timeout_seconds,
+            cookie_header=cookie_header,
+            game_userid=game_userid,
+            game_password=game_password,
+            game_server_id=game_server_id,
+            game_nickname=game_nickname,
+            game_direction=game_direction,
+            game_prefer_branch=game_prefer_branch,
+        )
 
     response = requests.get(
         url,

@@ -3,7 +3,8 @@
 ConquerX2 の **Jupiter-002 ランキング** を定期取得し、
 GitHub Pages でそのまま公開できる静的サイト一式です。
 
-既定では公開 export を使いますが、`CX2_GAME_COOKIE` を設定すると
+既定では公開 export を使いますが、`CX2_GAME_USERID` / `CX2_GAME_PASSWORD`
+または `CX2_GAME_COOKIE` を設定すると
 **ゲーム内ランキング + プレイヤー詳細 API** を優先して取得します。
 
 ## できること
@@ -51,7 +52,17 @@ pytest -q
 
 ゲーム内の hourly ランキングを使いたい場合は、あわせて repository secrets を追加します。
 
-- `CX2_GAME_COOKIE`
+- 推奨: `CX2_GAME_USERID`
+- 推奨: `CX2_GAME_PASSWORD`
+- 任意: `CX2_GAME_SERVER_ID`
+  - 既定: `212`
+- 任意: `CX2_GAME_NICKNAME`
+  - 専用アカウントがまだサーバー未登録なら初回だけ使います
+- 任意: `CX2_GAME_DIRECTION`
+  - 既定: `0`
+- 任意: `CX2_GAME_PREFER_BRANCH`
+  - 既定: `1`
+- 旧方式: `CX2_GAME_COOKIE`
   - 例: `PHPSESSID=...; CONQUERX2=...`
 - 任意: `CX2_GAME_SOURCE_URL`
   - 既定: `https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0`
@@ -68,8 +79,9 @@ pytest -q
 ## 注意
 
 - GitHub Free では GitHub Pages は **public repository** で使うのが基本です。private repository で使う場合はプラン条件を確認してください。
-- `CX2_GAME_COOKIE` が無い場合、取得対象は `users.txt / planets.txt / empires.txt / conquest.txt` を含む export データです。
-- `CX2_GAME_COOKIE` を使う場合、cookie の期限切れで取得が止まります。セッション更新時は secret も更新してください。
+- `CX2_GAME_USERID` / `CX2_GAME_PASSWORD` も `CX2_GAME_COOKIE` も無い場合、取得対象は `users.txt / planets.txt / empires.txt / conquest.txt` を含む export データです。
+- `CX2_GAME_USERID` / `CX2_GAME_PASSWORD` を使う場合、毎回ログインして session を作り直します。
+- `CX2_GAME_COOKIE` だけを使う場合、cookie の期限切れで取得が止まります。長期運用では login secrets を推奨します。
 - `data/state.json` は毎時間更新される履歴ファイルなので、長期運用で大きくなります。必要なら `prune_snapshots()` の日数を調整してください。
 - GitHub Actions の `GITHUB_TOKEN` で push された commit は Pages の branch build を起こさないため、この repository では branch 公開ではなく Actions deploy を使っています。
 
@@ -78,9 +90,15 @@ pytest -q
 環境変数で変更できます。
 
 - `CX2_SERVER_LABEL` (既定: `Jupiter-002`)
+- `CX2_GAME_USERID`
+- `CX2_GAME_PASSWORD`
+- `CX2_GAME_SERVER_ID` (既定: `212`)
+- `CX2_GAME_NICKNAME` (未登録アカウントを初回作成する時だけ)
+- `CX2_GAME_DIRECTION` (既定: `0`)
+- `CX2_GAME_PREFER_BRANCH` (既定: `1`)
 - `CX2_GAME_COOKIE`
 - `CX2_GAME_SOURCE_URL` (既定: `https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0`)
-- `CX2_SOURCE_URL` (既定: `CX2_GAME_COOKIE` があれば game source、無ければ export base)
+- `CX2_SOURCE_URL` (既定: login secrets か `CX2_GAME_COOKIE` があれば game source、無ければ export base)
 - `CX2_EXPORT_BASE_URL` (既定: `https://jp.conquerx2.com/export/game-jp-02.conquerx2.com`)
 - `CX2_SERVER_RANK_URL` (既定: game source または `<export base>/users.txt`)
 - `USER_AGENT`

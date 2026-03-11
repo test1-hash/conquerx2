@@ -2,6 +2,8 @@ from pathlib import Path
 import unittest
 
 from cx2pages.scraper import (
+    extract_game_connect_auth_url,
+    is_new_user_registration_page,
     parse_game_player_detail,
     parse_rank_rows_from_export,
     parse_rank_rows_from_game_html,
@@ -122,6 +124,30 @@ class ParserTest(unittest.TestCase):
         self.assertEqual(detail.level, 21)
         self.assertEqual(detail.planets, 23)
         self.assertEqual(detail.title, '初心者')
+
+    def test_extract_game_connect_auth_url(self):
+        text = """
+        <script>
+        window.location.href = 'https://game-jp-02.conquerx2.com/auth/auth.php?key=abc123&area=jp&lang=jp&migration_id=0';
+        </script>
+        """
+        self.assertEqual(
+            extract_game_connect_auth_url(text),
+            'https://game-jp-02.conquerx2.com/auth/auth.php?key=abc123&area=jp&lang=jp&migration_id=0',
+        )
+
+    def test_is_new_user_registration_page(self):
+        text = """
+        <html>
+          <body>
+            <form action="./" method="post" id="fo_register_newuser">
+              <input type="text" name="nickname" value="test">
+            </form>
+          </body>
+        </html>
+        """
+        self.assertTrue(is_new_user_registration_page(text))
+        self.assertFalse(is_new_user_registration_page('<html><body>game main</body></html>'))
 
 
 if __name__ == '__main__':

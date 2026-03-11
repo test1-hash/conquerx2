@@ -23,6 +23,17 @@ def _env_or_none(name: str) -> str | None:
 
 DEFAULT_SERVER_LABEL = os.getenv("CX2_SERVER_LABEL", "Jupiter-002")
 DEFAULT_GAME_COOKIE = _env_or_none("CX2_GAME_COOKIE")
+DEFAULT_GAME_USERID = _env_or_none("CX2_GAME_USERID")
+DEFAULT_GAME_PASSWORD = _env_or_none("CX2_GAME_PASSWORD")
+DEFAULT_GAME_SERVER_ID = int(os.getenv("CX2_GAME_SERVER_ID", "212"))
+DEFAULT_GAME_NICKNAME = _env_or_none("CX2_GAME_NICKNAME")
+DEFAULT_GAME_DIRECTION = int(os.getenv("CX2_GAME_DIRECTION", "0"))
+DEFAULT_GAME_PREFER_BRANCH = os.getenv("CX2_GAME_PREFER_BRANCH", "1").strip().lower() not in {
+    "0",
+    "false",
+    "no",
+    "off",
+}
 DEFAULT_GAME_SOURCE_URL = _env_or_none("CX2_GAME_SOURCE_URL") or (
     "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0"
 )
@@ -31,7 +42,9 @@ DEFAULT_EXPORT_BASE_URL = os.getenv(
     "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com",
 )
 DEFAULT_SOURCE_URL = _env_or_none("CX2_SOURCE_URL") or (
-    DEFAULT_GAME_SOURCE_URL if DEFAULT_GAME_COOKIE else DEFAULT_EXPORT_BASE_URL
+    DEFAULT_GAME_SOURCE_URL
+    if DEFAULT_GAME_COOKIE or (DEFAULT_GAME_USERID and DEFAULT_GAME_PASSWORD)
+    else DEFAULT_EXPORT_BASE_URL
 )
 DEFAULT_SITE_LINK_URL = _env_or_none("CX2_SERVER_RANK_URL") or (
     None if "act=dispGameRank" in DEFAULT_SOURCE_URL else f"{DEFAULT_EXPORT_BASE_URL.rstrip('/')}/users.txt"
@@ -48,6 +61,8 @@ DOCS_DIR = PROJECT_ROOT / "docs"
 
 def _source_label() -> str:
     if "act=dispGameRank" in DEFAULT_SOURCE_URL:
+        if DEFAULT_GAME_USERID and DEFAULT_GAME_PASSWORD:
+            return "game rank (auto-login)"
         return "game rank (authenticated)"
     return "export users.txt"
 
@@ -113,6 +128,12 @@ def command_update() -> int:
             user_agent=DEFAULT_USER_AGENT,
             timeout_seconds=DEFAULT_TIMEOUT,
             cookie_header=DEFAULT_GAME_COOKIE,
+            game_userid=DEFAULT_GAME_USERID,
+            game_password=DEFAULT_GAME_PASSWORD,
+            game_server_id=DEFAULT_GAME_SERVER_ID,
+            game_nickname=DEFAULT_GAME_NICKNAME,
+            game_direction=DEFAULT_GAME_DIRECTION,
+            game_prefer_branch=DEFAULT_GAME_PREFER_BRANCH,
         )
         snapshot = Snapshot(
             captured_at_utc=started_at,
