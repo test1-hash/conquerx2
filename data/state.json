@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-03-12T09:08:03.903449+00:00",
+  "generated_at_utc": "2026-03-12T09:58:19.122703+00:00",
   "snapshots": [
     {
       "captured_at_utc": "2026-03-08T08:56:48.895079+00:00",
@@ -36548,11 +36548,11 @@
       ]
     },
     {
-      "captured_at_utc": "2026-03-12T09:07:54.717014+00:00",
+      "captured_at_utc": "2026-03-12T09:58:11.646682+00:00",
       "captured_hour_utc": "2026-03-12T09:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "5f9d31434b30bc7a941830d481b95b8bbbf8f9d3fb7d8814ff0276cc38298016",
+      "content_sha256": "c6a2647f117cff261fb4e85e2b6bb3a6d27069ba3bacd7d85aab60017bc7abb4",
       "row_count": 42,
       "rows": [
         {
@@ -37021,6 +37021,14 @@
     }
   ],
   "fetch_runs": [
+    {
+      "started_at_utc": "2026-03-12T09:58:11.646682+00:00",
+      "status": "ok",
+      "row_count": 42,
+      "http_status": 200,
+      "message": null,
+      "url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0"
+    },
     {
       "started_at_utc": "2026-03-12T09:07:54.717014+00:00",
       "status": "ok",
