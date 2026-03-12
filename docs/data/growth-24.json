@@ -1,10 +1,10 @@
 {
   "latest": {
-    "captured_at_utc": "2026-03-12T07:12:25.463105+00:00",
+    "captured_at_utc": "2026-03-12T07:54:38.951953+00:00",
     "captured_hour_utc": "2026-03-12T07:00:00+00:00",
     "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
     "http_status": 200,
-    "content_sha256": "363a839d6be8e340a3911c140f199a197e916023cf352607db40be20444e4b55",
+    "content_sha256": "b3817de333ab8ae6ad1cdf26785ae9494b9c0be1d117cb29310e90ed4854f98a",
     "row_count": 42,
     "rows": [
       {
@@ -12,9 +12,9 @@
         "title": "初心者",
         "player_name": "aaaa",
         "level": 21,
-        "planets": 27,
+        "planets": 28,
         "points": 70688,
-        "avg_points": 2618,
+        "avg_points": 2524,
         "fleet_score": 13567,
         "empire_name": null
       },
@@ -23,9 +23,9 @@
         "title": "初心者",
         "player_name": "だいあん",
         "level": 21,
-        "planets": 26,
+        "planets": 27,
         "points": 56494,
-        "avg_points": 2172,
+        "avg_points": 2092,
         "fleet_score": 7148,
         "empire_name": "アシリア"
       },
@@ -472,8 +472,8 @@
     ]
   },
   "comparison": {
-    "captured_at_utc": "2026-03-11T06:34:54.746039+00:00",
-    "captured_hour_utc": "2026-03-11T06:00:00+00:00",
+    "captured_at_utc": "2026-03-11T07:28:36.144318+00:00",
+    "captured_hour_utc": "2026-03-11T07:00:00+00:00",
     "source_url": "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com",
     "http_status": 200,
     "content_sha256": "bcd3c66be2cbca69dbf3ffdb914b3edf214043370a2e9e77d462d439e1efdcce",
@@ -905,23 +905,23 @@
       "title": "初心者",
       "player_name": "aaaa",
       "level": 21,
-      "planets": 27,
+      "planets": 28,
       "points": 70688,
-      "avg_points": 2618,
+      "avg_points": 2524,
       "fleet_score": 13567,
       "empire_name": null,
       "player_key": "70c881d4a269",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 30153,
           "delta_rank": 0,
           "delta_level": null,
-          "delta_planets": 10,
+          "delta_planets": 11,
           "delta_fleet": 5766,
-          "fleet_per_hour": 234.15039028444716,
-          "points_per_hour": 1224.4774051763675
+          "fleet_per_hour": 235.98155354628136,
+          "points_per_hour": 1234.053379133025
         }
       },
       "fleet_share": 0.19192790855590766,
@@ -940,15 +940,15 @@
       "player_key": "82acb2a11842",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 21532,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 10,
           "delta_fleet": 2026,
-          "fleet_per_hour": 82.27344618735518,
-          "points_per_hour": 874.3888663899959
+          "fleet_per_hour": 82.91686220686196,
+          "points_per_hour": 881.2269876792457
         }
       },
       "fleet_share": 0.08334890325473637,
@@ -959,23 +959,23 @@
       "title": "初心者",
       "player_name": "だいあん",
       "level": 21,
-      "planets": 26,
+      "planets": 27,
       "points": 56494,
-      "avg_points": 2172,
+      "avg_points": 2092,
       "fleet_score": 7148,
       "empire_name": "アシリア",
       "player_key": "c97bd5f53b97",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 17051,
           "delta_rank": 0,
           "delta_level": null,
-          "delta_planets": 6,
+          "delta_planets": 7,
           "delta_fleet": 2575,
-          "fleet_per_hour": 104.56768209893364,
-          "points_per_hour": 692.4207951335603
+          "fleet_per_hour": 105.38544925107085,
+          "points_per_hour": 697.835842788353
         }
       },
       "fleet_share": 0.12652671080114702,
@@ -994,15 +994,15 @@
       "player_key": "344f8584666f",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 8599,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 586,
-          "fleet_per_hour": 23.79676182911655,
-          "points_per_hour": 349.19514499756525
+          "fleet_per_hour": 23.982863402379618,
+          "points_per_hour": 351.9260109164886
         }
       },
       "fleet_share": 0.07578792735042734,
@@ -1021,15 +1021,15 @@
       "player_key": "bff7d6a2d5cf",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 5756,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 512,
-          "fleet_per_hour": 20.7917099940404,
-          "points_per_hour": 233.74430219862606
+          "fleet_per_hour": 20.954310686038166,
+          "points_per_hour": 235.57228966569468
         }
       },
       "fleet_share": 0.06586585435944595,
@@ -1048,15 +1048,15 @@
       "player_key": "57f784c249b5",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 4860,
           "delta_rank": 1,
           "delta_level": null,
           "delta_planets": 3,
           "delta_fleet": 296,
-          "fleet_per_hour": 12.020207340304607,
-          "points_per_hour": 197.35880970905535
+          "fleet_per_hour": 12.114210865365814,
+          "points_per_hour": 198.9022459651279
         }
       },
       "fleet_share": 0.06437569470174138,
@@ -1075,15 +1075,15 @@
       "player_key": "d387fc8d57b2",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 4772,
           "delta_rank": 1,
           "delta_level": null,
           "delta_planets": 4,
           "delta_fleet": 1095,
-          "fleet_per_hour": 44.46664539741062,
-          "points_per_hour": 193.78523455382967
+          "fleet_per_hour": 44.81439492424178,
+          "points_per_hour": 195.30072381596509
         }
       },
       "fleet_share": 0.11399881866509155,
@@ -1102,15 +1102,15 @@
       "player_key": "f63d84d27f8c",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 3892,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 2,
           "delta_fleet": 622,
-          "fleet_per_hour": 25.258678938072517,
-          "points_per_hour": 158.04948300157272
+          "fleet_per_hour": 25.45621337249168,
+          "points_per_hour": 159.285502324337
         }
       },
       "fleet_share": 0.13119868637110016,
@@ -1129,15 +1129,15 @@
       "player_key": "e7fc885b79f1",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 3648,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 2,
           "delta_fleet": 511,
-          "fleet_per_hour": 20.75110118545829,
-          "points_per_hour": 148.14093370753784
+          "fleet_per_hour": 20.913384297979498,
+          "points_per_hour": 149.29946363802193
         }
       },
       "fleet_share": 0.12443676779813757,
@@ -1156,15 +1156,15 @@
       "player_key": "3a95b8ddeee0",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 3079,
           "delta_rank": 2,
           "delta_level": null,
           "delta_planets": 2,
           "delta_fleet": 348,
-          "fleet_per_hour": 14.131865386574335,
-          "points_per_hour": 125.03452162431716
+          "fleet_per_hour": 14.242383044416565,
+          "points_per_hour": 126.01234883263967
         }
       },
       "fleet_share": 0.1774265692560012,
@@ -1183,15 +1183,15 @@
       "player_key": "5b11ad5d6d31",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 2912,
           "delta_rank": 2,
           "delta_level": null,
           "delta_planets": 2,
           "delta_fleet": 90,
-          "fleet_per_hour": 3.654792772389914,
-          "points_per_hour": 118.25285059110477
+          "fleet_per_hour": 3.6833749252801464,
+          "points_per_hour": 119.17764202684207
         }
       },
       "fleet_share": 0.046560476107124105,
@@ -1210,15 +1210,15 @@
       "player_key": "479bff803fee",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 2779,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 241,
-          "fleet_per_hour": 9.786722868288548,
-          "points_per_hour": 112.85187904968413
+          "fleet_per_hour": 9.863259522139058,
+          "points_per_hour": 113.73443241503918
         }
       },
       "fleet_share": 0.1395373402344988,
@@ -1237,15 +1237,15 @@
       "player_key": "6f52eefa5f25",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 1907,
           "delta_rank": 7,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 691,
-          "fleet_per_hour": 28.060686730238118,
-          "points_per_hour": 77.44099796608407
+          "fleet_per_hour": 28.28013414853979,
+          "points_per_hour": 78.04662202788043
         }
       },
       "fleet_share": 0.2456776352481874,
@@ -1264,15 +1264,15 @@
       "player_key": "2ffb3de1a66a",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 1245,
           "delta_rank": 1,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 67,
-          "fleet_per_hour": 2.7207901750013805,
-          "points_per_hour": 50.55796668472714
+          "fleet_per_hour": 2.7420679999307755,
+          "points_per_hour": 50.95335313304202
         }
       },
       "fleet_share": 0.036525974025974024,
@@ -1291,15 +1291,15 @@
       "player_key": "a62cc1a28e25",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 1219,
           "delta_rank": -2,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 384,
-          "fleet_per_hour": 15.5937824955303,
-          "points_per_hour": 49.50213766159228
+          "fleet_per_hour": 15.715733014528624,
+          "points_per_hour": 49.88926704351665
         }
       },
       "fleet_share": 0.1063422111515616,
@@ -1318,15 +1318,15 @@
       "player_key": "0cde3a0a778a",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 1185,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 487,
-          "fleet_per_hour": 19.776489779487648,
-          "points_per_hour": 48.121438169800534
+          "fleet_per_hour": 19.93115098457146,
+          "points_per_hour": 48.49776984952192
         }
       },
       "fleet_share": 0.1920024894974327,
@@ -1345,15 +1345,15 @@
       "player_key": "3d75d3d66682",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 879,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 57,
-          "fleet_per_hour": 2.3147020891802788,
-          "points_per_hour": 35.69514274367483
+          "fleet_per_hour": 2.3328041193440927,
+          "points_per_hour": 35.97429510356943
         }
       },
       "fleet_share": 0.04338842975206612,
@@ -1372,15 +1372,15 @@
       "player_key": "16cf314ccc3d",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 864,
           "delta_rank": 2,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 86,
-          "fleet_per_hour": 3.4923575380614733,
-          "points_per_hour": 35.08601061494318
+          "fleet_per_hour": 3.519669373045473,
+          "points_per_hour": 35.36039928268941
         }
       },
       "fleet_share": 0.0751361161524501,
@@ -1399,15 +1399,15 @@
       "player_key": "d54227c1d9a2",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 831,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 55,
-          "fleet_per_hour": 2.2334844720160585,
-          "points_per_hour": 33.74591993173354
+          "fleet_per_hour": 2.250951343226756,
+          "points_per_hour": 34.00982847675335
         }
       },
       "fleet_share": 0.10726429675425038,
@@ -1426,15 +1426,15 @@
       "player_key": "6761d55b10c5",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 822,
           "delta_rank": 3,
           "delta_level": null,
           "delta_planets": 1,
           "delta_fleet": 82,
-          "fleet_per_hour": 3.3299223037330328,
-          "points_per_hour": 33.38044065449455
+          "fleet_per_hour": 3.3559638208108,
+          "points_per_hour": 33.641490984225335
         }
       },
       "fleet_share": 0.05315203955500618,
@@ -1453,15 +1453,15 @@
       "player_key": "623aad2c5322",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 766,
           "delta_rank": -2,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 600,
-          "fleet_per_hour": 24.365285149266093,
-          "points_per_hour": 31.10634737389638
+          "fleet_per_hour": 24.555832835200974,
+          "points_per_hour": 31.34961325293991
         }
       },
       "fleet_share": 0.19870473947600825,
@@ -1480,15 +1480,15 @@
       "player_key": "9271b5bdc834",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 518,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 21.03536284553306
+          "points_per_hour": 21.199869014390174
         }
       },
       "fleet_share": 0.025266482431898933,
@@ -1507,15 +1507,15 @@
       "player_key": "968c5fd62ac7",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 494,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 26,
-          "fleet_per_hour": 1.0558290231348642,
-          "points_per_hour": 20.060751439562416
+          "fleet_per_hour": 1.0640860895253756,
+          "points_per_hour": 20.217635700982136
         }
       },
       "fleet_share": 0.013415518491660623,
@@ -1534,15 +1534,15 @@
       "player_key": "1ca9bcc13482",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 485,
           "delta_rank": 4,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 13,
-          "fleet_per_hour": 0.5279145115674321,
-          "points_per_hour": 19.695272162323427
+          "fleet_per_hour": 0.5320430447626878,
+          "points_per_hour": 19.849298208454123
         }
       },
       "fleet_share": 0.016646848989298454,
@@ -1561,15 +1561,15 @@
       "player_key": "a32b6f4dd9cd",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 369,
           "delta_rank": -1,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": null,
           "fleet_per_hour": null,
-          "points_per_hour": 14.984650366798647
+          "points_per_hour": 15.101837193648599
         }
       },
       "fleet_share": null,
@@ -1588,15 +1588,15 @@
       "player_key": "afc0cedec2ab",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 361,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 10,
-          "fleet_per_hour": 0.40608808582110156,
-          "points_per_hour": 14.659779898141766
+          "fleet_per_hour": 0.4092638805866829,
+          "points_per_hour": 14.774426089179254
         }
       },
       "fleet_share": 0.017325392528424473,
@@ -1615,15 +1615,15 @@
       "player_key": "13764851baae",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 239,
           "delta_rank": -4,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 9.705505251124327
+          "points_per_hour": 9.781406746021721
         }
       },
       "fleet_share": 0.003911342894393742,
@@ -1642,15 +1642,15 @@
       "player_key": "708a2c724bec",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 237,
           "delta_rank": -4,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": null,
           "fleet_per_hour": null,
-          "points_per_hour": 9.624287633960106
+          "points_per_hour": 9.699553969904386
         }
       },
       "fleet_share": null,
@@ -1669,15 +1669,15 @@
       "player_key": "be4b165f67be",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 192,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 11,
-          "fleet_per_hour": 0.4466968944032117,
-          "points_per_hour": 7.79689124776515
+          "fleet_per_hour": 0.4501902686453512,
+          "points_per_hour": 7.857866507264312
         }
       },
       "fleet_share": 0.023112480739599383,
@@ -1696,15 +1696,15 @@
       "player_key": "627addaa5b27",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 89,
           "delta_rank": 0,
           "delta_level": null,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 3.614183963807804
+          "points_per_hour": 3.642448537221478
         }
       },
       "fleet_share": 0.014814814814814815,
@@ -1723,8 +1723,8 @@
       "player_key": "262cb1916a97",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -1,
           "delta_level": null,
@@ -1750,8 +1750,8 @@
       "player_key": "d654b96eac46",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -1,
           "delta_level": null,
@@ -1777,8 +1777,8 @@
       "player_key": "6c34247c9960",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -3,
           "delta_level": null,
@@ -1804,8 +1804,8 @@
       "player_key": "519a3cf4ec1a",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -1,
           "delta_level": null,
@@ -1831,8 +1831,8 @@
       "player_key": "f9b6875a3ffb",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -1,
           "delta_level": null,
@@ -1858,8 +1858,8 @@
       "player_key": "75ea71ee01dd",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -1,
           "delta_level": null,
@@ -1885,8 +1885,8 @@
       "player_key": "6f0e03a791c4",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -2,
           "delta_level": null,
@@ -1912,8 +1912,8 @@
       "player_key": "22b537ac0caa",
       "comparisons": {
         "24": {
-          "snapshot_time_utc": "2026-03-11T06:34:54.746039+00:00",
-          "elapsed_hours": 24.625199185,
+          "snapshot_time_utc": "2026-03-11T07:28:36.144318+00:00",
+          "elapsed_hours": 24.434113231944444,
           "delta_points": 0,
           "delta_rank": -2,
           "delta_level": null,
