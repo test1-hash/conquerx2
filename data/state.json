@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-03-14T19:28:17.276459+00:00",
+  "generated_at_utc": "2026-03-14T19:47:30.132875+00:00",
   "snapshots": [
     {
       "captured_at_utc": "2026-03-08T08:56:48.895079+00:00",
@@ -61696,11 +61696,11 @@
       ]
     },
     {
-      "captured_at_utc": "2026-03-14T19:28:09.801301+00:00",
+      "captured_at_utc": "2026-03-14T19:47:20.032366+00:00",
       "captured_hour_utc": "2026-03-14T19:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "2a882f3be56206827268be2c9039e753a3ba11445f0db81b152dada374510f8c",
+      "content_sha256": "3a2f3c339d1baeab5afb70f1e4e24f73f709608f63270c75b253e014d5ac94d3",
       "row_count": 43,
       "rows": [
         {
@@ -61708,9 +61708,9 @@
           "title": "初心者",
           "player_name": "aaaa",
           "level": 24,
-          "planets": 51,
+          "planets": 52,
           "points": 174273,
-          "avg_points": 3417,
+          "avg_points": 3351,
           "fleet_score": 40674,
           "empire_name": "あ"
         },
@@ -62180,6 +62180,14 @@
     }
   ],
   "fetch_runs": [
+    {
+      "started_at_utc": "2026-03-14T19:47:20.032366+00:00",
+      "status": "ok",
+      "row_count": 43,
+      "http_status": 200,
+      "message": null,
+      "url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0"
+    },
     {
       "started_at_utc": "2026-03-14T19:28:09.801301+00:00",
       "status": "ok",
@@ -63768,14 +63776,6 @@
       "started_at_utc": "2026-03-09T03:35:11.629890+00:00",
       "status": "ok",
       "row_count": 35,
-      "http_status": 200,
-      "message": null,
-      "url": "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com"
-    },
-    {
-      "started_at_utc": "2026-03-09T01:00:05.912620+00:00",
-      "status": "ok",
-      "row_count": 36,
       "http_status": 200,
       "message": null,
       "url": "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com"
