@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-03-14T16:02:26.960512+00:00",
+  "generated_at_utc": "2026-03-14T16:42:23.980880+00:00",
   "snapshots": [
     {
       "captured_at_utc": "2026-03-08T08:56:48.895079+00:00",
@@ -60247,11 +60247,11 @@
       ]
     },
     {
-      "captured_at_utc": "2026-03-14T16:02:19.137521+00:00",
+      "captured_at_utc": "2026-03-14T16:42:13.993380+00:00",
       "captured_hour_utc": "2026-03-14T16:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "8a7f4f9db44324c24342c73c3bc9ec088aec7e3e475d90238f6c7151d491ecd4",
+      "content_sha256": "1bc69f1250743aceeb64ca5c773af9681afa1310b747a3e274f0a7c124d1596a",
       "row_count": 43,
       "rows": [
         {
@@ -60270,9 +60270,9 @@
           "title": "匠の業",
           "player_name": "だいあん",
           "level": 24,
-          "planets": 50,
+          "planets": 52,
           "points": 138883,
-          "avg_points": 2777,
+          "avg_points": 2670,
           "fleet_score": 20006,
           "empire_name": "アシリア"
         },
@@ -60303,9 +60303,9 @@
           "title": "匠の業",
           "player_name": "volume",
           "level": 18,
-          "planets": 18,
+          "planets": 19,
           "points": 28267,
-          "avg_points": 1570,
+          "avg_points": 1487,
           "fleet_score": 3785,
           "empire_name": "スペースストーム"
         },
@@ -60314,9 +60314,9 @@
           "title": "初心者",
           "player_name": "桜島",
           "level": 18,
-          "planets": 21,
+          "planets": 22,
           "points": 27220,
-          "avg_points": 1296,
+          "avg_points": 1237,
           "fleet_score": 3315,
           "empire_name": "流れ星"
         },
@@ -60468,9 +60468,9 @@
           "title": "帝国の一員",
           "player_name": "マモル",
           "level": 13,
-          "planets": 3,
+          "planets": 4,
           "points": 5741,
-          "avg_points": 1913,
+          "avg_points": 1435,
           "fleet_score": 338,
           "empire_name": "スペースストーム"
         },
@@ -60731,6 +60731,14 @@
     }
   ],
   "fetch_runs": [
+    {
+      "started_at_utc": "2026-03-14T16:42:13.993380+00:00",
+      "status": "ok",
+      "row_count": 43,
+      "http_status": 200,
+      "message": null,
+      "url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0"
+    },
     {
       "started_at_utc": "2026-03-14T16:02:19.137521+00:00",
       "status": "ok",
@@ -62317,14 +62325,6 @@
     },
     {
       "started_at_utc": "2026-03-08T22:12:11.237444+00:00",
-      "status": "ok",
-      "row_count": 36,
-      "http_status": 200,
-      "message": null,
-      "url": "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com"
-    },
-    {
-      "started_at_utc": "2026-03-08T21:54:59.954163+00:00",
       "status": "ok",
       "row_count": 36,
       "http_status": 200,
