@@ -46,9 +46,10 @@ pytest -q
 2. GitHub の **Settings → Pages** を開く。
 3. **Build and deployment** の **Source** を `GitHub Actions` にする。
 4. **Actions** を有効にする。
-5. `hourly-update` workflow を一度手動実行するか、次の定期実行を待つ。
+5. `hourly-update` workflow は `schedule` の毎時05分ごろだけ新規取得します。
 
-これで 毎時05分ごろに `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
+これで 毎時05分ごろに新規データを取得して `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
+`push` や `workflow_dispatch` は既存の `state.json` から再 build / deploy だけを行い、追加取得はしません。
 
 ゲーム内の hourly ランキングを使いたい場合は、あわせて repository secrets を追加します。
 

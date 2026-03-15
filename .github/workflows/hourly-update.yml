@@ -41,6 +41,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Update ranking and build static site
+        if: github.event_name == 'schedule'
         env:
           CX2_GAME_COOKIE: ${{ secrets.CX2_GAME_COOKIE }}
           CX2_GAME_USERID: ${{ secrets.CX2_GAME_USERID }}
@@ -53,6 +54,10 @@ jobs:
           CX2_SOURCE_URL: ${{ secrets.CX2_SOURCE_URL }}
           CX2_SERVER_RANK_URL: ${{ secrets.CX2_SERVER_RANK_URL }}
         run: python manage.py update
+
+      - name: Build static site from current state
+        if: github.event_name != 'schedule'
+        run: python manage.py build
 
       - name: Commit and push changes
         run: |
