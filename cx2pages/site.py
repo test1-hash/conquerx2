@@ -228,6 +228,30 @@ def get_player_history(state: dict[str, Any], player_name: str) -> list[dict[str
     return history
 
 
+def _history_with_previous_deltas(history: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    points_with_deltas: list[dict[str, Any]] = []
+    previous_point: dict[str, Any] | None = None
+    for point in history:
+        delta_points = None
+        delta_fleet = None
+        if previous_point is not None:
+            delta_points = point["points"] - previous_point["points"]
+            if (
+                point.get("fleet_score") is not None
+                and previous_point.get("fleet_score") is not None
+            ):
+                delta_fleet = point["fleet_score"] - previous_point["fleet_score"]
+        points_with_deltas.append(
+            {
+                **point,
+                "delta_points_from_previous": delta_points,
+                "delta_fleet_from_previous": delta_fleet,
+            }
+        )
+        previous_point = point
+    return points_with_deltas
+
+
 def export_data_json(out_dir: Path, settings: Settings, state: dict[str, Any]) -> None:
     data_dir = out_dir / "data"
     players_dir = data_dir / "players"
@@ -370,6 +394,7 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
     player_names = sorted({row["player_name"] for snap in state.get("snapshots", []) for row in snap["rows"]}, key=str.casefold)
     for player_name in player_names:
         history = get_player_history(state, player_name)
+        history_with_deltas = _history_with_previous_deltas(history)
         latest_point = history[-1] if history else None
         total_gain = history[-1]["points"] - history[0]["points"] if len(history) >= 2 else None
         best_rank = min((point["rank_position"] for point in history), default=None)
@@ -389,7 +414,10 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
             show_title=_has_title(history),
             show_level=_has_level(history),
             show_fleet=_has_fleet(history),
-            history=[{**point, "captured_at_utc": parse_iso_datetime(point["captured_at_utc"])} for point in history],
+            history=[
+                {**point, "captured_at_utc": parse_iso_datetime(point["captured_at_utc"])}
+                for point in history_with_deltas
+            ],
             latest_point=latest_point,
             total_gain=total_gain,
             best_rank=best_rank,

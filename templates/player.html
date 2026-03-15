@@ -85,8 +85,14 @@
               <td>{{ point.empire_name or '-' }}</td>
               {% if show_level %}<td class="num">{{ fmt_int(point.level) }}</td>{% endif %}
               <td class="num">{{ fmt_int(point.planets) }}</td>
-              <td class="num strong">{{ fmt_int(point.points) }}</td>
-              {% if show_fleet %}<td class="num">{{ fmt_int(point.fleet_score) }}</td>{% endif %}
+              <td class="num strong">
+                {{ fmt_int(point.points) }}{% if point.delta_points_from_previous is not none %}<span class="history-delta {{ 'pos' if point.delta_points_from_previous > 0 else 'neg' if point.delta_points_from_previous < 0 else 'muted' }}">({{ fmt_signed(point.delta_points_from_previous) }})</span>{% endif %}
+              </td>
+              {% if show_fleet %}
+                <td class="num">
+                  {{ fmt_int(point.fleet_score) }}{% if point.delta_fleet_from_previous is not none %}<span class="history-delta {{ 'pos' if point.delta_fleet_from_previous > 0 else 'neg' if point.delta_fleet_from_previous < 0 else 'muted' }}">({{ fmt_signed(point.delta_fleet_from_previous) }})</span>{% endif %}
+                </td>
+              {% endif %}
               <td class="num">{{ fmt_int(point.avg_points) }}</td>
             </tr>
           {% endfor %}

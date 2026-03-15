@@ -104,6 +104,23 @@ class SiteBuildTest(unittest.TestCase):
             self.assertIn('戦力変化', growth_html)
             self.assertIn('艦/h', growth_html)
 
+    def test_render_player_history_with_previous_deltas(self):
+        rows1 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1000, avg_points=250, fleet_score=120, empire_name='A'),
+        ]
+        rows2 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1100, avg_points=275, fleet_score=150, empire_name='A'),
+        ]
+        state = {'version': 1, 'generated_at_utc': None, 'snapshots': [], 'fetch_runs': []}
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T00:00:00+09:00')), rows=rows1, source_url='x'))
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T01:00:00+09:00')), rows=rows2, source_url='x'))
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'docs'
+            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x', source_label='test'), state)
+            player_html = next((out / 'players').glob('*.html')).read_text(encoding='utf-8')
+            self.assertIn('1,100<span class="history-delta pos">(+100)</span>', player_html)
+            self.assertIn('150<span class="history-delta pos">(+30)</span>', player_html)
+
 
 if __name__ == '__main__':
     unittest.main()
