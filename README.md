@@ -9,7 +9,7 @@ GitHub Pages でそのまま公開できる静的サイト一式です。
 
 ## できること
 
-- 5分ごとのランキング取得
+- 毎時05分ごろのランキング取得
 - 最新ランキング表示
 - 1h / 6h / 24h / 7d 成長率ページ
 - 新規ランクイン / 圏外落ち / 帝国変更
@@ -48,7 +48,7 @@ pytest -q
 4. **Actions** を有効にする。
 5. `hourly-update` workflow を一度手動実行するか、次の定期実行を待つ。
 
-これで 5 分ごとに `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
+これで 毎時05分ごろに `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
 
 ゲーム内の hourly ランキングを使いたい場合は、あわせて repository secrets を追加します。
 
@@ -74,7 +74,7 @@ pytest -q
 - `manage.py` : 取得・再生成コマンド
 - `data/state.json` : 取得履歴のテキスト保存先
 - `docs/` : 公開される静的サイト
-- `.github/workflows/hourly-update.yml` : 5分ごと更新
+- `.github/workflows/hourly-update.yml` : 毎時05分ごろ更新
 
 ## 注意
 
