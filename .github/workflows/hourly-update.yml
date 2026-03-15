@@ -9,7 +9,7 @@ on:
       - 'data/**'
   workflow_dispatch:
   schedule:
-    - cron: '5 * * * *'
+    - cron: '*/5 * * * *'
 
 permissions:
   contents: write
@@ -21,7 +21,81 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      should_run_build: ${{ steps.decision.outputs.should_run_build }}
+      should_update: ${{ steps.decision.outputs.should_update }}
+      reason: ${{ steps.decision.outputs.reason }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Decide whether this run should fetch
+        id: decision
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then
+            echo "should_run_build=true" >> "$GITHUB_OUTPUT"
+            echo "should_update=false" >> "$GITHUB_OUTPUT"
+            echo "reason=non-schedule event" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          python - <<'PY'
+          import json
+          import os
+          from datetime import datetime
+          from pathlib import Path
+          from urllib import request
+          from zoneinfo import ZoneInfo
+
+          jst = ZoneInfo("Asia/Tokyo")
+          now = datetime.now(tz=jst)
+          should_update = now.minute >= 5
+          reason = f"after_window_{now.strftime('%Y-%m-%dT%H:%M')}"
+
+          if now.minute < 5:
+              should_update = False
+              reason = f"before_window_{now.strftime('%Y-%m-%dT%H:%M')}"
+
+          state = None
+          repository = os.environ.get("GITHUB_REPOSITORY")
+          if should_update and repository:
+              state_url = f"https://raw.githubusercontent.com/{repository}/main/data/state.json"
+              try:
+                  with request.urlopen(state_url, timeout=20) as response:
+                      state = json.load(response)
+              except Exception:
+                  state = None
+
+          state_path = Path("data/state.json")
+          if should_update and state is None and state_path.exists():
+              state = json.loads(state_path.read_text(encoding="utf-8"))
+
+          if should_update and state is not None:
+              snapshots = state.get("snapshots", [])
+              if snapshots:
+                  latest = max(snapshots, key=lambda item: item["captured_at_utc"])
+                  latest_dt = datetime.fromisoformat(latest["captured_at_utc"]).astimezone(jst)
+                  if latest_dt.year == now.year and latest_dt.month == now.month and latest_dt.day == now.day and latest_dt.hour == now.hour:
+                      should_update = False
+                      reason = f"already_fetched_{latest_dt.strftime('%Y-%m-%dT%H:%M')}"
+
+          should_run_build = should_update
+          output_path = Path(os.environ["GITHUB_OUTPUT"])
+          with output_path.open("a", encoding="utf-8") as fh:
+              fh.write(f"should_run_build={'true' if should_run_build else 'false'}\n")
+              fh.write(f"should_update={'true' if should_update else 'false'}\n")
+              fh.write(f"reason={reason}\n")
+          print(f"should_run_build={should_run_build}")
+          print(f"should_update={should_update}")
+          print(f"reason={reason}")
+          PY
+
   build:
+    needs: gate
+    if: needs.gate.outputs.should_run_build == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,7 +115,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Update ranking and build static site
-        if: github.event_name == 'schedule'
+        if: needs.gate.outputs.should_update == 'true'
         env:
           CX2_GAME_COOKIE: ${{ secrets.CX2_GAME_COOKIE }}
           CX2_GAME_USERID: ${{ secrets.CX2_GAME_USERID }}
@@ -56,7 +130,7 @@ jobs:
         run: python manage.py update
 
       - name: Build static site from current state
-        if: github.event_name != 'schedule'
+        if: needs.gate.outputs.should_update != 'true'
         run: python manage.py build
 
       - name: Commit and push changes
@@ -78,6 +152,7 @@ jobs:
 
   deploy:
     needs: build
+    if: needs.build.result == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

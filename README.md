@@ -9,7 +9,7 @@ GitHub Pages でそのまま公開できる静的サイト一式です。
 
 ## できること
 
-- 毎時05分ごろのランキング取得
+- 毎時05分以降の最初の実行でランキング取得
 - 最新ランキング表示
 - 1h / 6h / 24h / 7d 成長率ページ
 - 新規ランクイン / 圏外落ち / 帝国変更
@@ -46,9 +46,9 @@ pytest -q
 2. GitHub の **Settings → Pages** を開く。
 3. **Build and deployment** の **Source** を `GitHub Actions` にする。
 4. **Actions** を有効にする。
-5. `hourly-update` workflow は `schedule` の毎時05分ごろだけ新規取得します。
+5. `hourly-update` workflow は `schedule` 自体は5分ごとに起動しますが、JST の各時間で `05分以降の最初の1回` だけ新規取得します。
 
-これで 毎時05分ごろに新規データを取得して `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
+これで GitHub Actions の時刻ブレがあっても、毎時05分以降の最初の実行で1回だけ新規データを取得して `docs/` が再生成され、その成果物が GitHub Pages に直接 deploy されます。
 `push` や `workflow_dispatch` は既存の `state.json` から再 build / deploy だけを行い、追加取得はしません。
 
 ゲーム内の hourly ランキングを使いたい場合は、あわせて repository secrets を追加します。
@@ -75,7 +75,7 @@ pytest -q
 - `manage.py` : 取得・再生成コマンド
 - `data/state.json` : 取得履歴のテキスト保存先
 - `docs/` : 公開される静的サイト
-- `.github/workflows/hourly-update.yml` : 毎時05分ごろ更新
+- `.github/workflows/hourly-update.yml` : 5分ごとに起動し、05分以降の最初の1回だけ取得
 
 ## 注意
 
@@ -83,6 +83,7 @@ pytest -q
 - `CX2_GAME_USERID` / `CX2_GAME_PASSWORD` も `CX2_GAME_COOKIE` も無い場合、取得対象は `users.txt / planets.txt / empires.txt / conquest.txt` を含む export データです。
 - `CX2_GAME_USERID` / `CX2_GAME_PASSWORD` を使う場合、毎回ログインして session を作り直します。
 - `CX2_GAME_COOKIE` だけを使う場合、cookie の期限切れで取得が止まります。長期運用では login secrets を推奨します。
+- GitHub Actions の `schedule` は数分から数十分ずれることがあるため、この repository では 5分ごとに起動しつつ `その時間にまだ取得していなければ1回だけ更新` する gate を入れています。
 - `data/state.json` は毎時間更新される履歴ファイルなので、長期運用で大きくなります。必要なら `prune_snapshots()` の日数を調整してください。
 - GitHub Actions の `GITHUB_TOKEN` で push された commit は Pages の branch build を起こさないため、この repository では branch 公開ではなく Actions deploy を使っています。
 
