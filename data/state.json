@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at_utc": "2026-03-15T07:30:09.558450+00:00",
+  "generated_at_utc": "2026-03-15T07:59:54.732262+00:00",
   "snapshots": [
     {
       "captured_at_utc": "2026-03-08T08:56:48.895079+00:00",
@@ -66186,11 +66186,11 @@
       ]
     },
     {
-      "captured_at_utc": "2026-03-15T07:29:59.214050+00:00",
+      "captured_at_utc": "2026-03-15T07:59:43.907367+00:00",
       "captured_hour_utc": "2026-03-15T07:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "91dbde555fc4bdd366f3155532d42eef96384de20534524f399c950c17364974",
+      "content_sha256": "1fd999d5498456ba08b74245a4a6fed5bd99482a6461ed49e14f1584a2b7baf1",
       "row_count": 46,
       "rows": [
         {
@@ -66231,9 +66231,9 @@
           "title": "初心者",
           "player_name": "TK",
           "level": 21,
-          "planets": 17,
+          "planets": 18,
           "points": 59786,
-          "avg_points": 3516,
+          "avg_points": 3321,
           "fleet_score": 6900,
           "empire_name": "スペースストーム"
         },
@@ -66253,9 +66253,9 @@
           "title": "初心者",
           "player_name": "桜島",
           "level": 19,
-          "planets": 23,
+          "planets": 24,
           "points": 31929,
-          "avg_points": 1388,
+          "avg_points": 1330,
           "fleet_score": 3181,
           "empire_name": "流れ星"
         },
@@ -66703,6 +66703,14 @@
     }
   ],
   "fetch_runs": [
+    {
+      "started_at_utc": "2026-03-15T07:59:43.907367+00:00",
+      "status": "ok",
+      "row_count": 46,
+      "http_status": 200,
+      "message": null,
+      "url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0"
+    },
     {
       "started_at_utc": "2026-03-15T07:29:59.214050+00:00",
       "status": "ok",
@@ -68289,14 +68297,6 @@
     },
     {
       "started_at_utc": "2026-03-09T17:08:11.766824+00:00",
-      "status": "ok",
-      "row_count": 37,
-      "http_status": 200,
-      "message": null,
-      "url": "https://jp.conquerx2.com/export/game-jp-02.conquerx2.com"
-    },
-    {
-      "started_at_utc": "2026-03-09T16:10:56.750722+00:00",
       "status": "ok",
       "row_count": 37,
       "http_status": 200,
