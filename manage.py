@@ -62,8 +62,8 @@ DEFAULT_USER_AGENT = os.getenv(
 )
 DEFAULT_TIMEOUT = _env_int("HTTP_TIMEOUT_SECONDS", 30)
 PROJECT_ROOT = Path(__file__).resolve().parent
-STATE_PATH = PROJECT_ROOT / "data" / "state.json"
-DOCS_DIR = PROJECT_ROOT / "docs"
+STATE_PATH = Path(os.getenv("CX2_STATE_PATH", str(PROJECT_ROOT / "data" / "state.json")))
+DOCS_DIR = Path(os.getenv("CX2_DOCS_DIR", str(PROJECT_ROOT / "docs")))
 
 
 def _source_label() -> str:

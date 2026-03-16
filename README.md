@@ -71,9 +71,27 @@ pytest -q
 - 任意: `CX2_SERVER_RANK_URL`
   - サイトに表示するデータ元 URL を上書きしたい時だけ使います
 
+## Railway に載せる手順
+
+1. Railway project / service を作る。
+2. この repository を service に接続する。
+3. volume を service に mount する。
+   - 例: `/data`
+4. service variables に次を入れる。
+   - `CX2_STATE_PATH=/data/state.json`
+   - `CX2_DOCS_DIR=/data/docs`
+   - `CX2_GAME_USERID`
+   - `CX2_GAME_PASSWORD`
+   - `CX2_GAME_SERVER_ID=212`
+   - 任意: `WEB_CONCURRENCY=1`
+5. `app.py` を起動する deploy を走らせる。
+
+Railway 版では `app.py` が静的サイト配信と毎時 `:05 JST` の更新を同じ service 内で受け持ちます。GitHub Actions の `schedule` に依存しないため、数時間ごとの起動欠損は避けやすくなります。
+
 ## ファイル構成
 
 - `manage.py` : 取得・再生成コマンド
+- `app.py` : Railway 向けの静的配信 + 毎時更新ランナー
 - `data/state.json` : 取得履歴のテキスト保存先
 - `docs/` : 公開される静的サイト
 - `.github/workflows/hourly-update.yml` : 5分ごとに起動し、早着 run は `:05` まで待機してからその時間の1回だけ取得
