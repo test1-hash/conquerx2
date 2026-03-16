@@ -17,8 +17,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: github-pages
-  cancel-in-progress: true
+  group: ${{ github.workflow }}-${{ github.event_name }}
+  cancel-in-progress: ${{ github.event_name != 'schedule' }}
 
 jobs:
   gate:
@@ -52,12 +52,12 @@ jobs:
 
           jst = ZoneInfo("Asia/Tokyo")
           now = datetime.now(tz=jst)
-          should_update = now.minute >= 5
-          reason = f"after_window_{now.strftime('%Y-%m-%dT%H:%M')}"
-
+          should_update = True
           if now.minute < 5:
-              should_update = False
-              reason = f"before_window_{now.strftime('%Y-%m-%dT%H:%M')}"
+              target = now.replace(minute=5, second=0, microsecond=0)
+              reason = f"wait_until_{target.strftime('%Y-%m-%dT%H:%M')}"
+          else:
+              reason = f"fetch_now_{now.strftime('%Y-%m-%dT%H:%M')}"
 
           state = None
           repository = os.environ.get("GITHUB_REPOSITORY")
@@ -96,26 +96,117 @@ jobs:
   build:
     needs: gate
     if: needs.gate.outputs.should_run_build == 'true'
+    outputs:
+      did_build: ${{ steps.final_gate.outputs.do_build }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Finalize fetch timing
+        id: final_gate
+        shell: bash
+        env:
+          GATE_REASON: ${{ needs.gate.outputs.reason }}
+          GATE_SHOULD_UPDATE: ${{ needs.gate.outputs.should_update }}
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import time
+          from datetime import datetime
+          from pathlib import Path
+          from urllib import request
+          from zoneinfo import ZoneInfo
+
+          def load_state() -> dict | None:
+              repository = os.environ.get("GITHUB_REPOSITORY")
+              if repository:
+                  state_url = f"https://raw.githubusercontent.com/{repository}/main/data/state.json"
+                  try:
+                      with request.urlopen(state_url, timeout=20) as response:
+                          return json.load(response)
+                  except Exception:
+                      pass
+              state_path = Path("data/state.json")
+              if state_path.exists():
+                  return json.loads(state_path.read_text(encoding="utf-8"))
+              return None
+
+          def latest_snapshot_dt(state: dict | None, jst: ZoneInfo) -> datetime | None:
+              snapshots = (state or {}).get("snapshots", [])
+              if not snapshots:
+                  return None
+              latest = max(snapshots, key=lambda item: item["captured_at_utc"])
+              return datetime.fromisoformat(latest["captured_at_utc"]).astimezone(jst)
+
+          def same_hour(left: datetime, right: datetime) -> bool:
+              return (
+                  left.year == right.year
+                  and left.month == right.month
+                  and left.day == right.day
+                  and left.hour == right.hour
+              )
+
+          event_name = os.environ["GITHUB_EVENT_NAME"]
+          gate_should_update = os.environ.get("GATE_SHOULD_UPDATE") == "true"
+          reason = os.environ.get("GATE_REASON") or ""
+          do_build = event_name != "schedule"
+          do_update = False
+
+          jst = ZoneInfo("Asia/Tokyo")
+          if event_name == "schedule" and gate_should_update:
+              now = datetime.now(tz=jst)
+              if now.minute < 5:
+                  target = now.replace(minute=5, second=0, microsecond=0)
+                  sleep_seconds = max(0, int((target - now).total_seconds()))
+                  if sleep_seconds:
+                      print(f"Waiting {sleep_seconds}s until {target.isoformat()} JST before fetch")
+                      time.sleep(sleep_seconds)
+
+              now = datetime.now(tz=jst)
+              latest_dt = latest_snapshot_dt(load_state(), jst)
+              if latest_dt and same_hour(latest_dt, now):
+                  do_build = False
+                  do_update = False
+                  reason = f"already_fetched_{latest_dt.strftime('%Y-%m-%dT%H:%M')}"
+              else:
+                  do_build = True
+                  do_update = True
+                  reason = f"fetching_{now.strftime('%Y-%m-%dT%H:%M')}"
+          elif event_name != "schedule":
+              do_build = True
+              do_update = False
+              reason = reason or "non-schedule build"
+
+          output_path = Path(os.environ["GITHUB_OUTPUT"])
+          with output_path.open("a", encoding="utf-8") as fh:
+              fh.write(f"do_build={'true' if do_build else 'false'}\n")
+              fh.write(f"do_update={'true' if do_update else 'false'}\n")
+              fh.write(f"reason={reason}\n")
+          print(f"do_build={do_build}")
+          print(f"do_update={do_update}")
+          print(f"reason={reason}")
+          PY
+
       - name: Configure GitHub Pages
+        if: steps.final_gate.outputs.do_build == 'true'
         uses: actions/configure-pages@v5
 
       - name: Set up Python
+        if: steps.final_gate.outputs.do_build == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Install dependencies
+        if: steps.final_gate.outputs.do_build == 'true'
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Update ranking and build static site
-        if: needs.gate.outputs.should_update == 'true'
+        if: steps.final_gate.outputs.do_update == 'true'
         env:
           CX2_GAME_COOKIE: ${{ secrets.CX2_GAME_COOKIE }}
           CX2_GAME_USERID: ${{ secrets.CX2_GAME_USERID }}
@@ -130,10 +221,11 @@ jobs:
         run: python manage.py update
 
       - name: Build static site from current state
-        if: needs.gate.outputs.should_update != 'true'
+        if: steps.final_gate.outputs.do_build == 'true' && steps.final_gate.outputs.do_update != 'true'
         run: python manage.py build
 
       - name: Commit and push changes
+        if: steps.final_gate.outputs.do_build == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -146,13 +238,14 @@ jobs:
           git push
 
       - name: Upload GitHub Pages artifact
+        if: steps.final_gate.outputs.do_build == 'true'
         uses: actions/upload-pages-artifact@v4
         with:
           path: ./docs
 
   deploy:
     needs: build
-    if: needs.build.result == 'success'
+    if: needs.build.result == 'success' && needs.build.outputs.did_build == 'true'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
