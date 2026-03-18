@@ -89,8 +89,6 @@ def _sleep_until(target: datetime) -> None:
 
 def _scheduler_loop() -> None:
     _ensure_seed_data()
-    if not (DOCS_DIR / "index.html").exists():
-        command_build()
     _run_update_if_needed()
     while True:
         now = datetime.now(tz=JST)
@@ -117,8 +115,7 @@ def _start_scheduler_once() -> None:
 
 def create_app() -> Flask:
     _ensure_seed_data()
-    if not (DOCS_DIR / "index.html").exists():
-        command_build()
+    command_build()
     _start_scheduler_once()
 
     app = Flask(__name__, static_folder=None)
