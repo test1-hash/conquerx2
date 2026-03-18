@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jupiter-002 Empires</title>
+    <link rel="stylesheet" href="static/style.css">
+    
+  <script defer src="static/index.js"></script>
+
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">CONQUERX2 Rankwatch</div>
+          <h1>Jupiter-002</h1>
+        </div>
+        <nav class="site-nav">
+          
+          <a href="./index.html" class="">最新ランキング</a>
+          <a href="./empires.html" class="is-active">帝国</a>
+          <a href="./fleet.html" class="">戦力</a>
+          <a href="./growth-24h.html" class="">成長率</a>
+          <a href="./changes.html" class="">出入り・変化</a>
+          <a href="./data/latest.json">JSON</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wrap main-content">
+      
+  
+    <section class="card-grid">
+      <article class="card stat-card">
+        <div class="stat-label">最新取得</div>
+        <div class="stat-value">2026-03-18 18:05 JST</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">観測帝国数</div>
+        <div class="stat-value">6</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">首位帝国</div>
+        <div class="stat-value small">あ / 395,026</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">比較可能な期間</div>
+        <div class="stat-value small">
+          
+            
+              1h
+            
+             / 
+          
+            
+              6h
+            
+             / 
+          
+            
+              24h
+            
+             / 
+          
+            
+              168h
+            
+            
+          
+        </div>
+      </article>
+    </section>
+
+    <section class="card controls-card">
+      <form class="controls-form" id="table-controls">
+        <input type="text" id="search-input" placeholder="帝国名・代表プレイヤーで検索">
+        <select id="sort-select">
+          <option value="rank">順位順</option>
+          <option value="points">ポイント順</option>
+          <option value="members">人数順</option>
+          <option value="planets">惑星順</option>
+          <option value="fleet">戦力順</option>
+          <option value="1h">1h増加順</option>
+          <option value="24h">24h増加順</option>
+          <option value="168h">7d増加順</option>
+          <option value="name">名前順</option>
+        </select>
+        <button type="submit">反映</button>
+      </form>
+      <p class="muted" id="visible-count">表示件数: 6</p>
+    </section>
+
+    <section class="card">
+      <div class="section-head">
+        <h2>帝国ランキング</h2>
+        <p class="muted">各帝国名をクリックすると毎時の集計履歴を見られます。</p>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table compact-table" id="ranking-table">
+          <thead>
+            <tr>
+              <th>順位</th>
+              <th>帝国</th>
+              <th>人数</th>
+              <th>惑星</th>
+              <th>ポイント</th>
+              <th>戦力</th>
+              <th>pt/人</th>
+              <th>1h</th>
+              <th>24h</th>
+              <th>7d</th>
+              <th>代表</th>
+              <th>新規</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+              
+              
+              
+              <tr
+                data-search="あ aaaa"
+                data-name="あ"
+                data-rank="1"
+                data-points="395026"
+                data-members="1"
+                data-planets="87"
+                data-fleet="128345"
+                data-1h="4199"
+                data-24h="78141"
+                data-168h="-999999999"
+              >
+                <td class="num">1</td>
+                <td><a href="empires/4c224268dafd.html">あ</a></td>
+                <td class="num">1</td>
+                <td class="num">87</td>
+                <td class="num strong">395,026</td>
+                <td class="num">128,345</td>
+                <td class="num">395026.0</td>
+                <td class="num pos">+4,199</td>
+                <td class="num pos">+78,141</td>
+                <td class="num muted">-</td>
+                <td>aaaa</td>
+                <td>-</td>
+              </tr>
+            
+              
+              
+              
+              <tr
+                data-search="スペースストーム tk"
+                data-name="スペースストーム"
+                data-rank="2"
+                data-points="357063"
+                data-members="12"
+                data-planets="121"
+                data-fleet="45075"
+                data-1h="1560"
+                data-24h="86393"
+                data-168h="299309"
+              >
+                <td class="num">2</td>
+                <td><a href="empires/85a6ec98970a.html">スペースストーム</a></td>
+                <td class="num">12</td>
+                <td class="num">121</td>
+                <td class="num strong">357,063</td>
+                <td class="num">45,075</td>
+                <td class="num">29755.2</td>
+                <td class="num pos">+1,560</td>
+                <td class="num pos">+86,393</td>
+                <td class="num pos">+299,309</td>
+                <td>TK</td>
+                <td>-</td>
+              </tr>
+            
+              
+              
+              
+              <tr
+                data-search="アシリア だいあん"
+                data-name="アシリア"
+                data-rank="3"
+                data-points="354697"
+                data-members="2"
+                data-planets="100"
+                data-fleet="68965"
+                data-1h="62995"
+                data-24h="113835"
+                data-168h="312420"
+              >
+                <td class="num">3</td>
+                <td><a href="empires/02ab7d4c2434.html">アシリア</a></td>
+                <td class="num">2</td>
+                <td class="num">100</td>
+                <td class="num strong">354,697</td>
+                <td class="num">68,965</td>
+                <td class="num">177348.5</td>
+                <td class="num pos">+62,995</td>
+                <td class="num pos">+113,835</td>
+                <td class="num pos">+312,420</td>
+                <td>だいあん</td>
+                <td>-</td>
+              </tr>
+            
+              
+              
+              
+              <tr
+                data-search="流れ星 桜島"
+                data-name="流れ星"
+                data-rank="4"
+                data-points="83009"
+                data-members="2"
+                data-planets="41"
+                data-fleet="11152"
+                data-1h="3170"
+                data-24h="29004"
+                data-168h="73855"
+              >
+                <td class="num">4</td>
+                <td><a href="empires/752ee3c226ac.html">流れ星</a></td>
+                <td class="num">2</td>
+                <td class="num">41</td>
+                <td class="num strong">83,009</td>
+                <td class="num">11,152</td>
+                <td class="num">41504.5</td>
+                <td class="num pos">+3,170</td>
+                <td class="num pos">+29,004</td>
+                <td class="num pos">+73,855</td>
+                <td>桜島</td>
+                <td>-</td>
+              </tr>
+            
+              
+              
+              
+              <tr
+                data-search="princess december"
+                data-name="princess"
+                data-rank="5"
+                data-points="76711"
+                data-members="2"
+                data-planets="27"
+                data-fleet="13825"
+                data-1h="887"
+                data-24h="19166"
+                data-168h="71217"
+              >
+                <td class="num">5</td>
+                <td><a href="empires/eeb974d863fc.html">princess</a></td>
+                <td class="num">2</td>
+                <td class="num">27</td>
+                <td class="num strong">76,711</td>
+                <td class="num">13,825</td>
+                <td class="num">38355.5</td>
+                <td class="num pos">+887</td>
+                <td class="num pos">+19,166</td>
+                <td class="num pos">+71,217</td>
+                <td>December</td>
+                <td>-</td>
+              </tr>
+            
+              
+              
+              
+              <tr
+                data-search="のこのこ帝国 のこのこ"
+                data-name="のこのこ帝国"
+                data-rank="6"
+                data-points="2186"
+                data-members="1"
+                data-planets="1"
+                data-fleet="134"
+                data-1h="0"
+                data-24h="-999999999"
+                data-168h="-999999999"
+              >
+                <td class="num">6</td>
+                <td><a href="empires/5a5adaf88d79.html">のこのこ帝国</a></td>
+                <td class="num">1</td>
+                <td class="num">1</td>
+                <td class="num strong">2,186</td>
+                <td class="num">134</td>
+                <td class="num">2186.0</td>
+                <td class="num ">0</td>
+                <td class="num muted">-</td>
+                <td class="num muted">-</td>
+                <td>のこのこ</td>
+                <td>-</td>
+              </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+
+    </main>
+  </body>
+</html>

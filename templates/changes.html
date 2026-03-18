@@ -40,7 +40,7 @@
         {% if changeset.empire_changed %}
           <ul class="simple-list">
             {% for item in changeset.empire_changed %}
-              <li>#{{ item.rank_position }} <a href="players/{{ item.player_key }}.html">{{ item.player_name }}</a>: {{ item.old_empire or '-' }} → {{ item.new_empire or '-' }}</li>
+              <li>#{{ item.rank_position }} <a href="players/{{ item.player_key }}.html">{{ item.player_name }}</a>: {% if item.old_empire and item.old_empire_key %}<a href="empires/{{ item.old_empire_key }}.html">{{ item.old_empire }}</a>{% else %}{{ item.old_empire or '-' }}{% endif %} → {% if item.new_empire and item.new_empire_key %}<a href="empires/{{ item.new_empire_key }}.html">{{ item.new_empire }}</a>{% else %}{{ item.new_empire or '-' }}{% endif %}</li>
             {% endfor %}
           </ul>
         {% else %}

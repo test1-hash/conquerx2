@@ -39,7 +39,12 @@
               {% set comp = row.comparisons.get(window) %}
               <tr>
                 <td class="num">{{ row.rank_position }}</td>
-                <td><a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a></td>
+                <td>
+                  <a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a>
+                  {% if row.empire_name and row.empire_key %}
+                    <div class="player-title"><a href="empires/{{ row.empire_key }}.html">{{ row.empire_name }}</a></div>
+                  {% endif %}
+                </td>
                 <td class="num strong">{{ fmt_int(row.points) }}</td>
                 {% if show_fleet %}<td class="num">{{ fmt_int(row.fleet_score) }}</td>{% endif %}
                 <td class="num pos">{{ fmt_signed(comp.delta_points) }}</td>

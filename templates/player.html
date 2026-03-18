@@ -82,7 +82,7 @@
               <td>{{ jst_string(point.captured_at_utc) }}</td>
               <td class="num">{{ point.rank_position }}</td>
               {% if show_title %}<td>{{ point.title or '-' }}</td>{% endif %}
-              <td>{{ point.empire_name or '-' }}</td>
+              <td>{% if point.empire_name and point.empire_key %}<a href="../empires/{{ point.empire_key }}.html">{{ point.empire_name }}</a>{% else %}-{% endif %}</td>
               {% if show_level %}<td class="num">{{ fmt_int(point.level) }}</td>{% endif %}
               <td class="num">{{ fmt_int(point.planets) }}</td>
               <td class="num strong">

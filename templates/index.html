@@ -101,7 +101,7 @@
                   {% if row.title %}<div class="player-title">{{ row.title }}</div>{% endif %}
                   <div class="player-name"><a href="players/{{ row.player_key }}.html">{{ row.player_name }}</a></div>
                 </td>
-                <td>{{ row.empire_name or '-' }}</td>
+                <td>{% if row.empire_name and row.empire_key %}<a href="empires/{{ row.empire_key }}.html">{{ row.empire_name }}</a>{% else %}-{% endif %}</td>
                 {% if show_level %}<td class="num">{{ fmt_int(row.level) }}</td>{% endif %}
                 <td class="num">{{ fmt_int(row.planets) }}</td>
                 <td class="num strong">{{ fmt_int(row.points) }}</td>

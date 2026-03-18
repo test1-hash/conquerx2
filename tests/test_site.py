@@ -6,7 +6,7 @@ import unittest
 
 from cx2pages.models import FetchRun, RankRow, Snapshot
 from cx2pages.scraper import parse_rank_rows_from_text
-from cx2pages.site import Settings, build_board, get_fleet_rows, render_site
+from cx2pages.site import Settings, build_board, build_empire_board, empire_key, get_fleet_rows, render_site
 from cx2pages.state import add_fetch_run, add_or_replace_snapshot
 from cx2pages.utils import JST, to_utc
 
@@ -50,6 +50,29 @@ class SiteBuildTest(unittest.TestCase):
         self.assertEqual(fleet_rows[0]['player_name'], 'aaaa')
         self.assertEqual(fleet_rows[0]['fleet_rank_position'], 1)
 
+    def test_build_empire_board_with_comparison(self):
+        rows1 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1000, avg_points=250, fleet_score=120, empire_name='A'),
+            RankRow(rank_position=2, title=None, player_name='bbbb', level=None, planets=3, points=900, avg_points=300, fleet_score=160, empire_name='A'),
+            RankRow(rank_position=3, title=None, player_name='cccc', level=None, planets=2, points=600, avg_points=300, fleet_score=90, empire_name='B'),
+        ]
+        rows2 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1100, avg_points=275, fleet_score=150, empire_name='A'),
+            RankRow(rank_position=2, title=None, player_name='bbbb', level=None, planets=4, points=980, avg_points=245, fleet_score=180, empire_name='A'),
+            RankRow(rank_position=3, title=None, player_name='cccc', level=None, planets=2, points=650, avg_points=325, fleet_score=100, empire_name='B'),
+        ]
+        state = {'version': 1, 'generated_at_utc': None, 'snapshots': [], 'fetch_runs': []}
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T00:00:00+09:00')), rows=rows1, source_url='x'))
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T01:00:00+09:00')), rows=rows2, source_url='x'))
+
+        latest, board, comparisons = build_empire_board(state)
+        self.assertIsNotNone(latest)
+        self.assertIn(1, comparisons)
+        self.assertEqual(board[0]['empire_name'], 'A')
+        self.assertEqual(board[0]['points'], 2080)
+        self.assertEqual(board[0]['comparisons'][1]['delta_points'], 180)
+        self.assertEqual(board[0]['comparisons'][1]['delta_fleet'], 50)
+
     def test_render_site_outputs_index(self):
         text = Path('sample_data/jupiter002_public_ranking_2026-03-08.txt').read_text(encoding='utf-8')
         rows = parse_rank_rows_from_text(text, 'Jupiter-002')
@@ -59,8 +82,10 @@ class SiteBuildTest(unittest.TestCase):
             out = Path(tmp) / 'docs'
             render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x', source_label='test'), state)
             self.assertTrue((out / 'index.html').exists())
+            self.assertTrue((out / 'empires.html').exists())
             self.assertTrue((out / 'fleet.html').exists())
             self.assertTrue((out / 'data' / 'latest.json').exists())
+            self.assertTrue((out / 'data' / 'empires.json').exists())
             self.assertTrue((out / 'data' / 'fleet.json').exists())
 
     def test_render_site_without_title_and_level(self):
@@ -120,6 +145,30 @@ class SiteBuildTest(unittest.TestCase):
             player_html = next((out / 'players').glob('*.html')).read_text(encoding='utf-8')
             self.assertIn('1,100<span class="history-delta pos">(+100)</span>', player_html)
             self.assertIn('150<span class="history-delta pos">(+30)</span>', player_html)
+
+    def test_render_empire_pages(self):
+        rows1 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1000, avg_points=250, fleet_score=120, empire_name='A'),
+            RankRow(rank_position=2, title=None, player_name='bbbb', level=None, planets=3, points=900, avg_points=300, fleet_score=160, empire_name='A'),
+            RankRow(rank_position=3, title=None, player_name='cccc', level=None, planets=2, points=600, avg_points=300, fleet_score=90, empire_name='B'),
+        ]
+        rows2 = [
+            RankRow(rank_position=1, title=None, player_name='aaaa', level=None, planets=4, points=1100, avg_points=275, fleet_score=150, empire_name='A'),
+            RankRow(rank_position=2, title=None, player_name='bbbb', level=None, planets=4, points=980, avg_points=245, fleet_score=180, empire_name='A'),
+            RankRow(rank_position=3, title=None, player_name='cccc', level=None, planets=2, points=650, avg_points=325, fleet_score=100, empire_name='B'),
+        ]
+        state = {'version': 1, 'generated_at_utc': None, 'snapshots': [], 'fetch_runs': []}
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T00:00:00+09:00')), rows=rows1, source_url='x'))
+        add_or_replace_snapshot(state, Snapshot(captured_at_utc=to_utc(datetime.fromisoformat('2026-03-08T01:00:00+09:00')), rows=rows2, source_url='x'))
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / 'docs'
+            render_site(Path('.').resolve(), out, Settings(server_label='Jupiter-002', server_rank_url='x', source_label='test'), state)
+            empires_html = (out / 'empires.html').read_text(encoding='utf-8')
+            empire_html = (out / 'empires' / f'{empire_key("A")}.html').read_text(encoding='utf-8')
+            self.assertIn('帝国ランキング', empires_html)
+            self.assertIn('A', empires_html)
+            self.assertIn('人数推移', empire_html)
+            self.assertIn('2,080<span class="history-delta pos">(+180)</span>', empire_html)
 
 
 if __name__ == '__main__':
