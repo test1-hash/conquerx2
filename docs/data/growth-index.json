@@ -1,6 +1,676 @@
 {
   "1": {
     "latest": {
+      "captured_at_utc": "2026-03-26T05:26:40.578641+00:00",
+      "captured_hour_utc": "2026-03-26T05:00:00+00:00",
+      "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
+      "http_status": 200,
+      "content_sha256": "deeae6632bf3f50907fa43fbd680efdcea1594c2bdfd6df0df36df0ec8189734",
+      "row_count": 60,
+      "rows": [
+        {
+          "rank_position": 1,
+          "title": "略奪者",
+          "player_name": "aaaa",
+          "level": 29,
+          "planets": 144,
+          "points": 898328,
+          "avg_points": 6238,
+          "fleet_score": 354912,
+          "empire_name": "あ"
+        },
+        {
+          "rank_position": 2,
+          "title": "匠の業",
+          "player_name": "だいあん",
+          "level": 28,
+          "planets": 127,
+          "points": 646472,
+          "avg_points": 5090,
+          "fleet_score": 146075,
+          "empire_name": "アシリア"
+        },
+        {
+          "rank_position": 3,
+          "title": "匠の業",
+          "player_name": "azsxx",
+          "level": 27,
+          "planets": 84,
+          "points": 349757,
+          "avg_points": 4163,
+          "fleet_score": 56696,
+          "empire_name": "あ"
+        },
+        {
+          "rank_position": 4,
+          "title": null,
+          "player_name": "TK",
+          "level": 25,
+          "planets": 46,
+          "points": 246342,
+          "avg_points": 5355,
+          "fleet_score": 40802,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 5,
+          "title": null,
+          "player_name": "桜島",
+          "level": 25,
+          "planets": 114,
+          "points": 238510,
+          "avg_points": 2092,
+          "fleet_score": 20117,
+          "empire_name": "流れ星"
+        },
+        {
+          "rank_position": 6,
+          "title": "物流の達人",
+          "player_name": "December",
+          "level": 25,
+          "planets": 46,
+          "points": 200133,
+          "avg_points": 4350,
+          "fleet_score": 38442,
+          "empire_name": "princess"
+        },
+        {
+          "rank_position": 7,
+          "title": "匠の業",
+          "player_name": "volume",
+          "level": 25,
+          "planets": 61,
+          "points": 190891,
+          "avg_points": 3129,
+          "fleet_score": 24615,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 8,
+          "title": "匠の業",
+          "player_name": "雷光",
+          "level": 24,
+          "planets": 46,
+          "points": 166366,
+          "avg_points": 3616,
+          "fleet_score": 18322,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 9,
+          "title": "侵略者",
+          "player_name": "マリアンヌ・フォス",
+          "level": 24,
+          "planets": 50,
+          "points": 162090,
+          "avg_points": 3241,
+          "fleet_score": 23527,
+          "empire_name": "アシリア"
+        },
+        {
+          "rank_position": 10,
+          "title": null,
+          "player_name": "motomeuibu",
+          "level": 21,
+          "planets": 17,
+          "points": 78376,
+          "avg_points": 4610,
+          "fleet_score": 18654,
+          "empire_name": "princess"
+        },
+        {
+          "rank_position": 11,
+          "title": null,
+          "player_name": "蒲公英",
+          "level": 20,
+          "planets": 11,
+          "points": 44608,
+          "avg_points": 4055,
+          "fleet_score": 5951,
+          "empire_name": null
+        },
+        {
+          "rank_position": 12,
+          "title": "初心者",
+          "player_name": "abcd",
+          "level": 21,
+          "planets": 23,
+          "points": 43064,
+          "avg_points": 1872,
+          "fleet_score": 7487,
+          "empire_name": null
+        },
+        {
+          "rank_position": 13,
+          "title": null,
+          "player_name": "ゼネトス",
+          "level": 19,
+          "planets": 23,
+          "points": 37138,
+          "avg_points": 1614,
+          "fleet_score": 7626,
+          "empire_name": null
+        },
+        {
+          "rank_position": 14,
+          "title": "建設王",
+          "player_name": "Gunderk",
+          "level": 18,
+          "planets": 23,
+          "points": 34318,
+          "avg_points": 1492,
+          "fleet_score": 6779,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 15,
+          "title": null,
+          "player_name": "お酒MAN",
+          "level": 18,
+          "planets": 12,
+          "points": 33319,
+          "avg_points": 2776,
+          "fleet_score": 6595,
+          "empire_name": null
+        },
+        {
+          "rank_position": 16,
+          "title": null,
+          "player_name": "りゅう",
+          "level": 19,
+          "planets": 15,
+          "points": 31716,
+          "avg_points": 2114,
+          "fleet_score": 2101,
+          "empire_name": "アシリア"
+        },
+        {
+          "rank_position": 17,
+          "title": "帝国の一員",
+          "player_name": "マモル",
+          "level": 17,
+          "planets": 10,
+          "points": 24204,
+          "avg_points": 2420,
+          "fleet_score": 2412,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 18,
+          "title": "達人",
+          "player_name": "Lanack",
+          "level": 17,
+          "planets": 9,
+          "points": 22771,
+          "avg_points": 2530,
+          "fleet_score": 2392,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 19,
+          "title": null,
+          "player_name": "タウリ",
+          "level": 17,
+          "planets": 9,
+          "points": 21883,
+          "avg_points": 2431,
+          "fleet_score": 3567,
+          "empire_name": null
+        },
+        {
+          "rank_position": 20,
+          "title": "建設王",
+          "player_name": "能面",
+          "level": 17,
+          "planets": 12,
+          "points": 20959,
+          "avg_points": 1746,
+          "fleet_score": 2081,
+          "empire_name": null
+        },
+        {
+          "rank_position": 21,
+          "title": null,
+          "player_name": "ターキーマン",
+          "level": 17,
+          "planets": 11,
+          "points": 20242,
+          "avg_points": 1840,
+          "fleet_score": 1813,
+          "empire_name": null
+        },
+        {
+          "rank_position": 22,
+          "title": "建設王",
+          "player_name": "ねじれ",
+          "level": 16,
+          "planets": 1,
+          "points": 17927,
+          "avg_points": 17927,
+          "fleet_score": 8616,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 23,
+          "title": "建設王",
+          "player_name": "nomorebeer",
+          "level": 16,
+          "planets": 11,
+          "points": 16629,
+          "avg_points": 1511,
+          "fleet_score": 3290,
+          "empire_name": null
+        },
+        {
+          "rank_position": 24,
+          "title": null,
+          "player_name": "ハイデマリー・W・シュナウファー",
+          "level": 16,
+          "planets": 6,
+          "points": 15327,
+          "avg_points": 2554,
+          "fleet_score": 352,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 25,
+          "title": "虐殺者",
+          "player_name": "higuma",
+          "level": 15,
+          "planets": 5,
+          "points": 13352,
+          "avg_points": 2670,
+          "fleet_score": 1153,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 26,
+          "title": null,
+          "player_name": "ranran2",
+          "level": 15,
+          "planets": 7,
+          "points": 12594,
+          "avg_points": 1799,
+          "fleet_score": 1910,
+          "empire_name": null
+        },
+        {
+          "rank_position": 27,
+          "title": "匠の業",
+          "player_name": "Frodo",
+          "level": 15,
+          "planets": 8,
+          "points": 12465,
+          "avg_points": 1558,
+          "fleet_score": 952,
+          "empire_name": null
+        },
+        {
+          "rank_position": 28,
+          "title": "初心者",
+          "player_name": "Rows0160",
+          "level": 21,
+          "planets": 7,
+          "points": 11708,
+          "avg_points": 1672,
+          "fleet_score": 490,
+          "empire_name": null
+        },
+        {
+          "rank_position": 29,
+          "title": "初心者",
+          "player_name": "phovz",
+          "level": 15,
+          "planets": 5,
+          "points": 10030,
+          "avg_points": 2006,
+          "fleet_score": 648,
+          "empire_name": null
+        },
+        {
+          "rank_position": 30,
+          "title": "初心者",
+          "player_name": "tyrevel",
+          "level": 14,
+          "planets": 5,
+          "points": 9108,
+          "avg_points": 1821,
+          "fleet_score": 607,
+          "empire_name": null
+        },
+        {
+          "rank_position": 31,
+          "title": null,
+          "player_name": "shizuku",
+          "level": 13,
+          "planets": 1,
+          "points": 7419,
+          "avg_points": 7419,
+          "fleet_score": 2440,
+          "empire_name": null
+        },
+        {
+          "rank_position": 32,
+          "title": "初心者",
+          "player_name": "TP",
+          "level": 12,
+          "planets": 6,
+          "points": 5925,
+          "avg_points": 987,
+          "fleet_score": 513,
+          "empire_name": null
+        },
+        {
+          "rank_position": 33,
+          "title": "初心者",
+          "player_name": "アオヤ",
+          "level": 13,
+          "planets": 1,
+          "points": 5808,
+          "avg_points": 5808,
+          "fleet_score": 272,
+          "empire_name": null
+        },
+        {
+          "rank_position": 34,
+          "title": null,
+          "player_name": "KK",
+          "level": 12,
+          "planets": 1,
+          "points": 4883,
+          "avg_points": 4883,
+          "fleet_score": 16,
+          "empire_name": null
+        },
+        {
+          "rank_position": 35,
+          "title": null,
+          "player_name": "bububu",
+          "level": 12,
+          "planets": 1,
+          "points": 4764,
+          "avg_points": 4764,
+          "fleet_score": 812,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 36,
+          "title": "匠の業",
+          "player_name": "korota",
+          "level": 12,
+          "planets": 4,
+          "points": 4164,
+          "avg_points": 1041,
+          "fleet_score": 145,
+          "empire_name": null
+        },
+        {
+          "rank_position": 37,
+          "title": null,
+          "player_name": "オペレータ",
+          "level": 11,
+          "planets": 1,
+          "points": 3542,
+          "avg_points": 3542,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 38,
+          "title": null,
+          "player_name": "朱雀",
+          "level": 11,
+          "planets": 1,
+          "points": 3490,
+          "avg_points": 3490,
+          "fleet_score": 67,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 39,
+          "title": "建設王",
+          "player_name": "syarunoiru",
+          "level": 11,
+          "planets": 1,
+          "points": 3435,
+          "avg_points": 3435,
+          "fleet_score": 10,
+          "empire_name": null
+        },
+        {
+          "rank_position": 40,
+          "title": "匠の業",
+          "player_name": "yqmato",
+          "level": 10,
+          "planets": 1,
+          "points": 3288,
+          "avg_points": 3288,
+          "fleet_score": 264,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 41,
+          "title": "匠の業",
+          "player_name": "ゲオルク・メルカー",
+          "level": 10,
+          "planets": 1,
+          "points": 2898,
+          "avg_points": 2898,
+          "fleet_score": 86,
+          "empire_name": null
+        },
+        {
+          "rank_position": 42,
+          "title": "略奪者",
+          "player_name": "涼香",
+          "level": 12,
+          "planets": 1,
+          "points": 2823,
+          "avg_points": 2823,
+          "fleet_score": 138,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 43,
+          "title": "帝国の一員",
+          "player_name": "のこのこ",
+          "level": 10,
+          "planets": 1,
+          "points": 2823,
+          "avg_points": 2823,
+          "fleet_score": 385,
+          "empire_name": "のこのこ帝国"
+        },
+        {
+          "rank_position": 44,
+          "title": "匠の業",
+          "player_name": "eutoreiy",
+          "level": 10,
+          "planets": 1,
+          "points": 2010,
+          "avg_points": 2010,
+          "fleet_score": 5,
+          "empire_name": null
+        },
+        {
+          "rank_position": 45,
+          "title": "匠の業",
+          "player_name": "paxai1",
+          "level": 9,
+          "planets": 1,
+          "points": 1901,
+          "avg_points": 1901,
+          "fleet_score": 51,
+          "empire_name": null
+        },
+        {
+          "rank_position": 46,
+          "title": "初心者",
+          "player_name": "potato1226",
+          "level": 9,
+          "planets": 1,
+          "points": 1632,
+          "avg_points": 1632,
+          "fleet_score": 69,
+          "empire_name": null
+        },
+        {
+          "rank_position": 47,
+          "title": "初心者",
+          "player_name": "ヤンマ",
+          "level": 9,
+          "planets": 1,
+          "points": 1622,
+          "avg_points": 1622,
+          "fleet_score": 16,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 48,
+          "title": "初心者",
+          "player_name": "藤宮澄夏",
+          "level": 8,
+          "planets": 1,
+          "points": 1437,
+          "avg_points": 1437,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 49,
+          "title": null,
+          "player_name": "かなた",
+          "level": 7,
+          "planets": 1,
+          "points": 888,
+          "avg_points": 888,
+          "fleet_score": 15,
+          "empire_name": "流れ星"
+        },
+        {
+          "rank_position": 50,
+          "title": "初心者",
+          "player_name": "aragon",
+          "level": 6,
+          "planets": 1,
+          "points": 786,
+          "avg_points": 786,
+          "fleet_score": 18,
+          "empire_name": null
+        },
+        {
+          "rank_position": 51,
+          "title": null,
+          "player_name": "イショーチカ",
+          "level": 5,
+          "planets": 1,
+          "points": 436,
+          "avg_points": 436,
+          "fleet_score": 4,
+          "empire_name": null
+        },
+        {
+          "rank_position": 52,
+          "title": "略奪者",
+          "player_name": "Nana",
+          "level": 4,
+          "planets": 1,
+          "points": 250,
+          "avg_points": 250,
+          "fleet_score": 13,
+          "empire_name": null
+        },
+        {
+          "rank_position": 53,
+          "title": null,
+          "player_name": "araia",
+          "level": 2,
+          "planets": 1,
+          "points": 112,
+          "avg_points": 112,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 54,
+          "title": "初心者",
+          "player_name": "yuki",
+          "level": 2,
+          "planets": 1,
+          "points": 107,
+          "avg_points": 107,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 55,
+          "title": null,
+          "player_name": "tefeyo63",
+          "level": 1,
+          "planets": 1,
+          "points": 54,
+          "avg_points": 54,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 56,
+          "title": null,
+          "player_name": "1111",
+          "level": 1,
+          "planets": 1,
+          "points": 50,
+          "avg_points": 50,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 57,
+          "title": null,
+          "player_name": "gama",
+          "level": 1,
+          "planets": 1,
+          "points": 46,
+          "avg_points": 46,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 58,
+          "title": null,
+          "player_name": "maruch",
+          "level": 1,
+          "planets": 1,
+          "points": 44,
+          "avg_points": 44,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 59,
+          "title": null,
+          "player_name": "VQ",
+          "level": 1,
+          "planets": 1,
+          "points": 44,
+          "avg_points": 44,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 60,
+          "title": "初心者",
+          "player_name": "ぱい",
+          "level": 1,
+          "planets": 1,
+          "points": 44,
+          "avg_points": 44,
+          "fleet_score": null,
+          "empire_name": null
+        }
+      ]
+    },
+    "comparison": {
       "captured_at_utc": "2026-03-26T03:52:03.560751+00:00",
       "captured_hour_utc": "2026-03-26T03:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
@@ -561,676 +1231,6 @@
         {
           "rank_position": 51,
           "title": null,
-          "player_name": "イショーチカ",
-          "level": 5,
-          "planets": 1,
-          "points": 436,
-          "avg_points": 436,
-          "fleet_score": 4,
-          "empire_name": null
-        },
-        {
-          "rank_position": 52,
-          "title": "略奪者",
-          "player_name": "Nana",
-          "level": 4,
-          "planets": 1,
-          "points": 250,
-          "avg_points": 250,
-          "fleet_score": 13,
-          "empire_name": null
-        },
-        {
-          "rank_position": 53,
-          "title": null,
-          "player_name": "araia",
-          "level": 2,
-          "planets": 1,
-          "points": 112,
-          "avg_points": 112,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 54,
-          "title": "初心者",
-          "player_name": "yuki",
-          "level": 2,
-          "planets": 1,
-          "points": 107,
-          "avg_points": 107,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 55,
-          "title": null,
-          "player_name": "tefeyo63",
-          "level": 1,
-          "planets": 1,
-          "points": 54,
-          "avg_points": 54,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 56,
-          "title": null,
-          "player_name": "1111",
-          "level": 1,
-          "planets": 1,
-          "points": 50,
-          "avg_points": 50,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 57,
-          "title": null,
-          "player_name": "gama",
-          "level": 1,
-          "planets": 1,
-          "points": 46,
-          "avg_points": 46,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 58,
-          "title": null,
-          "player_name": "maruch",
-          "level": 1,
-          "planets": 1,
-          "points": 44,
-          "avg_points": 44,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 59,
-          "title": null,
-          "player_name": "VQ",
-          "level": 1,
-          "planets": 1,
-          "points": 44,
-          "avg_points": 44,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 60,
-          "title": "初心者",
-          "player_name": "ぱい",
-          "level": 1,
-          "planets": 1,
-          "points": 44,
-          "avg_points": 44,
-          "fleet_score": null,
-          "empire_name": null
-        }
-      ]
-    },
-    "comparison": {
-      "captured_at_utc": "2026-03-26T01:05:07.905483+00:00",
-      "captured_hour_utc": "2026-03-26T01:00:00+00:00",
-      "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
-      "http_status": 200,
-      "content_sha256": "f7f4f171602be44b7868923fe71dfab0b49ae3d3ae149c464ed567134f0661bd",
-      "row_count": 60,
-      "rows": [
-        {
-          "rank_position": 1,
-          "title": "略奪者",
-          "player_name": "aaaa",
-          "level": 29,
-          "planets": 143,
-          "points": 885551,
-          "avg_points": 6192,
-          "fleet_score": 348959,
-          "empire_name": "あ"
-        },
-        {
-          "rank_position": 2,
-          "title": "匠の業",
-          "player_name": "だいあん",
-          "level": 28,
-          "planets": 127,
-          "points": 639754,
-          "avg_points": 5037,
-          "fleet_score": 144446,
-          "empire_name": "アシリア"
-        },
-        {
-          "rank_position": 3,
-          "title": "匠の業",
-          "player_name": "azsxx",
-          "level": 27,
-          "planets": 84,
-          "points": 347159,
-          "avg_points": 4132,
-          "fleet_score": 56408,
-          "empire_name": "あ"
-        },
-        {
-          "rank_position": 4,
-          "title": null,
-          "player_name": "TK",
-          "level": 25,
-          "planets": 46,
-          "points": 242662,
-          "avg_points": 5275,
-          "fleet_score": 39246,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 5,
-          "title": null,
-          "player_name": "桜島",
-          "level": 25,
-          "planets": 114,
-          "points": 234150,
-          "avg_points": 2053,
-          "fleet_score": 19937,
-          "empire_name": "流れ星"
-        },
-        {
-          "rank_position": 6,
-          "title": "物流の達人",
-          "player_name": "December",
-          "level": 25,
-          "planets": 46,
-          "points": 196598,
-          "avg_points": 4273,
-          "fleet_score": 36741,
-          "empire_name": "princess"
-        },
-        {
-          "rank_position": 7,
-          "title": "匠の業",
-          "player_name": "volume",
-          "level": 24,
-          "planets": 61,
-          "points": 187041,
-          "avg_points": 3066,
-          "fleet_score": 23163,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 8,
-          "title": "匠の業",
-          "player_name": "雷光",
-          "level": 24,
-          "planets": 45,
-          "points": 162624,
-          "avg_points": 3613,
-          "fleet_score": 17790,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 9,
-          "title": "侵略者",
-          "player_name": "マリアンヌ・フォス",
-          "level": 24,
-          "planets": 49,
-          "points": 159169,
-          "avg_points": 3248,
-          "fleet_score": 22687,
-          "empire_name": "アシリア"
-        },
-        {
-          "rank_position": 10,
-          "title": null,
-          "player_name": "motomeuibu",
-          "level": 21,
-          "planets": 16,
-          "points": 74547,
-          "avg_points": 4659,
-          "fleet_score": 18659,
-          "empire_name": "princess"
-        },
-        {
-          "rank_position": 11,
-          "title": null,
-          "player_name": "蒲公英",
-          "level": 20,
-          "planets": 11,
-          "points": 44205,
-          "avg_points": 4018,
-          "fleet_score": 5901,
-          "empire_name": null
-        },
-        {
-          "rank_position": 12,
-          "title": "初心者",
-          "player_name": "abcd",
-          "level": 21,
-          "planets": 23,
-          "points": 42668,
-          "avg_points": 1855,
-          "fleet_score": 7555,
-          "empire_name": null
-        },
-        {
-          "rank_position": 13,
-          "title": null,
-          "player_name": "ゼネトス",
-          "level": 19,
-          "planets": 23,
-          "points": 36725,
-          "avg_points": 1596,
-          "fleet_score": 7613,
-          "empire_name": null
-        },
-        {
-          "rank_position": 14,
-          "title": "建設王",
-          "player_name": "Gunderk",
-          "level": 18,
-          "planets": 23,
-          "points": 33896,
-          "avg_points": 1473,
-          "fleet_score": 6709,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 15,
-          "title": null,
-          "player_name": "お酒MAN",
-          "level": 18,
-          "planets": 12,
-          "points": 32844,
-          "avg_points": 2737,
-          "fleet_score": 6460,
-          "empire_name": null
-        },
-        {
-          "rank_position": 16,
-          "title": null,
-          "player_name": "りゅう",
-          "level": 19,
-          "planets": 15,
-          "points": 30225,
-          "avg_points": 2015,
-          "fleet_score": 2053,
-          "empire_name": "アシリア"
-        },
-        {
-          "rank_position": 17,
-          "title": "帝国の一員",
-          "player_name": "マモル",
-          "level": 17,
-          "planets": 10,
-          "points": 23697,
-          "avg_points": 2369,
-          "fleet_score": 2357,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 18,
-          "title": "達人",
-          "player_name": "Lanack",
-          "level": 17,
-          "planets": 9,
-          "points": 22472,
-          "avg_points": 2496,
-          "fleet_score": 2392,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 19,
-          "title": null,
-          "player_name": "タウリ",
-          "level": 17,
-          "planets": 9,
-          "points": 21871,
-          "avg_points": 2430,
-          "fleet_score": 3567,
-          "empire_name": null
-        },
-        {
-          "rank_position": 20,
-          "title": null,
-          "player_name": "ターキーマン",
-          "level": 17,
-          "planets": 11,
-          "points": 20199,
-          "avg_points": 1836,
-          "fleet_score": 1813,
-          "empire_name": null
-        },
-        {
-          "rank_position": 21,
-          "title": "建設王",
-          "player_name": "能面",
-          "level": 17,
-          "planets": 11,
-          "points": 19260,
-          "avg_points": 1750,
-          "fleet_score": 1574,
-          "empire_name": null
-        },
-        {
-          "rank_position": 22,
-          "title": "建設王",
-          "player_name": "ねじれ",
-          "level": 16,
-          "planets": 1,
-          "points": 17490,
-          "avg_points": 17490,
-          "fleet_score": 8232,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 23,
-          "title": null,
-          "player_name": "ハイデマリー・W・シュナウファー",
-          "level": 16,
-          "planets": 6,
-          "points": 15208,
-          "avg_points": 2534,
-          "fleet_score": 352,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 24,
-          "title": "建設王",
-          "player_name": "nomorebeer",
-          "level": 16,
-          "planets": 11,
-          "points": 15105,
-          "avg_points": 1373,
-          "fleet_score": 2602,
-          "empire_name": null
-        },
-        {
-          "rank_position": 25,
-          "title": "虐殺者",
-          "player_name": "higuma",
-          "level": 15,
-          "planets": 5,
-          "points": 13274,
-          "avg_points": 2654,
-          "fleet_score": 1153,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 26,
-          "title": null,
-          "player_name": "ranran2",
-          "level": 15,
-          "planets": 7,
-          "points": 12477,
-          "avg_points": 1782,
-          "fleet_score": 1910,
-          "empire_name": null
-        },
-        {
-          "rank_position": 27,
-          "title": "匠の業",
-          "player_name": "Frodo",
-          "level": 15,
-          "planets": 8,
-          "points": 11875,
-          "avg_points": 1484,
-          "fleet_score": 933,
-          "empire_name": null
-        },
-        {
-          "rank_position": 28,
-          "title": "初心者",
-          "player_name": "Rows0160",
-          "level": 21,
-          "planets": 7,
-          "points": 11708,
-          "avg_points": 1672,
-          "fleet_score": 490,
-          "empire_name": null
-        },
-        {
-          "rank_position": 29,
-          "title": "初心者",
-          "player_name": "phovz",
-          "level": 15,
-          "planets": 5,
-          "points": 9931,
-          "avg_points": 1986,
-          "fleet_score": 648,
-          "empire_name": null
-        },
-        {
-          "rank_position": 30,
-          "title": "初心者",
-          "player_name": "tyrevel",
-          "level": 14,
-          "planets": 5,
-          "points": 8991,
-          "avg_points": 1798,
-          "fleet_score": 607,
-          "empire_name": null
-        },
-        {
-          "rank_position": 31,
-          "title": null,
-          "player_name": "shizuku",
-          "level": 13,
-          "planets": 1,
-          "points": 7419,
-          "avg_points": 7419,
-          "fleet_score": 2440,
-          "empire_name": null
-        },
-        {
-          "rank_position": 32,
-          "title": "初心者",
-          "player_name": "TP",
-          "level": 12,
-          "planets": 6,
-          "points": 5846,
-          "avg_points": 974,
-          "fleet_score": 513,
-          "empire_name": null
-        },
-        {
-          "rank_position": 33,
-          "title": "初心者",
-          "player_name": "アオヤ",
-          "level": 13,
-          "planets": 1,
-          "points": 5689,
-          "avg_points": 5689,
-          "fleet_score": 240,
-          "empire_name": null
-        },
-        {
-          "rank_position": 34,
-          "title": null,
-          "player_name": "KK",
-          "level": 12,
-          "planets": 1,
-          "points": 4883,
-          "avg_points": 4883,
-          "fleet_score": 16,
-          "empire_name": null
-        },
-        {
-          "rank_position": 35,
-          "title": null,
-          "player_name": "bububu",
-          "level": 12,
-          "planets": 1,
-          "points": 4764,
-          "avg_points": 4764,
-          "fleet_score": 812,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 36,
-          "title": "匠の業",
-          "player_name": "korota",
-          "level": 11,
-          "planets": 3,
-          "points": 3692,
-          "avg_points": 1230,
-          "fleet_score": 128,
-          "empire_name": null
-        },
-        {
-          "rank_position": 37,
-          "title": null,
-          "player_name": "オペレータ",
-          "level": 11,
-          "planets": 1,
-          "points": 3540,
-          "avg_points": 3540,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 38,
-          "title": null,
-          "player_name": "朱雀",
-          "level": 11,
-          "planets": 1,
-          "points": 3490,
-          "avg_points": 3490,
-          "fleet_score": 67,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 39,
-          "title": "建設王",
-          "player_name": "syarunoiru",
-          "level": 11,
-          "planets": 1,
-          "points": 3433,
-          "avg_points": 3433,
-          "fleet_score": 10,
-          "empire_name": null
-        },
-        {
-          "rank_position": 40,
-          "title": "匠の業",
-          "player_name": "yqmato",
-          "level": 10,
-          "planets": 1,
-          "points": 3288,
-          "avg_points": 3288,
-          "fleet_score": 264,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 41,
-          "title": "匠の業",
-          "player_name": "ゲオルク・メルカー",
-          "level": 10,
-          "planets": 1,
-          "points": 2853,
-          "avg_points": 2853,
-          "fleet_score": 86,
-          "empire_name": null
-        },
-        {
-          "rank_position": 42,
-          "title": "略奪者",
-          "player_name": "涼香",
-          "level": 12,
-          "planets": 1,
-          "points": 2823,
-          "avg_points": 2823,
-          "fleet_score": 138,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 43,
-          "title": "帝国の一員",
-          "player_name": "のこのこ",
-          "level": 10,
-          "planets": 1,
-          "points": 2823,
-          "avg_points": 2823,
-          "fleet_score": 385,
-          "empire_name": "のこのこ帝国"
-        },
-        {
-          "rank_position": 44,
-          "title": "匠の業",
-          "player_name": "eutoreiy",
-          "level": 10,
-          "planets": 1,
-          "points": 1979,
-          "avg_points": 1979,
-          "fleet_score": 5,
-          "empire_name": null
-        },
-        {
-          "rank_position": 45,
-          "title": "匠の業",
-          "player_name": "paxai1",
-          "level": 9,
-          "planets": 1,
-          "points": 1862,
-          "avg_points": 1862,
-          "fleet_score": 51,
-          "empire_name": null
-        },
-        {
-          "rank_position": 46,
-          "title": "初心者",
-          "player_name": "potato1226",
-          "level": 9,
-          "planets": 1,
-          "points": 1595,
-          "avg_points": 1595,
-          "fleet_score": 69,
-          "empire_name": null
-        },
-        {
-          "rank_position": 47,
-          "title": "初心者",
-          "player_name": "ヤンマ",
-          "level": 8,
-          "planets": 1,
-          "points": 1413,
-          "avg_points": 1413,
-          "fleet_score": 16,
-          "empire_name": "スペースストーム"
-        },
-        {
-          "rank_position": 48,
-          "title": "初心者",
-          "player_name": "藤宮澄夏",
-          "level": 8,
-          "planets": 1,
-          "points": 1406,
-          "avg_points": 1406,
-          "fleet_score": null,
-          "empire_name": null
-        },
-        {
-          "rank_position": 49,
-          "title": null,
-          "player_name": "かなた",
-          "level": 7,
-          "planets": 1,
-          "points": 888,
-          "avg_points": 888,
-          "fleet_score": 15,
-          "empire_name": "流れ星"
-        },
-        {
-          "rank_position": 50,
-          "title": "初心者",
-          "player_name": "aragon",
-          "level": 6,
-          "planets": 1,
-          "points": 786,
-          "avg_points": 786,
-          "fleet_score": 18,
-          "empire_name": null
-        },
-        {
-          "rank_position": 51,
-          "title": "初心者",
           "player_name": "イショーチカ",
           "level": 5,
           "planets": 1,
@@ -1344,11 +1344,11 @@
   },
   "6": {
     "latest": {
-      "captured_at_utc": "2026-03-26T03:52:03.560751+00:00",
-      "captured_hour_utc": "2026-03-26T03:00:00+00:00",
+      "captured_at_utc": "2026-03-26T05:26:40.578641+00:00",
+      "captured_hour_utc": "2026-03-26T05:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "59ca915206c7e970de2cd09283c33e4da37321eb1354a6b814311a6eac8e7fe0",
+      "content_sha256": "deeae6632bf3f50907fa43fbd680efdcea1594c2bdfd6df0df36df0ec8189734",
       "row_count": 60,
       "rows": [
         {
@@ -1357,9 +1357,9 @@
           "player_name": "aaaa",
           "level": 29,
           "planets": 144,
-          "points": 891644,
-          "avg_points": 6191,
-          "fleet_score": 351907,
+          "points": 898328,
+          "avg_points": 6238,
+          "fleet_score": 354912,
           "empire_name": "あ"
         },
         {
@@ -1368,9 +1368,9 @@
           "player_name": "だいあん",
           "level": 28,
           "planets": 127,
-          "points": 642569,
-          "avg_points": 5059,
-          "fleet_score": 144986,
+          "points": 646472,
+          "avg_points": 5090,
+          "fleet_score": 146075,
           "empire_name": "アシリア"
         },
         {
@@ -1379,9 +1379,9 @@
           "player_name": "azsxx",
           "level": 27,
           "planets": 84,
-          "points": 348910,
-          "avg_points": 4153,
-          "fleet_score": 56408,
+          "points": 349757,
+          "avg_points": 4163,
+          "fleet_score": 56696,
           "empire_name": "あ"
         },
         {
@@ -1390,9 +1390,9 @@
           "player_name": "TK",
           "level": 25,
           "planets": 46,
-          "points": 244534,
-          "avg_points": 5315,
-          "fleet_score": 40039,
+          "points": 246342,
+          "avg_points": 5355,
+          "fleet_score": 40802,
           "empire_name": "スペースストーム"
         },
         {
@@ -1401,9 +1401,9 @@
           "player_name": "桜島",
           "level": 25,
           "planets": 114,
-          "points": 237235,
-          "avg_points": 2081,
-          "fleet_score": 20027,
+          "points": 238510,
+          "avg_points": 2092,
+          "fleet_score": 20117,
           "empire_name": "流れ星"
         },
         {
@@ -1412,20 +1412,20 @@
           "player_name": "December",
           "level": 25,
           "planets": 46,
-          "points": 198274,
-          "avg_points": 4310,
-          "fleet_score": 37452,
+          "points": 200133,
+          "avg_points": 4350,
+          "fleet_score": 38442,
           "empire_name": "princess"
         },
         {
           "rank_position": 7,
           "title": "匠の業",
           "player_name": "volume",
-          "level": 24,
+          "level": 25,
           "planets": 61,
-          "points": 189627,
-          "avg_points": 3108,
-          "fleet_score": 24366,
+          "points": 190891,
+          "avg_points": 3129,
+          "fleet_score": 24615,
           "empire_name": "スペースストーム"
         },
         {
@@ -1434,9 +1434,9 @@
           "player_name": "雷光",
           "level": 24,
           "planets": 46,
-          "points": 164674,
-          "avg_points": 3579,
-          "fleet_score": 18195,
+          "points": 166366,
+          "avg_points": 3616,
+          "fleet_score": 18322,
           "empire_name": "スペースストーム"
         },
         {
@@ -1445,9 +1445,9 @@
           "player_name": "マリアンヌ・フォス",
           "level": 24,
           "planets": 50,
-          "points": 161190,
-          "avg_points": 3223,
-          "fleet_score": 23209,
+          "points": 162090,
+          "avg_points": 3241,
+          "fleet_score": 23527,
           "empire_name": "アシリア"
         },
         {
@@ -1455,10 +1455,10 @@
           "title": null,
           "player_name": "motomeuibu",
           "level": 21,
-          "planets": 16,
-          "points": 74924,
-          "avg_points": 4682,
-          "fleet_score": 18659,
+          "planets": 17,
+          "points": 78376,
+          "avg_points": 4610,
+          "fleet_score": 18654,
           "empire_name": "princess"
         },
         {
@@ -1467,9 +1467,9 @@
           "player_name": "蒲公英",
           "level": 20,
           "planets": 11,
-          "points": 44339,
-          "avg_points": 4030,
-          "fleet_score": 5901,
+          "points": 44608,
+          "avg_points": 4055,
+          "fleet_score": 5951,
           "empire_name": null
         },
         {
@@ -1478,8 +1478,8 @@
           "player_name": "abcd",
           "level": 21,
           "planets": 23,
-          "points": 42683,
-          "avg_points": 1855,
+          "points": 43064,
+          "avg_points": 1872,
           "fleet_score": 7487,
           "empire_name": null
         },
@@ -1489,9 +1489,9 @@
           "player_name": "ゼネトス",
           "level": 19,
           "planets": 23,
-          "points": 36973,
-          "avg_points": 1607,
-          "fleet_score": 7616,
+          "points": 37138,
+          "avg_points": 1614,
+          "fleet_score": 7626,
           "empire_name": null
         },
         {
@@ -1500,9 +1500,9 @@
           "player_name": "Gunderk",
           "level": 18,
           "planets": 23,
-          "points": 34069,
-          "avg_points": 1481,
-          "fleet_score": 6709,
+          "points": 34318,
+          "avg_points": 1492,
+          "fleet_score": 6779,
           "empire_name": "スペースストーム"
         },
         {
@@ -1511,9 +1511,9 @@
           "player_name": "お酒MAN",
           "level": 18,
           "planets": 12,
-          "points": 32986,
-          "avg_points": 2748,
-          "fleet_score": 6467,
+          "points": 33319,
+          "avg_points": 2776,
+          "fleet_score": 6595,
           "empire_name": null
         },
         {
@@ -1522,9 +1522,9 @@
           "player_name": "りゅう",
           "level": 19,
           "planets": 15,
-          "points": 31192,
-          "avg_points": 2079,
-          "fleet_score": 2081,
+          "points": 31716,
+          "avg_points": 2114,
+          "fleet_score": 2101,
           "empire_name": "アシリア"
         },
         {
@@ -1533,9 +1533,9 @@
           "player_name": "マモル",
           "level": 17,
           "planets": 10,
-          "points": 24104,
-          "avg_points": 2410,
-          "fleet_score": 2394,
+          "points": 24204,
+          "avg_points": 2420,
+          "fleet_score": 2412,
           "empire_name": "スペースストーム"
         },
         {
@@ -1544,8 +1544,8 @@
           "player_name": "Lanack",
           "level": 17,
           "planets": 9,
-          "points": 22553,
-          "avg_points": 2505,
+          "points": 22771,
+          "avg_points": 2530,
           "fleet_score": 2392,
           "empire_name": "スペースストーム"
         },
@@ -1555,13 +1555,24 @@
           "player_name": "タウリ",
           "level": 17,
           "planets": 9,
-          "points": 21877,
-          "avg_points": 2430,
+          "points": 21883,
+          "avg_points": 2431,
           "fleet_score": 3567,
           "empire_name": null
         },
         {
           "rank_position": 20,
+          "title": "建設王",
+          "player_name": "能面",
+          "level": 17,
+          "planets": 12,
+          "points": 20959,
+          "avg_points": 1746,
+          "fleet_score": 2081,
+          "empire_name": null
+        },
+        {
+          "rank_position": 21,
           "title": null,
           "player_name": "ターキーマン",
           "level": 17,
@@ -1569,17 +1580,6 @@
           "points": 20242,
           "avg_points": 1840,
           "fleet_score": 1813,
-          "empire_name": null
-        },
-        {
-          "rank_position": 21,
-          "title": "建設王",
-          "player_name": "能面",
-          "level": 17,
-          "planets": 11,
-          "points": 20124,
-          "avg_points": 1829,
-          "fleet_score": 1713,
           "empire_name": null
         },
         {
@@ -1599,9 +1599,9 @@
           "player_name": "nomorebeer",
           "level": 16,
           "planets": 11,
-          "points": 15825,
-          "avg_points": 1438,
-          "fleet_score": 2907,
+          "points": 16629,
+          "avg_points": 1511,
+          "fleet_score": 3290,
           "empire_name": null
         },
         {
@@ -1610,8 +1610,8 @@
           "player_name": "ハイデマリー・W・シュナウファー",
           "level": 16,
           "planets": 6,
-          "points": 15230,
-          "avg_points": 2538,
+          "points": 15327,
+          "avg_points": 2554,
           "fleet_score": 352,
           "empire_name": "スペースストーム"
         },
@@ -1621,8 +1621,8 @@
           "player_name": "higuma",
           "level": 15,
           "planets": 5,
-          "points": 13306,
-          "avg_points": 2661,
+          "points": 13352,
+          "avg_points": 2670,
           "fleet_score": 1153,
           "empire_name": "スペースストーム"
         },
@@ -1632,8 +1632,8 @@
           "player_name": "ranran2",
           "level": 15,
           "planets": 7,
-          "points": 12533,
-          "avg_points": 1790,
+          "points": 12594,
+          "avg_points": 1799,
           "fleet_score": 1910,
           "empire_name": null
         },
@@ -1643,8 +1643,8 @@
           "player_name": "Frodo",
           "level": 15,
           "planets": 8,
-          "points": 12176,
-          "avg_points": 1522,
+          "points": 12465,
+          "avg_points": 1558,
           "fleet_score": 952,
           "empire_name": null
         },
@@ -1665,8 +1665,8 @@
           "player_name": "phovz",
           "level": 15,
           "planets": 5,
-          "points": 10024,
-          "avg_points": 2004,
+          "points": 10030,
+          "avg_points": 2006,
           "fleet_score": 648,
           "empire_name": null
         },
@@ -1676,8 +1676,8 @@
           "player_name": "tyrevel",
           "level": 14,
           "planets": 5,
-          "points": 9085,
-          "avg_points": 1817,
+          "points": 9108,
+          "avg_points": 1821,
           "fleet_score": 607,
           "empire_name": null
         },
@@ -1698,7 +1698,7 @@
           "player_name": "TP",
           "level": 12,
           "planets": 6,
-          "points": 5922,
+          "points": 5925,
           "avg_points": 987,
           "fleet_score": 513,
           "empire_name": null
@@ -1709,9 +1709,9 @@
           "player_name": "アオヤ",
           "level": 13,
           "planets": 1,
-          "points": 5731,
-          "avg_points": 5731,
-          "fleet_score": 240,
+          "points": 5808,
+          "avg_points": 5808,
+          "fleet_score": 272,
           "empire_name": null
         },
         {
@@ -1741,10 +1741,10 @@
           "title": "匠の業",
           "player_name": "korota",
           "level": 12,
-          "planets": 3,
-          "points": 3860,
-          "avg_points": 1286,
-          "fleet_score": 131,
+          "planets": 4,
+          "points": 4164,
+          "avg_points": 1041,
+          "fleet_score": 145,
           "empire_name": null
         },
         {
@@ -1753,8 +1753,8 @@
           "player_name": "オペレータ",
           "level": 11,
           "planets": 1,
-          "points": 3541,
-          "avg_points": 3541,
+          "points": 3542,
+          "avg_points": 3542,
           "fleet_score": null,
           "empire_name": null
         },
@@ -1775,8 +1775,8 @@
           "player_name": "syarunoiru",
           "level": 11,
           "planets": 1,
-          "points": 3434,
-          "avg_points": 3434,
+          "points": 3435,
+          "avg_points": 3435,
           "fleet_score": 10,
           "empire_name": null
         },
@@ -1797,8 +1797,8 @@
           "player_name": "ゲオルク・メルカー",
           "level": 10,
           "planets": 1,
-          "points": 2896,
-          "avg_points": 2896,
+          "points": 2898,
+          "avg_points": 2898,
           "fleet_score": 86,
           "empire_name": null
         },
@@ -1841,8 +1841,8 @@
           "player_name": "paxai1",
           "level": 9,
           "planets": 1,
-          "points": 1862,
-          "avg_points": 1862,
+          "points": 1901,
+          "avg_points": 1901,
           "fleet_score": 51,
           "empire_name": null
         },
@@ -1852,8 +1852,8 @@
           "player_name": "potato1226",
           "level": 9,
           "planets": 1,
-          "points": 1631,
-          "avg_points": 1631,
+          "points": 1632,
+          "avg_points": 1632,
           "fleet_score": 69,
           "empire_name": null
         },
@@ -1863,8 +1863,8 @@
           "player_name": "ヤンマ",
           "level": 9,
           "planets": 1,
-          "points": 1594,
-          "avg_points": 1594,
+          "points": 1622,
+          "avg_points": 1622,
           "fleet_score": 16,
           "empire_name": "スペースストーム"
         },
@@ -2014,11 +2014,11 @@
       ]
     },
     "comparison": {
-      "captured_at_utc": "2026-03-25T21:24:26.082601+00:00",
-      "captured_hour_utc": "2026-03-25T21:00:00+00:00",
+      "captured_at_utc": "2026-03-25T23:07:11.982022+00:00",
+      "captured_hour_utc": "2026-03-25T23:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "fdbe72bbca9cc24ca866c018ce63f2d9c58c82d600ec4efdae7604553c38d913",
+      "content_sha256": "3c30b518baeafd63224730ffc6d791b0cb8b91e7dcc02347785a0c9e2c1ecac6",
       "row_count": 60,
       "rows": [
         {
@@ -2027,9 +2027,9 @@
           "player_name": "aaaa",
           "level": 29,
           "planets": 142,
-          "points": 873460,
-          "avg_points": 6151,
-          "fleet_score": 342753,
+          "points": 878601,
+          "avg_points": 6187,
+          "fleet_score": 345247,
           "empire_name": "あ"
         },
         {
@@ -2038,9 +2038,9 @@
           "player_name": "だいあん",
           "level": 28,
           "planets": 126,
-          "points": 632162,
-          "avg_points": 5017,
-          "fleet_score": 142585,
+          "points": 636238,
+          "avg_points": 5049,
+          "fleet_score": 143578,
           "empire_name": "アシリア"
         },
         {
@@ -2049,8 +2049,8 @@
           "player_name": "azsxx",
           "level": 27,
           "planets": 84,
-          "points": 346095,
-          "avg_points": 4120,
+          "points": 346495,
+          "avg_points": 4124,
           "fleet_score": 56408,
           "empire_name": "あ"
         },
@@ -2060,9 +2060,9 @@
           "player_name": "TK",
           "level": 25,
           "planets": 46,
-          "points": 239797,
-          "avg_points": 5212,
-          "fleet_score": 38288,
+          "points": 240871,
+          "avg_points": 5236,
+          "fleet_score": 38609,
           "empire_name": "スペースストーム"
         },
         {
@@ -2071,8 +2071,8 @@
           "player_name": "桜島",
           "level": 25,
           "planets": 114,
-          "points": 230384,
-          "avg_points": 2020,
+          "points": 230667,
+          "avg_points": 2023,
           "fleet_score": 19937,
           "empire_name": "流れ星"
         },
@@ -2082,9 +2082,9 @@
           "player_name": "December",
           "level": 25,
           "planets": 45,
-          "points": 193842,
-          "avg_points": 4307,
-          "fleet_score": 35722,
+          "points": 195100,
+          "avg_points": 4335,
+          "fleet_score": 36324,
           "empire_name": "princess"
         },
         {
@@ -2092,9 +2092,9 @@
           "title": "匠の業",
           "player_name": "volume",
           "level": 24,
-          "planets": 60,
-          "points": 184778,
-          "avg_points": 3079,
+          "planets": 61,
+          "points": 186119,
+          "avg_points": 3051,
           "fleet_score": 23163,
           "empire_name": "スペースストーム"
         },
@@ -2104,8 +2104,8 @@
           "player_name": "雷光",
           "level": 24,
           "planets": 45,
-          "points": 160968,
-          "avg_points": 3577,
+          "points": 161631,
+          "avg_points": 3591,
           "fleet_score": 17626,
           "empire_name": "スペースストーム"
         },
@@ -2115,8 +2115,8 @@
           "player_name": "マリアンヌ・フォス",
           "level": 24,
           "planets": 48,
-          "points": 153537,
-          "avg_points": 3198,
+          "points": 154340,
+          "avg_points": 3215,
           "fleet_score": 22281,
           "empire_name": "アシリア"
         },
@@ -2126,19 +2126,19 @@
           "player_name": "motomeuibu",
           "level": 21,
           "planets": 16,
-          "points": 73745,
-          "avg_points": 4609,
-          "fleet_score": 18602,
+          "points": 74379,
+          "avg_points": 4648,
+          "fleet_score": 18659,
           "empire_name": "princess"
         },
         {
           "rank_position": 11,
           "title": null,
           "player_name": "蒲公英",
-          "level": 19,
+          "level": 20,
           "planets": 11,
-          "points": 43525,
-          "avg_points": 3956,
+          "points": 43805,
+          "avg_points": 3982,
           "fleet_score": 5810,
           "empire_name": null
         },
@@ -2147,9 +2147,9 @@
           "title": "初心者",
           "player_name": "abcd",
           "level": 21,
-          "planets": 22,
+          "planets": 23,
           "points": 42210,
-          "avg_points": 1918,
+          "avg_points": 1835,
           "fleet_score": 7395,
           "empire_name": null
         },
@@ -2159,9 +2159,9 @@
           "player_name": "ゼネトス",
           "level": 19,
           "planets": 23,
-          "points": 35987,
-          "avg_points": 1564,
-          "fleet_score": 7536,
+          "points": 36457,
+          "avg_points": 1585,
+          "fleet_score": 7598,
           "empire_name": null
         },
         {
@@ -2170,8 +2170,8 @@
           "player_name": "Gunderk",
           "level": 18,
           "planets": 23,
-          "points": 33860,
-          "avg_points": 1472,
+          "points": 33896,
+          "avg_points": 1473,
           "fleet_score": 6709,
           "empire_name": "スペースストーム"
         },
@@ -2181,9 +2181,9 @@
           "player_name": "お酒MAN",
           "level": 18,
           "planets": 12,
-          "points": 32297,
-          "avg_points": 2691,
-          "fleet_score": 6401,
+          "points": 32464,
+          "avg_points": 2705,
+          "fleet_score": 6413,
           "empire_name": null
         },
         {
@@ -2203,8 +2203,8 @@
           "player_name": "マモル",
           "level": 17,
           "planets": 10,
-          "points": 23475,
-          "avg_points": 2347,
+          "points": 23522,
+          "avg_points": 2352,
           "fleet_score": 2317,
           "empire_name": "スペースストーム"
         },
@@ -2225,8 +2225,8 @@
           "player_name": "タウリ",
           "level": 17,
           "planets": 9,
-          "points": 21828,
-          "avg_points": 2425,
+          "points": 21864,
+          "avg_points": 2429,
           "fleet_score": 3567,
           "empire_name": null
         },
@@ -2236,8 +2236,8 @@
           "player_name": "ターキーマン",
           "level": 17,
           "planets": 11,
-          "points": 20149,
-          "avg_points": 1831,
+          "points": 20199,
+          "avg_points": 1836,
           "fleet_score": 1813,
           "empire_name": null
         },
@@ -2247,9 +2247,9 @@
           "player_name": "能面",
           "level": 17,
           "planets": 11,
-          "points": 18333,
-          "avg_points": 1666,
-          "fleet_score": 1494,
+          "points": 18412,
+          "avg_points": 1673,
+          "fleet_score": 1498,
           "empire_name": null
         },
         {
@@ -2269,8 +2269,8 @@
           "player_name": "ハイデマリー・W・シュナウファー",
           "level": 16,
           "planets": 6,
-          "points": 15146,
-          "avg_points": 2524,
+          "points": 15154,
+          "avg_points": 2525,
           "fleet_score": 352,
           "empire_name": "スペースストーム"
         },
@@ -2280,8 +2280,8 @@
           "player_name": "nomorebeer",
           "level": 16,
           "planets": 11,
-          "points": 14579,
-          "avg_points": 1325,
+          "points": 14654,
+          "avg_points": 1332,
           "fleet_score": 2593,
           "empire_name": null
         },
@@ -2291,8 +2291,8 @@
           "player_name": "higuma",
           "level": 15,
           "planets": 5,
-          "points": 12848,
-          "avg_points": 2569,
+          "points": 13071,
+          "avg_points": 2614,
           "fleet_score": 1153,
           "empire_name": "スペースストーム"
         },
@@ -2301,10 +2301,10 @@
           "title": null,
           "player_name": "ranran2",
           "level": 15,
-          "planets": 6,
-          "points": 11783,
-          "avg_points": 1963,
-          "fleet_score": 1673,
+          "planets": 7,
+          "points": 12345,
+          "avg_points": 1763,
+          "fleet_score": 1851,
           "empire_name": null
         },
         {
@@ -2324,9 +2324,9 @@
           "player_name": "Frodo",
           "level": 15,
           "planets": 8,
-          "points": 11198,
-          "avg_points": 1399,
-          "fleet_score": 823,
+          "points": 11382,
+          "avg_points": 1422,
+          "fleet_score": 831,
           "empire_name": null
         },
         {
@@ -2368,8 +2368,8 @@
           "player_name": "TP",
           "level": 12,
           "planets": 6,
-          "points": 5818,
-          "avg_points": 969,
+          "points": 5828,
+          "avg_points": 971,
           "fleet_score": 513,
           "empire_name": null
         },
@@ -2379,8 +2379,8 @@
           "player_name": "アオヤ",
           "level": 13,
           "planets": 1,
-          "points": 5647,
-          "avg_points": 5647,
+          "points": 5649,
+          "avg_points": 5649,
           "fleet_score": 240,
           "empire_name": null
         },
@@ -2412,8 +2412,8 @@
           "player_name": "オペレータ",
           "level": 11,
           "planets": 1,
-          "points": 3537,
-          "avg_points": 3537,
+          "points": 3538,
+          "avg_points": 3538,
           "fleet_score": null,
           "empire_name": null
         },
@@ -2445,8 +2445,8 @@
           "player_name": "syarunoiru",
           "level": 11,
           "planets": 1,
-          "points": 3380,
-          "avg_points": 3380,
+          "points": 3432,
+          "avg_points": 3432,
           "fleet_score": 10,
           "empire_name": null
         },
@@ -2463,6 +2463,17 @@
         },
         {
           "rank_position": 41,
+          "title": "匠の業",
+          "player_name": "ゲオルク・メルカー",
+          "level": 10,
+          "planets": 1,
+          "points": 2852,
+          "avg_points": 2852,
+          "fleet_score": 86,
+          "empire_name": null
+        },
+        {
+          "rank_position": 42,
           "title": "帝国の一員",
           "player_name": "のこのこ",
           "level": 10,
@@ -2473,7 +2484,7 @@
           "empire_name": "のこのこ帝国"
         },
         {
-          "rank_position": 42,
+          "rank_position": 43,
           "title": "略奪者",
           "player_name": "涼香",
           "level": 12,
@@ -2484,24 +2495,13 @@
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 43,
-          "title": "匠の業",
-          "player_name": "ゲオルク・メルカー",
-          "level": 10,
-          "planets": 1,
-          "points": 2812,
-          "avg_points": 2812,
-          "fleet_score": 86,
-          "empire_name": null
-        },
-        {
           "rank_position": 44,
           "title": "匠の業",
           "player_name": "eutoreiy",
           "level": 10,
           "planets": 1,
-          "points": 1895,
-          "avg_points": 1895,
+          "points": 1939,
+          "avg_points": 1939,
           "fleet_score": 5,
           "empire_name": null
         },
@@ -2544,8 +2544,8 @@
           "player_name": "ヤンマ",
           "level": 8,
           "planets": 1,
-          "points": 1306,
-          "avg_points": 1306,
+          "points": 1319,
+          "avg_points": 1319,
           "fleet_score": 16,
           "empire_name": "スペースストーム"
         },
@@ -2687,11 +2687,11 @@
   },
   "24": {
     "latest": {
-      "captured_at_utc": "2026-03-26T03:52:03.560751+00:00",
-      "captured_hour_utc": "2026-03-26T03:00:00+00:00",
+      "captured_at_utc": "2026-03-26T05:26:40.578641+00:00",
+      "captured_hour_utc": "2026-03-26T05:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "59ca915206c7e970de2cd09283c33e4da37321eb1354a6b814311a6eac8e7fe0",
+      "content_sha256": "deeae6632bf3f50907fa43fbd680efdcea1594c2bdfd6df0df36df0ec8189734",
       "row_count": 60,
       "rows": [
         {
@@ -2700,9 +2700,9 @@
           "player_name": "aaaa",
           "level": 29,
           "planets": 144,
-          "points": 891644,
-          "avg_points": 6191,
-          "fleet_score": 351907,
+          "points": 898328,
+          "avg_points": 6238,
+          "fleet_score": 354912,
           "empire_name": "あ"
         },
         {
@@ -2711,9 +2711,9 @@
           "player_name": "だいあん",
           "level": 28,
           "planets": 127,
-          "points": 642569,
-          "avg_points": 5059,
-          "fleet_score": 144986,
+          "points": 646472,
+          "avg_points": 5090,
+          "fleet_score": 146075,
           "empire_name": "アシリア"
         },
         {
@@ -2722,9 +2722,9 @@
           "player_name": "azsxx",
           "level": 27,
           "planets": 84,
-          "points": 348910,
-          "avg_points": 4153,
-          "fleet_score": 56408,
+          "points": 349757,
+          "avg_points": 4163,
+          "fleet_score": 56696,
           "empire_name": "あ"
         },
         {
@@ -2733,9 +2733,9 @@
           "player_name": "TK",
           "level": 25,
           "planets": 46,
-          "points": 244534,
-          "avg_points": 5315,
-          "fleet_score": 40039,
+          "points": 246342,
+          "avg_points": 5355,
+          "fleet_score": 40802,
           "empire_name": "スペースストーム"
         },
         {
@@ -2744,9 +2744,9 @@
           "player_name": "桜島",
           "level": 25,
           "planets": 114,
-          "points": 237235,
-          "avg_points": 2081,
-          "fleet_score": 20027,
+          "points": 238510,
+          "avg_points": 2092,
+          "fleet_score": 20117,
           "empire_name": "流れ星"
         },
         {
@@ -2755,20 +2755,20 @@
           "player_name": "December",
           "level": 25,
           "planets": 46,
-          "points": 198274,
-          "avg_points": 4310,
-          "fleet_score": 37452,
+          "points": 200133,
+          "avg_points": 4350,
+          "fleet_score": 38442,
           "empire_name": "princess"
         },
         {
           "rank_position": 7,
           "title": "匠の業",
           "player_name": "volume",
-          "level": 24,
+          "level": 25,
           "planets": 61,
-          "points": 189627,
-          "avg_points": 3108,
-          "fleet_score": 24366,
+          "points": 190891,
+          "avg_points": 3129,
+          "fleet_score": 24615,
           "empire_name": "スペースストーム"
         },
         {
@@ -2777,9 +2777,9 @@
           "player_name": "雷光",
           "level": 24,
           "planets": 46,
-          "points": 164674,
-          "avg_points": 3579,
-          "fleet_score": 18195,
+          "points": 166366,
+          "avg_points": 3616,
+          "fleet_score": 18322,
           "empire_name": "スペースストーム"
         },
         {
@@ -2788,9 +2788,9 @@
           "player_name": "マリアンヌ・フォス",
           "level": 24,
           "planets": 50,
-          "points": 161190,
-          "avg_points": 3223,
-          "fleet_score": 23209,
+          "points": 162090,
+          "avg_points": 3241,
+          "fleet_score": 23527,
           "empire_name": "アシリア"
         },
         {
@@ -2798,10 +2798,10 @@
           "title": null,
           "player_name": "motomeuibu",
           "level": 21,
-          "planets": 16,
-          "points": 74924,
-          "avg_points": 4682,
-          "fleet_score": 18659,
+          "planets": 17,
+          "points": 78376,
+          "avg_points": 4610,
+          "fleet_score": 18654,
           "empire_name": "princess"
         },
         {
@@ -2810,9 +2810,9 @@
           "player_name": "蒲公英",
           "level": 20,
           "planets": 11,
-          "points": 44339,
-          "avg_points": 4030,
-          "fleet_score": 5901,
+          "points": 44608,
+          "avg_points": 4055,
+          "fleet_score": 5951,
           "empire_name": null
         },
         {
@@ -2821,8 +2821,8 @@
           "player_name": "abcd",
           "level": 21,
           "planets": 23,
-          "points": 42683,
-          "avg_points": 1855,
+          "points": 43064,
+          "avg_points": 1872,
           "fleet_score": 7487,
           "empire_name": null
         },
@@ -2832,9 +2832,9 @@
           "player_name": "ゼネトス",
           "level": 19,
           "planets": 23,
-          "points": 36973,
-          "avg_points": 1607,
-          "fleet_score": 7616,
+          "points": 37138,
+          "avg_points": 1614,
+          "fleet_score": 7626,
           "empire_name": null
         },
         {
@@ -2843,9 +2843,9 @@
           "player_name": "Gunderk",
           "level": 18,
           "planets": 23,
-          "points": 34069,
-          "avg_points": 1481,
-          "fleet_score": 6709,
+          "points": 34318,
+          "avg_points": 1492,
+          "fleet_score": 6779,
           "empire_name": "スペースストーム"
         },
         {
@@ -2854,9 +2854,9 @@
           "player_name": "お酒MAN",
           "level": 18,
           "planets": 12,
-          "points": 32986,
-          "avg_points": 2748,
-          "fleet_score": 6467,
+          "points": 33319,
+          "avg_points": 2776,
+          "fleet_score": 6595,
           "empire_name": null
         },
         {
@@ -2865,9 +2865,9 @@
           "player_name": "りゅう",
           "level": 19,
           "planets": 15,
-          "points": 31192,
-          "avg_points": 2079,
-          "fleet_score": 2081,
+          "points": 31716,
+          "avg_points": 2114,
+          "fleet_score": 2101,
           "empire_name": "アシリア"
         },
         {
@@ -2876,9 +2876,9 @@
           "player_name": "マモル",
           "level": 17,
           "planets": 10,
-          "points": 24104,
-          "avg_points": 2410,
-          "fleet_score": 2394,
+          "points": 24204,
+          "avg_points": 2420,
+          "fleet_score": 2412,
           "empire_name": "スペースストーム"
         },
         {
@@ -2887,8 +2887,8 @@
           "player_name": "Lanack",
           "level": 17,
           "planets": 9,
-          "points": 22553,
-          "avg_points": 2505,
+          "points": 22771,
+          "avg_points": 2530,
           "fleet_score": 2392,
           "empire_name": "スペースストーム"
         },
@@ -2898,13 +2898,24 @@
           "player_name": "タウリ",
           "level": 17,
           "planets": 9,
-          "points": 21877,
-          "avg_points": 2430,
+          "points": 21883,
+          "avg_points": 2431,
           "fleet_score": 3567,
           "empire_name": null
         },
         {
           "rank_position": 20,
+          "title": "建設王",
+          "player_name": "能面",
+          "level": 17,
+          "planets": 12,
+          "points": 20959,
+          "avg_points": 1746,
+          "fleet_score": 2081,
+          "empire_name": null
+        },
+        {
+          "rank_position": 21,
           "title": null,
           "player_name": "ターキーマン",
           "level": 17,
@@ -2912,17 +2923,6 @@
           "points": 20242,
           "avg_points": 1840,
           "fleet_score": 1813,
-          "empire_name": null
-        },
-        {
-          "rank_position": 21,
-          "title": "建設王",
-          "player_name": "能面",
-          "level": 17,
-          "planets": 11,
-          "points": 20124,
-          "avg_points": 1829,
-          "fleet_score": 1713,
           "empire_name": null
         },
         {
@@ -2942,9 +2942,9 @@
           "player_name": "nomorebeer",
           "level": 16,
           "planets": 11,
-          "points": 15825,
-          "avg_points": 1438,
-          "fleet_score": 2907,
+          "points": 16629,
+          "avg_points": 1511,
+          "fleet_score": 3290,
           "empire_name": null
         },
         {
@@ -2953,8 +2953,8 @@
           "player_name": "ハイデマリー・W・シュナウファー",
           "level": 16,
           "planets": 6,
-          "points": 15230,
-          "avg_points": 2538,
+          "points": 15327,
+          "avg_points": 2554,
           "fleet_score": 352,
           "empire_name": "スペースストーム"
         },
@@ -2964,8 +2964,8 @@
           "player_name": "higuma",
           "level": 15,
           "planets": 5,
-          "points": 13306,
-          "avg_points": 2661,
+          "points": 13352,
+          "avg_points": 2670,
           "fleet_score": 1153,
           "empire_name": "スペースストーム"
         },
@@ -2975,8 +2975,8 @@
           "player_name": "ranran2",
           "level": 15,
           "planets": 7,
-          "points": 12533,
-          "avg_points": 1790,
+          "points": 12594,
+          "avg_points": 1799,
           "fleet_score": 1910,
           "empire_name": null
         },
@@ -2986,8 +2986,8 @@
           "player_name": "Frodo",
           "level": 15,
           "planets": 8,
-          "points": 12176,
-          "avg_points": 1522,
+          "points": 12465,
+          "avg_points": 1558,
           "fleet_score": 952,
           "empire_name": null
         },
@@ -3008,8 +3008,8 @@
           "player_name": "phovz",
           "level": 15,
           "planets": 5,
-          "points": 10024,
-          "avg_points": 2004,
+          "points": 10030,
+          "avg_points": 2006,
           "fleet_score": 648,
           "empire_name": null
         },
@@ -3019,8 +3019,8 @@
           "player_name": "tyrevel",
           "level": 14,
           "planets": 5,
-          "points": 9085,
-          "avg_points": 1817,
+          "points": 9108,
+          "avg_points": 1821,
           "fleet_score": 607,
           "empire_name": null
         },
@@ -3041,7 +3041,7 @@
           "player_name": "TP",
           "level": 12,
           "planets": 6,
-          "points": 5922,
+          "points": 5925,
           "avg_points": 987,
           "fleet_score": 513,
           "empire_name": null
@@ -3052,9 +3052,9 @@
           "player_name": "アオヤ",
           "level": 13,
           "planets": 1,
-          "points": 5731,
-          "avg_points": 5731,
-          "fleet_score": 240,
+          "points": 5808,
+          "avg_points": 5808,
+          "fleet_score": 272,
           "empire_name": null
         },
         {
@@ -3084,10 +3084,10 @@
           "title": "匠の業",
           "player_name": "korota",
           "level": 12,
-          "planets": 3,
-          "points": 3860,
-          "avg_points": 1286,
-          "fleet_score": 131,
+          "planets": 4,
+          "points": 4164,
+          "avg_points": 1041,
+          "fleet_score": 145,
           "empire_name": null
         },
         {
@@ -3096,8 +3096,8 @@
           "player_name": "オペレータ",
           "level": 11,
           "planets": 1,
-          "points": 3541,
-          "avg_points": 3541,
+          "points": 3542,
+          "avg_points": 3542,
           "fleet_score": null,
           "empire_name": null
         },
@@ -3118,8 +3118,8 @@
           "player_name": "syarunoiru",
           "level": 11,
           "planets": 1,
-          "points": 3434,
-          "avg_points": 3434,
+          "points": 3435,
+          "avg_points": 3435,
           "fleet_score": 10,
           "empire_name": null
         },
@@ -3140,8 +3140,8 @@
           "player_name": "ゲオルク・メルカー",
           "level": 10,
           "planets": 1,
-          "points": 2896,
-          "avg_points": 2896,
+          "points": 2898,
+          "avg_points": 2898,
           "fleet_score": 86,
           "empire_name": null
         },
@@ -3184,8 +3184,8 @@
           "player_name": "paxai1",
           "level": 9,
           "planets": 1,
-          "points": 1862,
-          "avg_points": 1862,
+          "points": 1901,
+          "avg_points": 1901,
           "fleet_score": 51,
           "empire_name": null
         },
@@ -3195,8 +3195,8 @@
           "player_name": "potato1226",
           "level": 9,
           "planets": 1,
-          "points": 1631,
-          "avg_points": 1631,
+          "points": 1632,
+          "avg_points": 1632,
           "fleet_score": 69,
           "empire_name": null
         },
@@ -3206,8 +3206,8 @@
           "player_name": "ヤンマ",
           "level": 9,
           "planets": 1,
-          "points": 1594,
-          "avg_points": 1594,
+          "points": 1622,
+          "avg_points": 1622,
           "fleet_score": 16,
           "empire_name": "スペースストーム"
         },
@@ -3357,11 +3357,11 @@
       ]
     },
     "comparison": {
-      "captured_at_utc": "2026-03-25T02:41:06.778217+00:00",
-      "captured_hour_utc": "2026-03-25T02:00:00+00:00",
+      "captured_at_utc": "2026-03-25T04:34:29.236147+00:00",
+      "captured_hour_utc": "2026-03-25T04:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "9f01629bc1186ffefcedc5a0560a5642989828fcfc651a3d38282acf0be82e42",
+      "content_sha256": "0d943ce9673814fe019a9d484c66c00a3686515ba79322d2b269647efa7861e4",
       "row_count": 60,
       "rows": [
         {
@@ -3370,9 +3370,9 @@
           "player_name": "aaaa",
           "level": 29,
           "planets": 137,
-          "points": 822077,
-          "avg_points": 6000,
-          "fleet_score": 322343,
+          "points": 828503,
+          "avg_points": 6047,
+          "fleet_score": 325864,
           "empire_name": "あ"
         },
         {
@@ -3381,9 +3381,9 @@
           "player_name": "だいあん",
           "level": 28,
           "planets": 123,
-          "points": 592166,
-          "avg_points": 4814,
-          "fleet_score": 129940,
+          "points": 597045,
+          "avg_points": 4854,
+          "fleet_score": 131897,
           "empire_name": "アシリア"
         },
         {
@@ -3392,8 +3392,8 @@
           "player_name": "azsxx",
           "level": 27,
           "planets": 84,
-          "points": 339536,
-          "avg_points": 4042,
+          "points": 340311,
+          "avg_points": 4051,
           "fleet_score": 56408,
           "empire_name": "あ"
         },
@@ -3403,9 +3403,9 @@
           "player_name": "TK",
           "level": 25,
           "planets": 46,
-          "points": 226498,
-          "avg_points": 4923,
-          "fleet_score": 35208,
+          "points": 227890,
+          "avg_points": 4954,
+          "fleet_score": 35304,
           "empire_name": "スペースストーム"
         },
         {
@@ -3414,8 +3414,8 @@
           "player_name": "桜島",
           "level": 25,
           "planets": 109,
-          "points": 216585,
-          "avg_points": 1987,
+          "points": 217289,
+          "avg_points": 1993,
           "fleet_score": 19925,
           "empire_name": "流れ星"
         },
@@ -3425,9 +3425,9 @@
           "player_name": "December",
           "level": 24,
           "planets": 43,
-          "points": 178885,
-          "avg_points": 4160,
-          "fleet_score": 30479,
+          "points": 180703,
+          "avg_points": 4202,
+          "fleet_score": 31148,
           "empire_name": "princess"
         },
         {
@@ -3436,20 +3436,20 @@
           "player_name": "volume",
           "level": 24,
           "planets": 59,
-          "points": 174181,
-          "avg_points": 2952,
-          "fleet_score": 21783,
+          "points": 175403,
+          "avg_points": 2972,
+          "fleet_score": 21943,
           "empire_name": "スペースストーム"
         },
         {
           "rank_position": 8,
-          "title": "銀河の支配者",
+          "title": "匠の業",
           "player_name": "雷光",
           "level": 24,
           "planets": 41,
-          "points": 150641,
-          "avg_points": 3674,
-          "fleet_score": 16188,
+          "points": 152007,
+          "avg_points": 3707,
+          "fleet_score": 16308,
           "empire_name": "スペースストーム"
         },
         {
@@ -3458,9 +3458,9 @@
           "player_name": "マリアンヌ・フォス",
           "level": 24,
           "planets": 46,
-          "points": 139717,
-          "avg_points": 3037,
-          "fleet_score": 19979,
+          "points": 140585,
+          "avg_points": 3056,
+          "fleet_score": 20121,
           "empire_name": "アシリア"
         },
         {
@@ -3469,9 +3469,9 @@
           "player_name": "motomeuibu",
           "level": 21,
           "planets": 15,
-          "points": 66654,
-          "avg_points": 4443,
-          "fleet_score": 18259,
+          "points": 67143,
+          "avg_points": 4476,
+          "fleet_score": 18283,
           "empire_name": "princess"
         },
         {
@@ -3480,9 +3480,9 @@
           "player_name": "蒲公英",
           "level": 19,
           "planets": 10,
-          "points": 40904,
-          "avg_points": 4090,
-          "fleet_score": 5115,
+          "points": 41057,
+          "avg_points": 4105,
+          "fleet_score": 5126,
           "empire_name": null
         },
         {
@@ -3490,10 +3490,10 @@
           "title": "初心者",
           "player_name": "abcd",
           "level": 20,
-          "planets": 17,
-          "points": 35773,
-          "avg_points": 2104,
-          "fleet_score": 6418,
+          "planets": 18,
+          "points": 36445,
+          "avg_points": 2024,
+          "fleet_score": 6274,
           "empire_name": null
         },
         {
@@ -3502,9 +3502,9 @@
           "player_name": "ゼネトス",
           "level": 19,
           "planets": 20,
-          "points": 31920,
-          "avg_points": 1596,
-          "fleet_score": 6521,
+          "points": 32216,
+          "avg_points": 1610,
+          "fleet_score": 6645,
           "empire_name": null
         },
         {
@@ -3513,9 +3513,9 @@
           "player_name": "Gunderk",
           "level": 18,
           "planets": 22,
-          "points": 31314,
-          "avg_points": 1423,
-          "fleet_score": 6309,
+          "points": 31851,
+          "avg_points": 1447,
+          "fleet_score": 6489,
           "empire_name": "スペースストーム"
         },
         {
@@ -3524,19 +3524,19 @@
           "player_name": "お酒MAN",
           "level": 18,
           "planets": 12,
-          "points": 30059,
-          "avg_points": 2504,
-          "fleet_score": 5585,
+          "points": 30372,
+          "avg_points": 2531,
+          "fleet_score": 5651,
           "empire_name": null
         },
         {
           "rank_position": 16,
-          "title": "初心者",
+          "title": null,
           "player_name": "りゅう",
           "level": 18,
           "planets": 15,
-          "points": 25749,
-          "avg_points": 1716,
+          "points": 26559,
+          "avg_points": 1770,
           "fleet_score": 2007,
           "empire_name": "アシリア"
         },
@@ -3546,32 +3546,32 @@
           "player_name": "マモル",
           "level": 17,
           "planets": 9,
-          "points": 21696,
-          "avg_points": 2410,
+          "points": 21890,
+          "avg_points": 2432,
           "fleet_score": 2187,
           "empire_name": "スペースストーム"
         },
         {
           "rank_position": 18,
-          "title": null,
-          "player_name": "タウリ",
-          "level": 17,
-          "planets": 9,
-          "points": 21499,
-          "avg_points": 2388,
-          "fleet_score": 3567,
-          "empire_name": null
-        },
-        {
-          "rank_position": 19,
           "title": "達人",
           "player_name": "Lanack",
           "level": 17,
           "planets": 9,
-          "points": 21442,
-          "avg_points": 2382,
+          "points": 21547,
+          "avg_points": 2394,
           "fleet_score": 2392,
           "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 19,
+          "title": null,
+          "player_name": "タウリ",
+          "level": 17,
+          "planets": 9,
+          "points": 21530,
+          "avg_points": 2392,
+          "fleet_score": 3567,
+          "empire_name": null
         },
         {
           "rank_position": 20,
@@ -3590,8 +3590,8 @@
           "player_name": "ねじれ",
           "level": 15,
           "planets": 1,
-          "points": 16185,
-          "avg_points": 16185,
+          "points": 16229,
+          "avg_points": 16229,
           "fleet_score": 7162,
           "empire_name": "スペースストーム"
         },
@@ -3601,8 +3601,8 @@
           "player_name": "ハイデマリー・W・シュナウファー",
           "level": 16,
           "planets": 6,
-          "points": 14573,
-          "avg_points": 2428,
+          "points": 14577,
+          "avg_points": 2429,
           "fleet_score": 352,
           "empire_name": "スペースストーム"
         },
@@ -3612,32 +3612,32 @@
           "player_name": "能面",
           "level": 16,
           "planets": 7,
-          "points": 13604,
-          "avg_points": 1943,
-          "fleet_score": 1297,
+          "points": 14138,
+          "avg_points": 2019,
+          "fleet_score": 1286,
           "empire_name": null
         },
         {
           "rank_position": 24,
+          "title": "虐殺者",
+          "player_name": "higuma",
+          "level": 15,
+          "planets": 5,
+          "points": 12074,
+          "avg_points": 2414,
+          "fleet_score": 1148,
+          "empire_name": "スペースストーム"
+        },
+        {
+          "rank_position": 25,
           "title": "初心者",
           "player_name": "Rows0160",
           "level": 21,
           "planets": 7,
-          "points": 11674,
-          "avg_points": 1667,
+          "points": 11708,
+          "avg_points": 1672,
           "fleet_score": 490,
           "empire_name": null
-        },
-        {
-          "rank_position": 25,
-          "title": "虐殺者",
-          "player_name": "higuma",
-          "level": 15,
-          "planets": 4,
-          "points": 11669,
-          "avg_points": 2917,
-          "fleet_score": 1126,
-          "empire_name": "スペースストーム"
         },
         {
           "rank_position": 26,
@@ -3645,8 +3645,8 @@
           "player_name": "ranran2",
           "level": 14,
           "planets": 6,
-          "points": 11314,
-          "avg_points": 1885,
+          "points": 11355,
+          "avg_points": 1892,
           "fleet_score": 1663,
           "empire_name": null
         },
@@ -3655,10 +3655,10 @@
           "title": "建設王",
           "player_name": "nomorebeer",
           "level": 15,
-          "planets": 7,
-          "points": 9650,
-          "avg_points": 1378,
-          "fleet_score": 1856,
+          "planets": 8,
+          "points": 10182,
+          "avg_points": 1272,
+          "fleet_score": 1938,
           "empire_name": null
         },
         {
@@ -3667,8 +3667,8 @@
           "player_name": "phovz",
           "level": 14,
           "planets": 5,
-          "points": 8906,
-          "avg_points": 1781,
+          "points": 8937,
+          "avg_points": 1787,
           "fleet_score": 752,
           "empire_name": null
         },
@@ -3678,13 +3678,24 @@
           "player_name": "tyrevel",
           "level": 14,
           "planets": 5,
-          "points": 7977,
-          "avg_points": 1595,
+          "points": 8042,
+          "avg_points": 1608,
           "fleet_score": 894,
           "empire_name": null
         },
         {
           "rank_position": 30,
+          "title": "匠の業",
+          "player_name": "Frodo",
+          "level": 14,
+          "planets": 5,
+          "points": 7645,
+          "avg_points": 1529,
+          "fleet_score": 602,
+          "empire_name": null
+        },
+        {
+          "rank_position": 31,
           "title": null,
           "player_name": "shizuku",
           "level": 13,
@@ -3695,24 +3706,13 @@
           "empire_name": null
         },
         {
-          "rank_position": 31,
-          "title": "匠の業",
-          "player_name": "Frodo",
-          "level": 13,
-          "planets": 5,
-          "points": 7208,
-          "avg_points": 1441,
-          "fleet_score": 602,
-          "empire_name": null
-        },
-        {
           "rank_position": 32,
           "title": "初心者",
           "player_name": "アオヤ",
-          "level": 12,
+          "level": 13,
           "planets": 1,
-          "points": 5048,
-          "avg_points": 5048,
+          "points": 5186,
+          "avg_points": 5186,
           "fleet_score": 236,
           "empire_name": null
         },
@@ -3722,8 +3722,8 @@
           "player_name": "KK",
           "level": 12,
           "planets": 1,
-          "points": 4656,
-          "avg_points": 4656,
+          "points": 4683,
+          "avg_points": 4683,
           "fleet_score": 16,
           "empire_name": null
         },
@@ -3733,9 +3733,9 @@
           "player_name": "TP",
           "level": 12,
           "planets": 4,
-          "points": 4406,
-          "avg_points": 1101,
-          "fleet_score": 403,
+          "points": 4501,
+          "avg_points": 1125,
+          "fleet_score": 439,
           "empire_name": null
         },
         {
@@ -3755,8 +3755,8 @@
           "player_name": "オペレータ",
           "level": 11,
           "planets": 1,
-          "points": 3523,
-          "avg_points": 3523,
+          "points": 3525,
+          "avg_points": 3525,
           "fleet_score": null,
           "empire_name": null
         },
@@ -3777,8 +3777,8 @@
           "player_name": "syarunoiru",
           "level": 11,
           "planets": 1,
-          "points": 3273,
-          "avg_points": 3273,
+          "points": 3274,
+          "avg_points": 3274,
           "fleet_score": 10,
           "empire_name": null
         },
@@ -3810,31 +3810,31 @@
           "player_name": "涼香",
           "level": 11,
           "planets": 1,
-          "points": 2485,
-          "avg_points": 2485,
+          "points": 2544,
+          "avg_points": 2544,
           "fleet_score": 138,
           "empire_name": "スペースストーム"
         },
         {
           "rank_position": 42,
           "title": "匠の業",
-          "player_name": "ゲオルク・メルカー",
+          "player_name": "korota",
           "level": 10,
-          "planets": 1,
-          "points": 2477,
-          "avg_points": 2477,
-          "fleet_score": 26,
+          "planets": 2,
+          "points": 2501,
+          "avg_points": 1250,
+          "fleet_score": 115,
           "empire_name": null
         },
         {
           "rank_position": 43,
           "title": "匠の業",
-          "player_name": "korota",
+          "player_name": "ゲオルク・メルカー",
           "level": 10,
-          "planets": 2,
-          "points": 2357,
-          "avg_points": 1178,
-          "fleet_score": 103,
+          "planets": 1,
+          "points": 2479,
+          "avg_points": 2479,
+          "fleet_score": 26,
           "empire_name": null
         },
         {
@@ -3843,8 +3843,8 @@
           "player_name": "eutoreiy",
           "level": 9,
           "planets": 1,
-          "points": 1711,
-          "avg_points": 1711,
+          "points": 1712,
+          "avg_points": 1712,
           "fleet_score": 1,
           "empire_name": null
         },
@@ -3854,8 +3854,8 @@
           "player_name": "paxai1",
           "level": 9,
           "planets": 1,
-          "points": 1605,
-          "avg_points": 1605,
+          "points": 1625,
+          "avg_points": 1625,
           "fleet_score": 50,
           "empire_name": null
         },
@@ -3876,8 +3876,8 @@
           "player_name": "ヤンマ",
           "level": 8,
           "planets": 1,
-          "points": 1115,
-          "avg_points": 1115,
+          "points": 1182,
+          "avg_points": 1182,
           "fleet_score": 12,
           "empire_name": "スペースストーム"
         },
@@ -3909,9 +3909,9 @@
           "player_name": "aragon",
           "level": 6,
           "planets": 1,
-          "points": 606,
-          "avg_points": 606,
-          "fleet_score": 11,
+          "points": 624,
+          "avg_points": 624,
+          "fleet_score": 13,
           "empire_name": null
         },
         {
@@ -4030,11 +4030,11 @@
   },
   "168": {
     "latest": {
-      "captured_at_utc": "2026-03-26T03:52:03.560751+00:00",
-      "captured_hour_utc": "2026-03-26T03:00:00+00:00",
+      "captured_at_utc": "2026-03-26T05:26:40.578641+00:00",
+      "captured_hour_utc": "2026-03-26T05:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "59ca915206c7e970de2cd09283c33e4da37321eb1354a6b814311a6eac8e7fe0",
+      "content_sha256": "deeae6632bf3f50907fa43fbd680efdcea1594c2bdfd6df0df36df0ec8189734",
       "row_count": 60,
       "rows": [
         {
@@ -4043,9 +4043,9 @@
           "player_name": "aaaa",
           "level": 29,
           "planets": 144,
-          "points": 891644,
-          "avg_points": 6191,
-          "fleet_score": 351907,
+          "points": 898328,
+          "avg_points": 6238,
+          "fleet_score": 354912,
           "empire_name": "あ"
         },
         {
@@ -4054,9 +4054,9 @@
           "player_name": "だいあん",
           "level": 28,
           "planets": 127,
-          "points": 642569,
-          "avg_points": 5059,
-          "fleet_score": 144986,
+          "points": 646472,
+          "avg_points": 5090,
+          "fleet_score": 146075,
           "empire_name": "アシリア"
         },
         {
@@ -4065,9 +4065,9 @@
           "player_name": "azsxx",
           "level": 27,
           "planets": 84,
-          "points": 348910,
-          "avg_points": 4153,
-          "fleet_score": 56408,
+          "points": 349757,
+          "avg_points": 4163,
+          "fleet_score": 56696,
           "empire_name": "あ"
         },
         {
@@ -4076,9 +4076,9 @@
           "player_name": "TK",
           "level": 25,
           "planets": 46,
-          "points": 244534,
-          "avg_points": 5315,
-          "fleet_score": 40039,
+          "points": 246342,
+          "avg_points": 5355,
+          "fleet_score": 40802,
           "empire_name": "スペースストーム"
         },
         {
@@ -4087,9 +4087,9 @@
           "player_name": "桜島",
           "level": 25,
           "planets": 114,
-          "points": 237235,
-          "avg_points": 2081,
-          "fleet_score": 20027,
+          "points": 238510,
+          "avg_points": 2092,
+          "fleet_score": 20117,
           "empire_name": "流れ星"
         },
         {
@@ -4098,20 +4098,20 @@
           "player_name": "December",
           "level": 25,
           "planets": 46,
-          "points": 198274,
-          "avg_points": 4310,
-          "fleet_score": 37452,
+          "points": 200133,
+          "avg_points": 4350,
+          "fleet_score": 38442,
           "empire_name": "princess"
         },
         {
           "rank_position": 7,
           "title": "匠の業",
           "player_name": "volume",
-          "level": 24,
+          "level": 25,
           "planets": 61,
-          "points": 189627,
-          "avg_points": 3108,
-          "fleet_score": 24366,
+          "points": 190891,
+          "avg_points": 3129,
+          "fleet_score": 24615,
           "empire_name": "スペースストーム"
         },
         {
@@ -4120,9 +4120,9 @@
           "player_name": "雷光",
           "level": 24,
           "planets": 46,
-          "points": 164674,
-          "avg_points": 3579,
-          "fleet_score": 18195,
+          "points": 166366,
+          "avg_points": 3616,
+          "fleet_score": 18322,
           "empire_name": "スペースストーム"
         },
         {
@@ -4131,9 +4131,9 @@
           "player_name": "マリアンヌ・フォス",
           "level": 24,
           "planets": 50,
-          "points": 161190,
-          "avg_points": 3223,
-          "fleet_score": 23209,
+          "points": 162090,
+          "avg_points": 3241,
+          "fleet_score": 23527,
           "empire_name": "アシリア"
         },
         {
@@ -4141,10 +4141,10 @@
           "title": null,
           "player_name": "motomeuibu",
           "level": 21,
-          "planets": 16,
-          "points": 74924,
-          "avg_points": 4682,
-          "fleet_score": 18659,
+          "planets": 17,
+          "points": 78376,
+          "avg_points": 4610,
+          "fleet_score": 18654,
           "empire_name": "princess"
         },
         {
@@ -4153,9 +4153,9 @@
           "player_name": "蒲公英",
           "level": 20,
           "planets": 11,
-          "points": 44339,
-          "avg_points": 4030,
-          "fleet_score": 5901,
+          "points": 44608,
+          "avg_points": 4055,
+          "fleet_score": 5951,
           "empire_name": null
         },
         {
@@ -4164,8 +4164,8 @@
           "player_name": "abcd",
           "level": 21,
           "planets": 23,
-          "points": 42683,
-          "avg_points": 1855,
+          "points": 43064,
+          "avg_points": 1872,
           "fleet_score": 7487,
           "empire_name": null
         },
@@ -4175,9 +4175,9 @@
           "player_name": "ゼネトス",
           "level": 19,
           "planets": 23,
-          "points": 36973,
-          "avg_points": 1607,
-          "fleet_score": 7616,
+          "points": 37138,
+          "avg_points": 1614,
+          "fleet_score": 7626,
           "empire_name": null
         },
         {
@@ -4186,9 +4186,9 @@
           "player_name": "Gunderk",
           "level": 18,
           "planets": 23,
-          "points": 34069,
-          "avg_points": 1481,
-          "fleet_score": 6709,
+          "points": 34318,
+          "avg_points": 1492,
+          "fleet_score": 6779,
           "empire_name": "スペースストーム"
         },
         {
@@ -4197,9 +4197,9 @@
           "player_name": "お酒MAN",
           "level": 18,
           "planets": 12,
-          "points": 32986,
-          "avg_points": 2748,
-          "fleet_score": 6467,
+          "points": 33319,
+          "avg_points": 2776,
+          "fleet_score": 6595,
           "empire_name": null
         },
         {
@@ -4208,9 +4208,9 @@
           "player_name": "りゅう",
           "level": 19,
           "planets": 15,
-          "points": 31192,
-          "avg_points": 2079,
-          "fleet_score": 2081,
+          "points": 31716,
+          "avg_points": 2114,
+          "fleet_score": 2101,
           "empire_name": "アシリア"
         },
         {
@@ -4219,9 +4219,9 @@
           "player_name": "マモル",
           "level": 17,
           "planets": 10,
-          "points": 24104,
-          "avg_points": 2410,
-          "fleet_score": 2394,
+          "points": 24204,
+          "avg_points": 2420,
+          "fleet_score": 2412,
           "empire_name": "スペースストーム"
         },
         {
@@ -4230,8 +4230,8 @@
           "player_name": "Lanack",
           "level": 17,
           "planets": 9,
-          "points": 22553,
-          "avg_points": 2505,
+          "points": 22771,
+          "avg_points": 2530,
           "fleet_score": 2392,
           "empire_name": "スペースストーム"
         },
@@ -4241,13 +4241,24 @@
           "player_name": "タウリ",
           "level": 17,
           "planets": 9,
-          "points": 21877,
-          "avg_points": 2430,
+          "points": 21883,
+          "avg_points": 2431,
           "fleet_score": 3567,
           "empire_name": null
         },
         {
           "rank_position": 20,
+          "title": "建設王",
+          "player_name": "能面",
+          "level": 17,
+          "planets": 12,
+          "points": 20959,
+          "avg_points": 1746,
+          "fleet_score": 2081,
+          "empire_name": null
+        },
+        {
+          "rank_position": 21,
           "title": null,
           "player_name": "ターキーマン",
           "level": 17,
@@ -4255,17 +4266,6 @@
           "points": 20242,
           "avg_points": 1840,
           "fleet_score": 1813,
-          "empire_name": null
-        },
-        {
-          "rank_position": 21,
-          "title": "建設王",
-          "player_name": "能面",
-          "level": 17,
-          "planets": 11,
-          "points": 20124,
-          "avg_points": 1829,
-          "fleet_score": 1713,
           "empire_name": null
         },
         {
@@ -4285,9 +4285,9 @@
           "player_name": "nomorebeer",
           "level": 16,
           "planets": 11,
-          "points": 15825,
-          "avg_points": 1438,
-          "fleet_score": 2907,
+          "points": 16629,
+          "avg_points": 1511,
+          "fleet_score": 3290,
           "empire_name": null
         },
         {
@@ -4296,8 +4296,8 @@
           "player_name": "ハイデマリー・W・シュナウファー",
           "level": 16,
           "planets": 6,
-          "points": 15230,
-          "avg_points": 2538,
+          "points": 15327,
+          "avg_points": 2554,
           "fleet_score": 352,
           "empire_name": "スペースストーム"
         },
@@ -4307,8 +4307,8 @@
           "player_name": "higuma",
           "level": 15,
           "planets": 5,
-          "points": 13306,
-          "avg_points": 2661,
+          "points": 13352,
+          "avg_points": 2670,
           "fleet_score": 1153,
           "empire_name": "スペースストーム"
         },
@@ -4318,8 +4318,8 @@
           "player_name": "ranran2",
           "level": 15,
           "planets": 7,
-          "points": 12533,
-          "avg_points": 1790,
+          "points": 12594,
+          "avg_points": 1799,
           "fleet_score": 1910,
           "empire_name": null
         },
@@ -4329,8 +4329,8 @@
           "player_name": "Frodo",
           "level": 15,
           "planets": 8,
-          "points": 12176,
-          "avg_points": 1522,
+          "points": 12465,
+          "avg_points": 1558,
           "fleet_score": 952,
           "empire_name": null
         },
@@ -4351,8 +4351,8 @@
           "player_name": "phovz",
           "level": 15,
           "planets": 5,
-          "points": 10024,
-          "avg_points": 2004,
+          "points": 10030,
+          "avg_points": 2006,
           "fleet_score": 648,
           "empire_name": null
         },
@@ -4362,8 +4362,8 @@
           "player_name": "tyrevel",
           "level": 14,
           "planets": 5,
-          "points": 9085,
-          "avg_points": 1817,
+          "points": 9108,
+          "avg_points": 1821,
           "fleet_score": 607,
           "empire_name": null
         },
@@ -4384,7 +4384,7 @@
           "player_name": "TP",
           "level": 12,
           "planets": 6,
-          "points": 5922,
+          "points": 5925,
           "avg_points": 987,
           "fleet_score": 513,
           "empire_name": null
@@ -4395,9 +4395,9 @@
           "player_name": "アオヤ",
           "level": 13,
           "planets": 1,
-          "points": 5731,
-          "avg_points": 5731,
-          "fleet_score": 240,
+          "points": 5808,
+          "avg_points": 5808,
+          "fleet_score": 272,
           "empire_name": null
         },
         {
@@ -4427,10 +4427,10 @@
           "title": "匠の業",
           "player_name": "korota",
           "level": 12,
-          "planets": 3,
-          "points": 3860,
-          "avg_points": 1286,
-          "fleet_score": 131,
+          "planets": 4,
+          "points": 4164,
+          "avg_points": 1041,
+          "fleet_score": 145,
           "empire_name": null
         },
         {
@@ -4439,8 +4439,8 @@
           "player_name": "オペレータ",
           "level": 11,
           "planets": 1,
-          "points": 3541,
-          "avg_points": 3541,
+          "points": 3542,
+          "avg_points": 3542,
           "fleet_score": null,
           "empire_name": null
         },
@@ -4461,8 +4461,8 @@
           "player_name": "syarunoiru",
           "level": 11,
           "planets": 1,
-          "points": 3434,
-          "avg_points": 3434,
+          "points": 3435,
+          "avg_points": 3435,
           "fleet_score": 10,
           "empire_name": null
         },
@@ -4483,8 +4483,8 @@
           "player_name": "ゲオルク・メルカー",
           "level": 10,
           "planets": 1,
-          "points": 2896,
-          "avg_points": 2896,
+          "points": 2898,
+          "avg_points": 2898,
           "fleet_score": 86,
           "empire_name": null
         },
@@ -4527,8 +4527,8 @@
           "player_name": "paxai1",
           "level": 9,
           "planets": 1,
-          "points": 1862,
-          "avg_points": 1862,
+          "points": 1901,
+          "avg_points": 1901,
           "fleet_score": 51,
           "empire_name": null
         },
@@ -4538,8 +4538,8 @@
           "player_name": "potato1226",
           "level": 9,
           "planets": 1,
-          "points": 1631,
-          "avg_points": 1631,
+          "points": 1632,
+          "avg_points": 1632,
           "fleet_score": 69,
           "empire_name": null
         },
@@ -4549,8 +4549,8 @@
           "player_name": "ヤンマ",
           "level": 9,
           "planets": 1,
-          "points": 1594,
-          "avg_points": 1594,
+          "points": 1622,
+          "avg_points": 1622,
           "fleet_score": 16,
           "empire_name": "スペースストーム"
         },
@@ -4700,12 +4700,12 @@
       ]
     },
     "comparison": {
-      "captured_at_utc": "2026-03-19T03:15:15.820116+00:00",
-      "captured_hour_utc": "2026-03-19T03:00:00+00:00",
+      "captured_at_utc": "2026-03-19T05:05:07.437775+00:00",
+      "captured_hour_utc": "2026-03-19T05:00:00+00:00",
       "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
       "http_status": 200,
-      "content_sha256": "3fd46dbf890c9299937bac26678828504b438a32428a1772262eba6145b9b4e0",
-      "row_count": 47,
+      "content_sha256": "f450f747e368040a2dc365b6763bfe99598d17b5fe2c978555aed126a1127552",
+      "row_count": 49,
       "rows": [
         {
           "rank_position": 1,
@@ -4713,20 +4713,20 @@
           "player_name": "aaaa",
           "level": 27,
           "planets": 93,
-          "points": 450712,
-          "avg_points": 4846,
-          "fleet_score": 151286,
+          "points": 460522,
+          "avg_points": 4951,
+          "fleet_score": 157319,
           "empire_name": "あ"
         },
         {
           "rank_position": 2,
-          "title": "銀河の支配者",
+          "title": "匠の業",
           "player_name": "だいあん",
           "level": 27,
-          "planets": 87,
-          "points": 343732,
-          "avg_points": 3950,
-          "fleet_score": 74403,
+          "planets": 90,
+          "points": 351464,
+          "avg_points": 3905,
+          "fleet_score": 78370,
           "empire_name": "アシリア"
         },
         {
@@ -4735,9 +4735,9 @@
           "player_name": "azsxx",
           "level": 25,
           "planets": 70,
-          "points": 205670,
-          "avg_points": 2938,
-          "fleet_score": 25148,
+          "points": 209953,
+          "avg_points": 2999,
+          "fleet_score": 27177,
           "empire_name": "あ"
         },
         {
@@ -4746,9 +4746,9 @@
           "player_name": "TK",
           "level": 24,
           "planets": 31,
-          "points": 145914,
-          "avg_points": 4706,
-          "fleet_score": 22023,
+          "points": 147604,
+          "avg_points": 4761,
+          "fleet_score": 22001,
           "empire_name": "スペースストーム"
         },
         {
@@ -4756,9 +4756,9 @@
           "title": "初心者",
           "player_name": "桜島",
           "level": 22,
-          "planets": 45,
-          "points": 99274,
-          "avg_points": 2206,
+          "planets": 48,
+          "points": 101775,
+          "avg_points": 2120,
           "fleet_score": 15233,
           "empire_name": "流れ星"
         },
@@ -4768,9 +4768,9 @@
           "player_name": "volume",
           "level": 22,
           "planets": 42,
-          "points": 94834,
-          "avg_points": 2257,
-          "fleet_score": 10370,
+          "points": 95883,
+          "avg_points": 2282,
+          "fleet_score": 10496,
           "empire_name": "スペースストーム"
         },
         {
@@ -4779,8 +4779,8 @@
           "player_name": "雷光",
           "level": 22,
           "planets": 29,
-          "points": 88184,
-          "avg_points": 3040,
+          "points": 88328,
+          "avg_points": 3045,
           "fleet_score": 8891,
           "empire_name": "スペースストーム"
         },
@@ -4789,10 +4789,10 @@
           "title": "侵略者",
           "player_name": "マリアンヌ・フォス",
           "level": 22,
-          "planets": 23,
-          "points": 69158,
-          "avg_points": 3006,
-          "fleet_score": 8929,
+          "planets": 24,
+          "points": 69913,
+          "avg_points": 2913,
+          "fleet_score": 8830,
           "empire_name": "アシリア"
         },
         {
@@ -4801,101 +4801,90 @@
           "player_name": "December",
           "level": 21,
           "planets": 21,
-          "points": 67904,
-          "avg_points": 3233,
-          "fleet_score": 11175,
+          "points": 68944,
+          "avg_points": 3283,
+          "fleet_score": 11431,
           "empire_name": "princess"
         },
         {
           "rank_position": 10,
           "title": "初心者",
-          "player_name": "Rows0160",
-          "level": 20,
-          "planets": 10,
-          "points": 27528,
-          "avg_points": 2752,
-          "fleet_score": 2076,
-          "empire_name": null
-        },
-        {
-          "rank_position": 11,
-          "title": "初心者",
           "player_name": "motomeuibu",
           "level": 18,
           "planets": 10,
-          "points": 24574,
-          "avg_points": 2457,
+          "points": 25089,
+          "avg_points": 2508,
           "fleet_score": 4990,
           "empire_name": "princess"
         },
         {
-          "rank_position": 12,
+          "rank_position": 11,
           "title": "初心者",
           "player_name": "蒲公英",
           "level": 17,
           "planets": 7,
-          "points": 21801,
-          "avg_points": 3114,
+          "points": 22180,
+          "avg_points": 3168,
           "fleet_score": 1989,
+          "empire_name": null
+        },
+        {
+          "rank_position": 12,
+          "title": "初心者",
+          "player_name": "ゼネトス",
+          "level": 17,
+          "planets": 14,
+          "points": 19996,
+          "avg_points": 1428,
+          "fleet_score": 4583,
           "empire_name": null
         },
         {
           "rank_position": 13,
           "title": "初心者",
-          "player_name": "ゼネトス",
+          "player_name": "タウリ",
           "level": 17,
-          "planets": 14,
-          "points": 19519,
-          "avg_points": 1394,
-          "fleet_score": 4525,
+          "planets": 8,
+          "points": 16939,
+          "avg_points": 2117,
+          "fleet_score": 2309,
           "empire_name": null
         },
         {
           "rank_position": 14,
           "title": "初心者",
-          "player_name": "タウリ",
-          "level": 17,
+          "player_name": "お酒MAN",
+          "level": 16,
           "planets": 8,
-          "points": 16619,
-          "avg_points": 2077,
-          "fleet_score": 2109,
+          "points": 15833,
+          "avg_points": 1979,
+          "fleet_score": 2673,
           "empire_name": null
         },
         {
           "rank_position": 15,
-          "title": "初心者",
-          "player_name": "お酒MAN",
-          "level": 16,
-          "planets": 8,
-          "points": 15393,
-          "avg_points": 1924,
-          "fleet_score": 2593,
-          "empire_name": null
-        },
-        {
-          "rank_position": 16,
           "title": "達人",
           "player_name": "Lanack",
           "level": 15,
           "planets": 6,
-          "points": 12840,
-          "avg_points": 2140,
+          "points": 12967,
+          "avg_points": 2161,
           "fleet_score": 1570,
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 17,
+          "rank_position": 16,
           "title": "初心者",
           "player_name": "Gunderk",
           "level": 15,
           "planets": 8,
-          "points": 12492,
-          "avg_points": 1561,
+          "points": 12531,
+          "avg_points": 1566,
           "fleet_score": 2354,
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 18,
+          "rank_position": 17,
           "title": "初心者",
           "player_name": "ターキーマン",
           "level": 15,
@@ -4906,7 +4895,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 19,
+          "rank_position": 18,
           "title": "建設王",
           "player_name": "ねじれ",
           "level": 14,
@@ -4917,62 +4906,62 @@
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 20,
+          "rank_position": 19,
           "title": "帝国の一員",
           "player_name": "マモル",
           "level": 14,
-          "planets": 4,
-          "points": 8616,
-          "avg_points": 2154,
+          "planets": 5,
+          "points": 8974,
+          "avg_points": 1794,
           "fleet_score": 780,
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 21,
+          "rank_position": 20,
           "title": "初心者",
           "player_name": "ハイデマリー・W・シュナウファー",
           "level": 14,
           "planets": 4,
-          "points": 7961,
-          "avg_points": 1990,
+          "points": 8048,
+          "avg_points": 2012,
           "fleet_score": 279,
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 22,
+          "rank_position": 21,
           "title": "匠の業",
           "player_name": "higuma",
           "level": 14,
           "planets": 1,
-          "points": 7684,
-          "avg_points": 7684,
+          "points": 7728,
+          "avg_points": 7728,
           "fleet_score": 801,
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 23,
+          "rank_position": 22,
           "title": "初心者",
           "player_name": "abcd",
           "level": 18,
           "planets": 4,
-          "points": 5748,
-          "avg_points": 1437,
+          "points": 5960,
+          "avg_points": 1490,
           "fleet_score": 546,
           "empire_name": null
         },
         {
-          "rank_position": 24,
+          "rank_position": 23,
           "title": "初心者",
           "player_name": "りゅう",
           "level": 12,
           "planets": 4,
-          "points": 4920,
-          "avg_points": 1230,
-          "fleet_score": 547,
+          "points": 5057,
+          "avg_points": 1264,
+          "fleet_score": 680,
           "empire_name": null
         },
         {
-          "rank_position": 25,
+          "rank_position": 24,
           "title": "初心者",
           "player_name": "shizuku",
           "level": 12,
@@ -4983,18 +4972,18 @@
           "empire_name": null
         },
         {
-          "rank_position": 26,
+          "rank_position": 25,
           "title": "初心者",
           "player_name": "ranran2",
           "level": 12,
           "planets": 3,
-          "points": 4344,
-          "avg_points": 1448,
-          "fleet_score": 358,
+          "points": 4393,
+          "avg_points": 1464,
+          "fleet_score": 360,
           "empire_name": null
         },
         {
-          "rank_position": 27,
+          "rank_position": 26,
           "title": "初心者",
           "player_name": "KK",
           "level": 12,
@@ -5005,7 +4994,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 28,
+          "rank_position": 27,
           "title": null,
           "player_name": "オペレータ",
           "level": 11,
@@ -5016,18 +5005,18 @@
           "empire_name": null
         },
         {
-          "rank_position": 29,
+          "rank_position": 28,
           "title": "初心者",
           "player_name": "橋本利香",
           "level": 11,
           "planets": 1,
-          "points": 3112,
-          "avg_points": 3112,
+          "points": 3113,
+          "avg_points": 3113,
           "fleet_score": null,
           "empire_name": null
         },
         {
-          "rank_position": 30,
+          "rank_position": 29,
           "title": "初心者",
           "player_name": "bububu",
           "level": 11,
@@ -5038,15 +5027,26 @@
           "empire_name": "スペースストーム"
         },
         {
-          "rank_position": 31,
+          "rank_position": 30,
           "title": "帝国の一員",
           "player_name": "のこのこ",
           "level": 10,
           "planets": 1,
-          "points": 2653,
-          "avg_points": 2653,
-          "fleet_score": 351,
+          "points": 2741,
+          "avg_points": 2741,
+          "fleet_score": 375,
           "empire_name": "のこのこ帝国"
+        },
+        {
+          "rank_position": 31,
+          "title": "匠の業",
+          "player_name": "yqmato",
+          "level": 10,
+          "planets": 1,
+          "points": 2294,
+          "avg_points": 2294,
+          "fleet_score": 14,
+          "empire_name": "スペースストーム"
         },
         {
           "rank_position": 32,
@@ -5061,14 +5061,14 @@
         },
         {
           "rank_position": 33,
-          "title": "匠の業",
-          "player_name": "yqmato",
-          "level": 10,
+          "title": "初心者",
+          "player_name": "nomorebeer",
+          "level": 9,
           "planets": 1,
-          "points": 2268,
-          "avg_points": 2268,
-          "fleet_score": 14,
-          "empire_name": "スペースストーム"
+          "points": 1879,
+          "avg_points": 1879,
+          "fleet_score": 81,
+          "empire_name": null
         },
         {
           "rank_position": 34,
@@ -5076,35 +5076,24 @@
           "player_name": "tyrevel",
           "level": 9,
           "planets": 1,
-          "points": 1829,
-          "avg_points": 1829,
+          "points": 1844,
+          "avg_points": 1844,
           "fleet_score": 270,
           "empire_name": null
         },
         {
           "rank_position": 35,
           "title": "初心者",
-          "player_name": "nomorebeer",
-          "level": 9,
-          "planets": 1,
-          "points": 1821,
-          "avg_points": 1821,
-          "fleet_score": 81,
-          "empire_name": null
-        },
-        {
-          "rank_position": 36,
-          "title": "初心者",
           "player_name": "phovz",
           "level": 9,
           "planets": 1,
-          "points": 1722,
-          "avg_points": 1722,
+          "points": 1786,
+          "avg_points": 1786,
           "fleet_score": 215,
           "empire_name": null
         },
         {
-          "rank_position": 37,
+          "rank_position": 36,
           "title": "初心者",
           "player_name": "syarunoiru",
           "level": 9,
@@ -5115,7 +5104,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 38,
+          "rank_position": 37,
           "title": "初心者",
           "player_name": "かなた",
           "level": 7,
@@ -5126,7 +5115,7 @@
           "empire_name": "流れ星"
         },
         {
-          "rank_position": 39,
+          "rank_position": 38,
           "title": "初心者",
           "player_name": "TP",
           "level": 7,
@@ -5134,6 +5123,17 @@
           "points": 790,
           "avg_points": 790,
           "fleet_score": 14,
+          "empire_name": null
+        },
+        {
+          "rank_position": 39,
+          "title": "初心者",
+          "player_name": "potato1226",
+          "level": 4,
+          "planets": 1,
+          "points": 216,
+          "avg_points": 216,
+          "fleet_score": 4,
           "empire_name": null
         },
         {
@@ -5150,6 +5150,17 @@
         {
           "rank_position": 41,
           "title": "初心者",
+          "player_name": "Rows0160",
+          "level": 20,
+          "planets": 1,
+          "points": 149,
+          "avg_points": 149,
+          "fleet_score": 1,
+          "empire_name": null
+        },
+        {
+          "rank_position": 42,
+          "title": "初心者",
           "player_name": "araia",
           "level": 2,
           "planets": 1,
@@ -5159,7 +5170,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 42,
+          "rank_position": 43,
           "title": "初心者",
           "player_name": "tefeyo63",
           "level": 1,
@@ -5170,7 +5181,18 @@
           "empire_name": null
         },
         {
-          "rank_position": 43,
+          "rank_position": 44,
+          "title": "初心者",
+          "player_name": "yuki",
+          "level": 1,
+          "planets": 1,
+          "points": 53,
+          "avg_points": 53,
+          "fleet_score": null,
+          "empire_name": null
+        },
+        {
+          "rank_position": 45,
           "title": "初心者",
           "player_name": "1111",
           "level": 1,
@@ -5181,7 +5203,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 44,
+          "rank_position": 46,
           "title": "初心者",
           "player_name": "gama",
           "level": 1,
@@ -5192,7 +5214,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 45,
+          "rank_position": 47,
           "title": "初心者",
           "player_name": "maruch",
           "level": 1,
@@ -5203,7 +5225,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 46,
+          "rank_position": 48,
           "title": "初心者",
           "player_name": "VQ",
           "level": 1,
@@ -5214,7 +5236,7 @@
           "empire_name": null
         },
         {
-          "rank_position": 47,
+          "rank_position": 49,
           "title": "初心者",
           "player_name": "イショーチカ",
           "level": 1,
@@ -5226,6 +5248,6 @@
         }
       ]
     },
-    "count": 45
+    "count": 47
   }
 }
