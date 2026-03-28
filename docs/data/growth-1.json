@@ -1,5 +1,686 @@
 {
   "latest": {
+    "captured_at_utc": "2026-03-28T18:19:52.743720+00:00",
+    "captured_hour_utc": "2026-03-28T18:00:00+00:00",
+    "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
+    "http_status": 200,
+    "content_sha256": "ac4fdfe32f201a4feb97a085c2db3e31a83a0357dc7708931b7721689b253689",
+    "row_count": 61,
+    "rows": [
+      {
+        "rank_position": 1,
+        "title": "略奪者",
+        "player_name": "aaaa",
+        "level": 30,
+        "planets": 162,
+        "points": 1107048,
+        "avg_points": 6833,
+        "fleet_score": 444404,
+        "empire_name": "あ"
+      },
+      {
+        "rank_position": 2,
+        "title": "匠の業",
+        "player_name": "だいあん",
+        "level": 29,
+        "planets": 152,
+        "points": 787278,
+        "avg_points": 5179,
+        "fleet_score": 171195,
+        "empire_name": "アシリア"
+      },
+      {
+        "rank_position": 3,
+        "title": "匠の業",
+        "player_name": "azsxx",
+        "level": 27,
+        "planets": 97,
+        "points": 452491,
+        "avg_points": 4664,
+        "fleet_score": 84969,
+        "empire_name": "あ"
+      },
+      {
+        "rank_position": 4,
+        "title": null,
+        "player_name": "桜島",
+        "level": 26,
+        "planets": 125,
+        "points": 295177,
+        "avg_points": 2361,
+        "fleet_score": 24467,
+        "empire_name": "流れ星"
+      },
+      {
+        "rank_position": 5,
+        "title": null,
+        "player_name": "TK",
+        "level": 26,
+        "planets": 47,
+        "points": 287300,
+        "avg_points": 6112,
+        "fleet_score": 55269,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 6,
+        "title": "物流の達人",
+        "player_name": "December",
+        "level": 25,
+        "planets": 50,
+        "points": 238643,
+        "avg_points": 4772,
+        "fleet_score": 48741,
+        "empire_name": "princess"
+      },
+      {
+        "rank_position": 7,
+        "title": "匠の業",
+        "player_name": "volume",
+        "level": 25,
+        "planets": 73,
+        "points": 232923,
+        "avg_points": 3190,
+        "fleet_score": 33104,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 8,
+        "title": "侵略者",
+        "player_name": "マリアンヌ・フォス",
+        "level": 25,
+        "planets": 60,
+        "points": 207440,
+        "avg_points": 3457,
+        "fleet_score": 27772,
+        "empire_name": "アシリア"
+      },
+      {
+        "rank_position": 9,
+        "title": "匠の業",
+        "player_name": "雷光",
+        "level": 25,
+        "planets": 55,
+        "points": 195099,
+        "avg_points": 3547,
+        "fleet_score": 21245,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 10,
+        "title": null,
+        "player_name": "motomeuibu",
+        "level": 22,
+        "planets": 25,
+        "points": 105060,
+        "avg_points": 4202,
+        "fleet_score": 22342,
+        "empire_name": "princess"
+      },
+      {
+        "rank_position": 11,
+        "title": null,
+        "player_name": "蒲公英",
+        "level": 20,
+        "planets": 15,
+        "points": 65771,
+        "avg_points": 4384,
+        "fleet_score": 10650,
+        "empire_name": null
+      },
+      {
+        "rank_position": 12,
+        "title": "初心者",
+        "player_name": "abcd",
+        "level": 22,
+        "planets": 29,
+        "points": 65597,
+        "avg_points": 2261,
+        "fleet_score": 10976,
+        "empire_name": "abcd"
+      },
+      {
+        "rank_position": 13,
+        "title": "建設王",
+        "player_name": "能面",
+        "level": 20,
+        "planets": 18,
+        "points": 44253,
+        "avg_points": 2458,
+        "fleet_score": 4273,
+        "empire_name": null
+      },
+      {
+        "rank_position": 14,
+        "title": null,
+        "player_name": "ゼネトス",
+        "level": 20,
+        "planets": 25,
+        "points": 42963,
+        "avg_points": 1718,
+        "fleet_score": 8133,
+        "empire_name": null
+      },
+      {
+        "rank_position": 15,
+        "title": null,
+        "player_name": "りゅう",
+        "level": 20,
+        "planets": 17,
+        "points": 41974,
+        "avg_points": 2469,
+        "fleet_score": 3889,
+        "empire_name": "アシリア"
+      },
+      {
+        "rank_position": 16,
+        "title": "建設王",
+        "player_name": "Gunderk",
+        "level": 19,
+        "planets": 24,
+        "points": 37600,
+        "avg_points": 1566,
+        "fleet_score": 7239,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 17,
+        "title": "匠の業",
+        "player_name": "Frodo",
+        "level": 19,
+        "planets": 16,
+        "points": 31948,
+        "avg_points": 1996,
+        "fleet_score": 2782,
+        "empire_name": null
+      },
+      {
+        "rank_position": 18,
+        "title": "建設王",
+        "player_name": "nomorebeer",
+        "level": 19,
+        "planets": 23,
+        "points": 31916,
+        "avg_points": 1387,
+        "fleet_score": 6533,
+        "empire_name": null
+      },
+      {
+        "rank_position": 19,
+        "title": "帝国の一員",
+        "player_name": "マモル",
+        "level": 18,
+        "planets": 11,
+        "points": 31369,
+        "avg_points": 2851,
+        "fleet_score": 4090,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 20,
+        "title": "達人",
+        "player_name": "Lanack",
+        "level": 18,
+        "planets": 10,
+        "points": 28177,
+        "avg_points": 2817,
+        "fleet_score": 2405,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 21,
+        "title": null,
+        "player_name": "ターキーマン",
+        "level": 18,
+        "planets": 13,
+        "points": 26303,
+        "avg_points": 2023,
+        "fleet_score": 2753,
+        "empire_name": null
+      },
+      {
+        "rank_position": 22,
+        "title": null,
+        "player_name": "タウリ",
+        "level": 17,
+        "planets": 9,
+        "points": 23438,
+        "avg_points": 2604,
+        "fleet_score": 4107,
+        "empire_name": null
+      },
+      {
+        "rank_position": 23,
+        "title": "建設王",
+        "player_name": "ねじれ",
+        "level": 16,
+        "planets": 1,
+        "points": 20712,
+        "avg_points": 20712,
+        "fleet_score": 9483,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 24,
+        "title": "虐殺者",
+        "player_name": "higuma",
+        "level": 16,
+        "planets": 5,
+        "points": 17765,
+        "avg_points": 3553,
+        "fleet_score": 1581,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 25,
+        "title": null,
+        "player_name": "ハイデマリー・W・シュナウファー",
+        "level": 16,
+        "planets": 6,
+        "points": 17466,
+        "avg_points": 2911,
+        "fleet_score": 352,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 26,
+        "title": null,
+        "player_name": "ranran2",
+        "level": 16,
+        "planets": 10,
+        "points": 16961,
+        "avg_points": 1696,
+        "fleet_score": 2037,
+        "empire_name": null
+      },
+      {
+        "rank_position": 27,
+        "title": "初心者",
+        "player_name": "phovz",
+        "level": 15,
+        "planets": 5,
+        "points": 12391,
+        "avg_points": 2478,
+        "fleet_score": 751,
+        "empire_name": "abcd"
+      },
+      {
+        "rank_position": 28,
+        "title": "初心者",
+        "player_name": "tyrevel",
+        "level": 15,
+        "planets": 5,
+        "points": 12037,
+        "avg_points": 2407,
+        "fleet_score": 781,
+        "empire_name": "abcd"
+      },
+      {
+        "rank_position": 29,
+        "title": "初心者",
+        "player_name": "Rows0160",
+        "level": 21,
+        "planets": 7,
+        "points": 11708,
+        "avg_points": 1672,
+        "fleet_score": 490,
+        "empire_name": null
+      },
+      {
+        "rank_position": 30,
+        "title": "初心者",
+        "player_name": "TP",
+        "level": 15,
+        "planets": 9,
+        "points": 11095,
+        "avg_points": 1232,
+        "fleet_score": 728,
+        "empire_name": null
+      },
+      {
+        "rank_position": 31,
+        "title": null,
+        "player_name": "shizuku",
+        "level": 13,
+        "planets": 1,
+        "points": 10198,
+        "avg_points": 10198,
+        "fleet_score": 4755,
+        "empire_name": null
+      },
+      {
+        "rank_position": 32,
+        "title": "匠の業",
+        "player_name": "korota",
+        "level": 14,
+        "planets": 5,
+        "points": 9495,
+        "avg_points": 1899,
+        "fleet_score": 1462,
+        "empire_name": null
+      },
+      {
+        "rank_position": 33,
+        "title": "初心者",
+        "player_name": "アオヤ",
+        "level": 15,
+        "planets": 2,
+        "points": 8427,
+        "avg_points": 4213,
+        "fleet_score": 1834,
+        "empire_name": null
+      },
+      {
+        "rank_position": 34,
+        "title": null,
+        "player_name": "bububu",
+        "level": 12,
+        "planets": 1,
+        "points": 5469,
+        "avg_points": 5469,
+        "fleet_score": 1035,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 35,
+        "title": "匠の業",
+        "player_name": "ゲオルク・メルカー",
+        "level": 12,
+        "planets": 1,
+        "points": 5187,
+        "avg_points": 5187,
+        "fleet_score": 331,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 36,
+        "title": null,
+        "player_name": "KK",
+        "level": 12,
+        "planets": 1,
+        "points": 5163,
+        "avg_points": 5163,
+        "fleet_score": 16,
+        "empire_name": null
+      },
+      {
+        "rank_position": 37,
+        "title": "匠の業",
+        "player_name": "yqmato",
+        "level": 11,
+        "planets": 1,
+        "points": 3971,
+        "avg_points": 3971,
+        "fleet_score": 264,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 38,
+        "title": null,
+        "player_name": "朱雀",
+        "level": 11,
+        "planets": 1,
+        "points": 3944,
+        "avg_points": 3944,
+        "fleet_score": 107,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 39,
+        "title": "略奪者",
+        "player_name": "涼香",
+        "level": 12,
+        "planets": 1,
+        "points": 3932,
+        "avg_points": 3932,
+        "fleet_score": 138,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 40,
+        "title": "建設王",
+        "player_name": "syarunoiru",
+        "level": 11,
+        "planets": 1,
+        "points": 3824,
+        "avg_points": 3824,
+        "fleet_score": 70,
+        "empire_name": null
+      },
+      {
+        "rank_position": 41,
+        "title": null,
+        "player_name": "オペレータ",
+        "level": 11,
+        "planets": 1,
+        "points": 3799,
+        "avg_points": 3799,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 42,
+        "title": "匠の業",
+        "player_name": "paxai1",
+        "level": 11,
+        "planets": 1,
+        "points": 2952,
+        "avg_points": 2952,
+        "fleet_score": 99,
+        "empire_name": null
+      },
+      {
+        "rank_position": 43,
+        "title": "帝国の一員",
+        "player_name": "のこのこ",
+        "level": 10,
+        "planets": 1,
+        "points": 2823,
+        "avg_points": 2823,
+        "fleet_score": 385,
+        "empire_name": "のこのこ帝国"
+      },
+      {
+        "rank_position": 44,
+        "title": "初心者",
+        "player_name": "ヤンマ",
+        "level": 10,
+        "planets": 1,
+        "points": 2763,
+        "avg_points": 2763,
+        "fleet_score": 156,
+        "empire_name": "スペースストーム"
+      },
+      {
+        "rank_position": 45,
+        "title": "匠の業",
+        "player_name": "eutoreiy",
+        "level": 11,
+        "planets": 1,
+        "points": 2746,
+        "avg_points": 2746,
+        "fleet_score": 15,
+        "empire_name": null
+      },
+      {
+        "rank_position": 46,
+        "title": "初心者",
+        "player_name": "藤宮澄夏",
+        "level": 9,
+        "planets": 1,
+        "points": 2010,
+        "avg_points": 2010,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 47,
+        "title": "初心者",
+        "player_name": "aragon",
+        "level": 9,
+        "planets": 1,
+        "points": 1971,
+        "avg_points": 1971,
+        "fleet_score": 418,
+        "empire_name": null
+      },
+      {
+        "rank_position": 48,
+        "title": "初心者",
+        "player_name": "potato1226",
+        "level": 9,
+        "planets": 1,
+        "points": 1822,
+        "avg_points": 1822,
+        "fleet_score": 69,
+        "empire_name": null
+      },
+      {
+        "rank_position": 49,
+        "title": null,
+        "player_name": "かなた",
+        "level": 7,
+        "planets": 1,
+        "points": 873,
+        "avg_points": 873,
+        "fleet_score": null,
+        "empire_name": "流れ星"
+      },
+      {
+        "rank_position": 50,
+        "title": "初心者",
+        "player_name": "Pトレーナー",
+        "level": 6,
+        "planets": 1,
+        "points": 622,
+        "avg_points": 622,
+        "fleet_score": 10,
+        "empire_name": null
+      },
+      {
+        "rank_position": 51,
+        "title": null,
+        "player_name": "イショーチカ",
+        "level": 5,
+        "planets": 1,
+        "points": 501,
+        "avg_points": 501,
+        "fleet_score": 4,
+        "empire_name": null
+      },
+      {
+        "rank_position": 52,
+        "title": null,
+        "player_name": "お酒MAN",
+        "level": 19,
+        "planets": 1,
+        "points": 278,
+        "avg_points": 278,
+        "fleet_score": 4,
+        "empire_name": null
+      },
+      {
+        "rank_position": 53,
+        "title": "略奪者",
+        "player_name": "Nana",
+        "level": 4,
+        "planets": 1,
+        "points": 250,
+        "avg_points": 250,
+        "fleet_score": 13,
+        "empire_name": null
+      },
+      {
+        "rank_position": 54,
+        "title": "初心者",
+        "player_name": "yuki",
+        "level": 3,
+        "planets": 1,
+        "points": 208,
+        "avg_points": 208,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 55,
+        "title": null,
+        "player_name": "araia",
+        "level": 2,
+        "planets": 1,
+        "points": 112,
+        "avg_points": 112,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 56,
+        "title": null,
+        "player_name": "tefeyo63",
+        "level": 1,
+        "planets": 1,
+        "points": 54,
+        "avg_points": 54,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 57,
+        "title": null,
+        "player_name": "1111",
+        "level": 1,
+        "planets": 1,
+        "points": 51,
+        "avg_points": 51,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 58,
+        "title": null,
+        "player_name": "gama",
+        "level": 1,
+        "planets": 1,
+        "points": 46,
+        "avg_points": 46,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 59,
+        "title": null,
+        "player_name": "maruch",
+        "level": 1,
+        "planets": 1,
+        "points": 44,
+        "avg_points": 44,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 60,
+        "title": null,
+        "player_name": "VQ",
+        "level": 1,
+        "planets": 1,
+        "points": 44,
+        "avg_points": 44,
+        "fleet_score": null,
+        "empire_name": null
+      },
+      {
+        "rank_position": 61,
+        "title": "初心者",
+        "player_name": "ぱい",
+        "level": 1,
+        "planets": 1,
+        "points": 44,
+        "avg_points": 44,
+        "fleet_score": null,
+        "empire_name": null
+      }
+    ]
+  },
+  "comparison": {
     "captured_at_utc": "2026-03-28T17:18:20.099211+00:00",
     "captured_hour_utc": "2026-03-28T17:00:00+00:00",
     "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
@@ -680,826 +1361,33 @@
       }
     ]
   },
-  "comparison": {
-    "captured_at_utc": "2026-03-28T16:16:17.827132+00:00",
-    "captured_hour_utc": "2026-03-28T16:00:00+00:00",
-    "source_url": "https://game-jp-02.conquerx2.com/?mid=game&act=dispGameRank&rankview=user&ranktype=0&offset=0",
-    "http_status": 200,
-    "content_sha256": "80634bffded5b35b5beebfd4556280fd6b43b341640467eae4d3f4866e5566e2",
-    "row_count": 61,
-    "rows": [
-      {
-        "rank_position": 1,
-        "title": "略奪者",
-        "player_name": "aaaa",
-        "level": 30,
-        "planets": 162,
-        "points": 1103853,
-        "avg_points": 6813,
-        "fleet_score": 446060,
-        "empire_name": "あ"
-      },
-      {
-        "rank_position": 2,
-        "title": "匠の業",
-        "player_name": "だいあん",
-        "level": 29,
-        "planets": 152,
-        "points": 780499,
-        "avg_points": 5134,
-        "fleet_score": 168466,
-        "empire_name": "アシリア"
-      },
-      {
-        "rank_position": 3,
-        "title": "匠の業",
-        "player_name": "azsxx",
-        "level": 27,
-        "planets": 97,
-        "points": 450242,
-        "avg_points": 4641,
-        "fleet_score": 84377,
-        "empire_name": "あ"
-      },
-      {
-        "rank_position": 4,
-        "title": null,
-        "player_name": "桜島",
-        "level": 26,
-        "planets": 125,
-        "points": 293629,
-        "avg_points": 2349,
-        "fleet_score": 24209,
-        "empire_name": "流れ星"
-      },
-      {
-        "rank_position": 5,
-        "title": null,
-        "player_name": "TK",
-        "level": 26,
-        "planets": 47,
-        "points": 285682,
-        "avg_points": 6078,
-        "fleet_score": 54557,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 6,
-        "title": "物流の達人",
-        "player_name": "December",
-        "level": 25,
-        "planets": 50,
-        "points": 237349,
-        "avg_points": 4746,
-        "fleet_score": 48397,
-        "empire_name": "princess"
-      },
-      {
-        "rank_position": 7,
-        "title": "匠の業",
-        "player_name": "volume",
-        "level": 25,
-        "planets": 72,
-        "points": 230945,
-        "avg_points": 3207,
-        "fleet_score": 32313,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 8,
-        "title": "侵略者",
-        "player_name": "マリアンヌ・フォス",
-        "level": 25,
-        "planets": 60,
-        "points": 206346,
-        "avg_points": 3439,
-        "fleet_score": 27540,
-        "empire_name": "アシリア"
-      },
-      {
-        "rank_position": 9,
-        "title": "匠の業",
-        "player_name": "雷光",
-        "level": 25,
-        "planets": 55,
-        "points": 193011,
-        "avg_points": 3509,
-        "fleet_score": 21034,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 10,
-        "title": null,
-        "player_name": "motomeuibu",
-        "level": 22,
-        "planets": 25,
-        "points": 104542,
-        "avg_points": 4181,
-        "fleet_score": 22165,
-        "empire_name": "princess"
-      },
-      {
-        "rank_position": 11,
-        "title": null,
-        "player_name": "蒲公英",
-        "level": 20,
-        "planets": 15,
-        "points": 65493,
-        "avg_points": 4366,
-        "fleet_score": 10650,
-        "empire_name": null
-      },
-      {
-        "rank_position": 12,
-        "title": "初心者",
-        "player_name": "abcd",
-        "level": 22,
-        "planets": 29,
-        "points": 64571,
-        "avg_points": 2226,
-        "fleet_score": 10776,
-        "empire_name": "abcd"
-      },
-      {
-        "rank_position": 13,
-        "title": "建設王",
-        "player_name": "能面",
-        "level": 20,
-        "planets": 17,
-        "points": 44135,
-        "avg_points": 2596,
-        "fleet_score": 4527,
-        "empire_name": null
-      },
-      {
-        "rank_position": 14,
-        "title": null,
-        "player_name": "ゼネトス",
-        "level": 20,
-        "planets": 25,
-        "points": 42864,
-        "avg_points": 1714,
-        "fleet_score": 8133,
-        "empire_name": null
-      },
-      {
-        "rank_position": 15,
-        "title": null,
-        "player_name": "りゅう",
-        "level": 20,
-        "planets": 17,
-        "points": 41449,
-        "avg_points": 2438,
-        "fleet_score": 3757,
-        "empire_name": "アシリア"
-      },
-      {
-        "rank_position": 16,
-        "title": "建設王",
-        "player_name": "Gunderk",
-        "level": 19,
-        "planets": 24,
-        "points": 37600,
-        "avg_points": 1566,
-        "fleet_score": 7239,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 17,
-        "title": "建設王",
-        "player_name": "nomorebeer",
-        "level": 19,
-        "planets": 22,
-        "points": 31627,
-        "avg_points": 1437,
-        "fleet_score": 6540,
-        "empire_name": null
-      },
-      {
-        "rank_position": 18,
-        "title": "匠の業",
-        "player_name": "Frodo",
-        "level": 19,
-        "planets": 16,
-        "points": 31516,
-        "avg_points": 1969,
-        "fleet_score": 2782,
-        "empire_name": null
-      },
-      {
-        "rank_position": 19,
-        "title": "帝国の一員",
-        "player_name": "マモル",
-        "level": 18,
-        "planets": 11,
-        "points": 31230,
-        "avg_points": 2839,
-        "fleet_score": 4090,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 20,
-        "title": "達人",
-        "player_name": "Lanack",
-        "level": 18,
-        "planets": 10,
-        "points": 28133,
-        "avg_points": 2813,
-        "fleet_score": 2405,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 21,
-        "title": null,
-        "player_name": "ターキーマン",
-        "level": 17,
-        "planets": 13,
-        "points": 25983,
-        "avg_points": 1998,
-        "fleet_score": 2753,
-        "empire_name": null
-      },
-      {
-        "rank_position": 22,
-        "title": null,
-        "player_name": "タウリ",
-        "level": 17,
-        "planets": 9,
-        "points": 23432,
-        "avg_points": 2603,
-        "fleet_score": 4107,
-        "empire_name": null
-      },
-      {
-        "rank_position": 23,
-        "title": "建設王",
-        "player_name": "ねじれ",
-        "level": 16,
-        "planets": 1,
-        "points": 20398,
-        "avg_points": 20398,
-        "fleet_score": 9252,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 24,
-        "title": "虐殺者",
-        "player_name": "higuma",
-        "level": 16,
-        "planets": 5,
-        "points": 17529,
-        "avg_points": 3505,
-        "fleet_score": 1541,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 25,
-        "title": null,
-        "player_name": "ハイデマリー・W・シュナウファー",
-        "level": 16,
-        "planets": 6,
-        "points": 17304,
-        "avg_points": 2884,
-        "fleet_score": 352,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 26,
-        "title": null,
-        "player_name": "ranran2",
-        "level": 16,
-        "planets": 10,
-        "points": 16927,
-        "avg_points": 1692,
-        "fleet_score": 2037,
-        "empire_name": null
-      },
-      {
-        "rank_position": 27,
-        "title": "初心者",
-        "player_name": "アオヤ",
-        "level": 15,
-        "planets": 7,
-        "points": 12762,
-        "avg_points": 1823,
-        "fleet_score": 1641,
-        "empire_name": null
-      },
-      {
-        "rank_position": 28,
-        "title": "初心者",
-        "player_name": "phovz",
-        "level": 15,
-        "planets": 5,
-        "points": 12349,
-        "avg_points": 2469,
-        "fleet_score": 751,
-        "empire_name": "abcd"
-      },
-      {
-        "rank_position": 29,
-        "title": "初心者",
-        "player_name": "tyrevel",
-        "level": 15,
-        "planets": 5,
-        "points": 12037,
-        "avg_points": 2407,
-        "fleet_score": 781,
-        "empire_name": "abcd"
-      },
-      {
-        "rank_position": 30,
-        "title": "初心者",
-        "player_name": "Rows0160",
-        "level": 21,
-        "planets": 7,
-        "points": 11708,
-        "avg_points": 1672,
-        "fleet_score": 490,
-        "empire_name": null
-      },
-      {
-        "rank_position": 31,
-        "title": "初心者",
-        "player_name": "TP",
-        "level": 15,
-        "planets": 9,
-        "points": 11038,
-        "avg_points": 1226,
-        "fleet_score": 728,
-        "empire_name": null
-      },
-      {
-        "rank_position": 32,
-        "title": null,
-        "player_name": "shizuku",
-        "level": 13,
-        "planets": 1,
-        "points": 10159,
-        "avg_points": 10159,
-        "fleet_score": 4755,
-        "empire_name": null
-      },
-      {
-        "rank_position": 33,
-        "title": "匠の業",
-        "player_name": "korota",
-        "level": 14,
-        "planets": 5,
-        "points": 9338,
-        "avg_points": 1867,
-        "fleet_score": 1416,
-        "empire_name": null
-      },
-      {
-        "rank_position": 34,
-        "title": null,
-        "player_name": "bububu",
-        "level": 12,
-        "planets": 1,
-        "points": 5411,
-        "avg_points": 5411,
-        "fleet_score": 1021,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 35,
-        "title": null,
-        "player_name": "KK",
-        "level": 12,
-        "planets": 1,
-        "points": 5163,
-        "avg_points": 5163,
-        "fleet_score": 16,
-        "empire_name": null
-      },
-      {
-        "rank_position": 36,
-        "title": "匠の業",
-        "player_name": "ゲオルク・メルカー",
-        "level": 12,
-        "planets": 1,
-        "points": 5089,
-        "avg_points": 5089,
-        "fleet_score": 316,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 37,
-        "title": "匠の業",
-        "player_name": "yqmato",
-        "level": 11,
-        "planets": 1,
-        "points": 3968,
-        "avg_points": 3968,
-        "fleet_score": 264,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 38,
-        "title": null,
-        "player_name": "朱雀",
-        "level": 11,
-        "planets": 1,
-        "points": 3939,
-        "avg_points": 3939,
-        "fleet_score": 107,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 39,
-        "title": "略奪者",
-        "player_name": "涼香",
-        "level": 12,
-        "planets": 1,
-        "points": 3855,
-        "avg_points": 3855,
-        "fleet_score": 138,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 40,
-        "title": "建設王",
-        "player_name": "syarunoiru",
-        "level": 11,
-        "planets": 1,
-        "points": 3823,
-        "avg_points": 3823,
-        "fleet_score": 70,
-        "empire_name": null
-      },
-      {
-        "rank_position": 41,
-        "title": null,
-        "player_name": "オペレータ",
-        "level": 11,
-        "planets": 1,
-        "points": 3798,
-        "avg_points": 3798,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 42,
-        "title": "匠の業",
-        "player_name": "paxai1",
-        "level": 11,
-        "planets": 1,
-        "points": 2873,
-        "avg_points": 2873,
-        "fleet_score": 99,
-        "empire_name": null
-      },
-      {
-        "rank_position": 43,
-        "title": "帝国の一員",
-        "player_name": "のこのこ",
-        "level": 10,
-        "planets": 1,
-        "points": 2823,
-        "avg_points": 2823,
-        "fleet_score": 385,
-        "empire_name": "のこのこ帝国"
-      },
-      {
-        "rank_position": 44,
-        "title": "初心者",
-        "player_name": "ヤンマ",
-        "level": 10,
-        "planets": 1,
-        "points": 2763,
-        "avg_points": 2763,
-        "fleet_score": 156,
-        "empire_name": "スペースストーム"
-      },
-      {
-        "rank_position": 45,
-        "title": "匠の業",
-        "player_name": "eutoreiy",
-        "level": 11,
-        "planets": 1,
-        "points": 2683,
-        "avg_points": 2683,
-        "fleet_score": 15,
-        "empire_name": null
-      },
-      {
-        "rank_position": 46,
-        "title": "初心者",
-        "player_name": "藤宮澄夏",
-        "level": 9,
-        "planets": 1,
-        "points": 2009,
-        "avg_points": 2009,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 47,
-        "title": "初心者",
-        "player_name": "aragon",
-        "level": 9,
-        "planets": 1,
-        "points": 1971,
-        "avg_points": 1971,
-        "fleet_score": 418,
-        "empire_name": null
-      },
-      {
-        "rank_position": 48,
-        "title": "初心者",
-        "player_name": "potato1226",
-        "level": 9,
-        "planets": 1,
-        "points": 1822,
-        "avg_points": 1822,
-        "fleet_score": 69,
-        "empire_name": null
-      },
-      {
-        "rank_position": 49,
-        "title": null,
-        "player_name": "かなた",
-        "level": 7,
-        "planets": 1,
-        "points": 873,
-        "avg_points": 873,
-        "fleet_score": null,
-        "empire_name": "流れ星"
-      },
-      {
-        "rank_position": 50,
-        "title": "初心者",
-        "player_name": "Pトレーナー",
-        "level": 6,
-        "planets": 1,
-        "points": 597,
-        "avg_points": 597,
-        "fleet_score": 10,
-        "empire_name": null
-      },
-      {
-        "rank_position": 51,
-        "title": null,
-        "player_name": "イショーチカ",
-        "level": 5,
-        "planets": 1,
-        "points": 501,
-        "avg_points": 501,
-        "fleet_score": 4,
-        "empire_name": null
-      },
-      {
-        "rank_position": 52,
-        "title": null,
-        "player_name": "お酒MAN",
-        "level": 19,
-        "planets": 1,
-        "points": 278,
-        "avg_points": 278,
-        "fleet_score": 4,
-        "empire_name": null
-      },
-      {
-        "rank_position": 53,
-        "title": "略奪者",
-        "player_name": "Nana",
-        "level": 4,
-        "planets": 1,
-        "points": 250,
-        "avg_points": 250,
-        "fleet_score": 13,
-        "empire_name": null
-      },
-      {
-        "rank_position": 54,
-        "title": "初心者",
-        "player_name": "yuki",
-        "level": 3,
-        "planets": 1,
-        "points": 208,
-        "avg_points": 208,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 55,
-        "title": null,
-        "player_name": "araia",
-        "level": 2,
-        "planets": 1,
-        "points": 112,
-        "avg_points": 112,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 56,
-        "title": null,
-        "player_name": "tefeyo63",
-        "level": 1,
-        "planets": 1,
-        "points": 54,
-        "avg_points": 54,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 57,
-        "title": null,
-        "player_name": "1111",
-        "level": 1,
-        "planets": 1,
-        "points": 51,
-        "avg_points": 51,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 58,
-        "title": null,
-        "player_name": "gama",
-        "level": 1,
-        "planets": 1,
-        "points": 46,
-        "avg_points": 46,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 59,
-        "title": null,
-        "player_name": "maruch",
-        "level": 1,
-        "planets": 1,
-        "points": 44,
-        "avg_points": 44,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 60,
-        "title": null,
-        "player_name": "VQ",
-        "level": 1,
-        "planets": 1,
-        "points": 44,
-        "avg_points": 44,
-        "fleet_score": null,
-        "empire_name": null
-      },
-      {
-        "rank_position": 61,
-        "title": "初心者",
-        "player_name": "ぱい",
-        "level": 1,
-        "planets": 1,
-        "points": 44,
-        "avg_points": 44,
-        "fleet_score": null,
-        "empire_name": null
-      }
-    ]
-  },
   "rows": [
-    {
-      "rank_position": 1,
-      "title": "略奪者",
-      "player_name": "aaaa",
-      "level": 30,
-      "planets": 162,
-      "points": 1108452,
-      "avg_points": 6842,
-      "fleet_score": 448245,
-      "empire_name": "あ",
-      "empire_key": "4c224268dafd",
-      "player_key": "70c881d4a269",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 4599,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 2185,
-          "fleet_per_hour": 2113.225426044951,
-          "points_per_hour": 4447.928482554109
-        }
-      },
-      "fleet_share": 0.4043882820365699,
-      "is_new_since_previous": false
-    },
     {
       "rank_position": 2,
       "title": "匠の業",
       "player_name": "だいあん",
       "level": 29,
       "planets": 152,
-      "points": 784080,
-      "avg_points": 5158,
-      "fleet_score": 169868,
+      "points": 787278,
+      "avg_points": 5179,
+      "fleet_score": 171195,
       "empire_name": "アシリア",
       "empire_key": "02ab7d4c2434",
       "player_key": "c97bd5f53b97",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 3581,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 3198,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 1402,
-          "fleet_per_hour": 1355.9460170778127,
-          "points_per_hour": 3463.368535774356
+          "delta_fleet": 1327,
+          "fleet_per_hour": 1293.7069865124133,
+          "points_per_hour": 3117.7655937201944
         }
       },
-      "fleet_share": 0.21664626058565453,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 3,
-      "title": "匠の業",
-      "player_name": "azsxx",
-      "level": 27,
-      "planets": 97,
-      "points": 451447,
-      "avg_points": 4654,
-      "fleet_score": 84690,
-      "empire_name": "あ",
-      "empire_key": "4c224268dafd",
-      "player_key": "82acb2a11842",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 1205,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 313,
-          "fleet_per_hour": 302.71833334190825,
-          "points_per_hour": 1165.41722580511
-        }
-      },
-      "fleet_share": 0.187596772157086,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 4,
-      "title": null,
-      "player_name": "桜島",
-      "level": 26,
-      "planets": 125,
-      "points": 294666,
-      "avg_points": 2357,
-      "fleet_score": 24370,
-      "empire_name": "流れ星",
-      "empire_key": "752ee3c226ac",
-      "player_key": "f63d84d27f8c",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 1037,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 161,
-          "fleet_per_hour": 155.71134718225952,
-          "points_per_hour": 1002.9358200497089
-        }
-      },
-      "fleet_share": 0.08270380702218784,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 7,
-      "title": "匠の業",
-      "player_name": "volume",
-      "level": 25,
-      "planets": 72,
-      "points": 231944,
-      "avg_points": 3221,
-      "fleet_score": 32709,
-      "empire_name": "スペースストーム",
-      "empire_key": "85a6ec98970a",
-      "player_key": "d387fc8d57b2",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 999,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 396,
-          "fleet_per_hour": 382.99188499487434,
-          "points_per_hour": 966.1840735097967
-        }
-      },
-      "fleet_share": 0.14102110854344152,
+      "fleet_share": 0.21745177688186385,
       "is_new_since_previous": false
     },
     {
@@ -1508,54 +1396,82 @@
       "player_name": "雷光",
       "level": 25,
       "planets": 55,
-      "points": 193866,
-      "avg_points": 3524,
-      "fleet_score": 21246,
+      "points": 195099,
+      "avg_points": 3547,
+      "fleet_score": 21245,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "bff7d6a2d5cf",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 855,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 1233,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 212,
-          "fleet_per_hour": 205.03605964372062,
-          "points_per_hour": 826.9142971480242
+          "delta_fleet": -1,
+          "fleet_per_hour": -0.9749110674547199,
+          "points_per_hour": 1202.0653461716697
         }
       },
-      "fleet_share": 0.10959116090495497,
+      "fleet_share": 0.10889343359012604,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 6,
-      "title": "物流の達人",
-      "player_name": "December",
-      "level": 25,
-      "planets": 50,
-      "points": 238068,
-      "avg_points": 4761,
-      "fleet_score": 48633,
-      "empire_name": "princess",
-      "empire_key": "eeb974d863fc",
-      "player_key": "65640c6577c9",
+      "rank_position": 3,
+      "title": "匠の業",
+      "player_name": "azsxx",
+      "level": 27,
+      "planets": 97,
+      "points": 452491,
+      "avg_points": 4664,
+      "fleet_score": 84969,
+      "empire_name": "あ",
+      "empire_key": "4c224268dafd",
+      "player_key": "82acb2a11842",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 719,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 1044,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 236,
-          "fleet_per_hour": 228.24768903734937,
-          "points_per_hour": 695.3817305841279
+          "delta_fleet": 279,
+          "fleet_per_hour": 272.0001878198668,
+          "points_per_hour": 1017.8071544227275
         }
       },
-      "fleet_share": 0.20428196985735167,
+      "fleet_share": 0.18778053044148946,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 7,
+      "title": "匠の業",
+      "player_name": "volume",
+      "level": 25,
+      "planets": 73,
+      "points": 232923,
+      "avg_points": 3190,
+      "fleet_score": 33104,
+      "empire_name": "スペースストーム",
+      "empire_key": "85a6ec98970a",
+      "player_key": "d387fc8d57b2",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 979,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 1,
+          "delta_fleet": 395,
+          "fleet_per_hour": 385.08987164461433,
+          "points_per_hour": 954.4379350381707
+        }
+      },
+      "fleet_share": 0.142124221309188,
       "is_new_since_previous": false
     },
     {
@@ -1564,110 +1480,26 @@
       "player_name": "TK",
       "level": 26,
       "planets": 47,
-      "points": 286358,
-      "avg_points": 6092,
-      "fleet_score": 54762,
+      "points": 287300,
+      "avg_points": 6112,
+      "fleet_score": 55269,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "344f8584666f",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 676,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 942,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 205,
-          "fleet_per_hour": 198.2660010705789,
-          "points_per_hour": 653.7942279205431
+          "delta_fleet": 507,
+          "fleet_per_hour": 494.279911199543,
+          "points_per_hour": 918.3662255423461
         }
       },
-      "fleet_share": 0.19123614496539296,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 12,
-      "title": "初心者",
-      "player_name": "abcd",
-      "level": 22,
-      "planets": 29,
-      "points": 65063,
-      "avg_points": 2243,
-      "fleet_score": 10776,
-      "empire_name": "abcd",
-      "empire_key": "e79f95058be4",
-      "player_key": "81fe8bfe8757",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 492,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 475.83840256938936
-        }
-      },
-      "fleet_share": 0.16562408742295928,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 17,
-      "title": "匠の業",
-      "player_name": "Frodo",
-      "level": 19,
-      "planets": 16,
-      "points": 31813,
-      "avg_points": 1988,
-      "fleet_score": 2782,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "5fd403fd0792",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 297,
-          "delta_rank": 1,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 287.2439137461558
-        }
-      },
-      "fleet_share": 0.087448527331594,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 10,
-      "title": null,
-      "player_name": "motomeuibu",
-      "level": 22,
-      "planets": 25,
-      "points": 104792,
-      "avg_points": 4191,
-      "fleet_score": 22325,
-      "empire_name": "princess",
-      "empire_key": "eeb974d863fc",
-      "player_key": "6f52eefa5f25",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 250,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 160,
-          "fleet_per_hour": 154.744195957525,
-          "points_per_hour": 241.7878061836328
-        }
-      },
-      "fleet_share": 0.21304107183754484,
+      "fleet_share": 0.19237382526975288,
       "is_new_since_previous": false
     },
     {
@@ -1676,54 +1508,110 @@
       "player_name": "マリアンヌ・フォス",
       "level": 25,
       "planets": 60,
-      "points": 206593,
-      "avg_points": 3443,
-      "fleet_score": 27612,
+      "points": 207440,
+      "avg_points": 3457,
+      "fleet_score": 27772,
       "empire_name": "アシリア",
       "empire_key": "02ab7d4c2434",
       "player_key": "57f784c249b5",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 247,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 847,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 72,
-          "fleet_per_hour": 69.63488818088625,
-          "points_per_hour": 238.8863525094292
+          "delta_fleet": 160,
+          "fleet_per_hour": 155.98577079275518,
+          "points_per_hour": 825.7496741341478
         }
       },
-      "fleet_share": 0.13365409282986354,
+      "fleet_share": 0.13387967605090628,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 23,
-      "title": "建設王",
-      "player_name": "ねじれ",
-      "level": 16,
-      "planets": 1,
-      "points": 20628,
-      "avg_points": 20628,
-      "fleet_score": 9441,
-      "empire_name": "スペースストーム",
-      "empire_key": "85a6ec98970a",
-      "player_key": "16cf314ccc3d",
+      "rank_position": 6,
+      "title": "物流の達人",
+      "player_name": "December",
+      "level": 25,
+      "planets": 50,
+      "points": 238643,
+      "avg_points": 4772,
+      "fleet_score": 48741,
+      "empire_name": "princess",
+      "empire_key": "eeb974d863fc",
+      "player_key": "65640c6577c9",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 230,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 575,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 189,
-          "fleet_per_hour": 182.79158147482642,
-          "points_per_hour": 222.4447816889422
+          "delta_fleet": 108,
+          "fleet_per_hour": 105.29039528510975,
+          "points_per_hour": 560.5738637864639
         }
       },
-      "fleet_share": 0.45767888307155324,
+      "fleet_share": 0.20424232011833576,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 12,
+      "title": "初心者",
+      "player_name": "abcd",
+      "level": 22,
+      "planets": 29,
+      "points": 65597,
+      "avg_points": 2261,
+      "fleet_score": 10976,
+      "empire_name": "abcd",
+      "empire_key": "e79f95058be4",
+      "player_key": "81fe8bfe8757",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 534,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 200,
+          "fleet_per_hour": 194.982213490944,
+          "points_per_hour": 520.6025100208204
+        }
+      },
+      "fleet_share": 0.1673247252160922,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 4,
+      "title": null,
+      "player_name": "桜島",
+      "level": 26,
+      "planets": 125,
+      "points": 295177,
+      "avg_points": 2361,
+      "fleet_score": 24467,
+      "empire_name": "流れ星",
+      "empire_key": "752ee3c226ac",
+      "player_key": "f63d84d27f8c",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 511,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 97,
+          "fleet_per_hour": 94.56637354310783,
+          "points_per_hour": 498.17955546936184
+        }
+      },
+      "fleet_share": 0.08288924950114678,
       "is_new_since_previous": false
     },
     {
@@ -1732,54 +1620,110 @@
       "player_name": "りゅう",
       "level": 20,
       "planets": 17,
-      "points": 41664,
-      "avg_points": 2450,
-      "fleet_score": 3778,
+      "points": 41974,
+      "avg_points": 2469,
+      "fleet_score": 3889,
       "empire_name": "アシリア",
       "empire_key": "02ab7d4c2434",
       "player_key": "c4f4b04f7e93",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 215,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 310,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 21,
-          "fleet_per_hour": 20.310175719425157,
-          "points_per_hour": 207.9375133179242
+          "delta_fleet": 111,
+          "fleet_per_hour": 108.2151284874739,
+          "points_per_hour": 302.22243091096317
         }
       },
-      "fleet_share": 0.09067780337941628,
+      "fleet_share": 0.09265259446323915,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 11,
-      "title": null,
-      "player_name": "蒲公英",
-      "level": 20,
-      "planets": 15,
-      "points": 65625,
-      "avg_points": 4375,
-      "fleet_score": 10650,
+      "rank_position": 33,
+      "title": "初心者",
+      "player_name": "アオヤ",
+      "level": 15,
+      "planets": 2,
+      "points": 8427,
+      "avg_points": 4213,
+      "fleet_score": 1834,
       "empire_name": null,
       "empire_key": null,
-      "player_key": "a62cc1a28e25",
+      "player_key": "a17dcb0da782",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 132,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 278,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 1,
+          "delta_fleet": 172,
+          "fleet_per_hour": 167.6847036022118,
+          "points_per_hour": 271.02527675241214
+        }
+      },
+      "fleet_share": 0.21763379613148215,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 10,
+      "title": null,
+      "player_name": "motomeuibu",
+      "level": 22,
+      "planets": 25,
+      "points": 105060,
+      "avg_points": 4202,
+      "fleet_score": 22342,
+      "empire_name": "princess",
+      "empire_key": "eeb974d863fc",
+      "player_key": "6f52eefa5f25",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 268,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 127.66396166495812
+          "delta_fleet": 17,
+          "fleet_per_hour": 16.573488146730238,
+          "points_per_hour": 261.27616607786496
         }
       },
-      "fleet_share": 0.16228571428571428,
+      "fleet_share": 0.2126594327051209,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 18,
+      "title": "建設王",
+      "player_name": "nomorebeer",
+      "level": 19,
+      "planets": 23,
+      "points": 31916,
+      "avg_points": 1387,
+      "fleet_score": 6533,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "5c46feff0d22",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 217,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 1,
+          "delta_fleet": -7,
+          "fleet_per_hour": -6.8243774721830395,
+          "points_per_hour": 211.55570163767422
+        }
+      },
+      "fleet_share": 0.20469357062288507,
       "is_new_since_previous": false
     },
     {
@@ -1788,26 +1732,54 @@
       "player_name": "ターキーマン",
       "level": 18,
       "planets": 13,
-      "points": 26092,
-      "avg_points": 2007,
+      "points": 26303,
+      "avg_points": 2023,
       "fleet_score": 2753,
       "empire_name": null,
       "empire_key": null,
       "player_key": "3d75d3d66682",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 109,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 211,
           "delta_rank": 0,
-          "delta_level": 1,
+          "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 105.4194834960639
+          "points_per_hour": 205.7062352329459
         }
       },
-      "fleet_share": 0.1055112678215545,
+      "fleet_share": 0.10466486712542296,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 13,
+      "title": "建設王",
+      "player_name": "能面",
+      "level": 20,
+      "planets": 18,
+      "points": 44253,
+      "avg_points": 2458,
+      "fleet_score": 4273,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "a93ec1a0e5bc",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 156,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 1,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 152.0861265229363
+        }
+      },
+      "fleet_share": 0.09655842541748583,
       "is_new_since_previous": false
     },
     {
@@ -1816,110 +1788,82 @@
       "player_name": "higuma",
       "level": 16,
       "planets": 5,
-      "points": 17611,
-      "avg_points": 3522,
-      "fleet_score": 1541,
+      "points": 17765,
+      "avg_points": 3553,
+      "fleet_score": 1581,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "968c5fd62ac7",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 82,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 154,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 40,
+          "fleet_per_hour": 38.996442698188794,
+          "points_per_hour": 150.13630438802687
+        }
+      },
+      "fleet_share": 0.08899521531100478,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 11,
+      "title": null,
+      "player_name": "蒲公英",
+      "level": 20,
+      "planets": 15,
+      "points": 65771,
+      "avg_points": 4384,
+      "fleet_score": 10650,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "a62cc1a28e25",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 146,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 79.30640042823156
+          "points_per_hour": 142.33701584838911
         }
       },
-      "fleet_share": 0.08750212935097382,
+      "fleet_share": 0.16192546867160298,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 32,
+      "rank_position": 17,
       "title": "匠の業",
-      "player_name": "korota",
-      "level": 14,
-      "planets": 5,
-      "points": 9420,
-      "avg_points": 1884,
-      "fleet_score": 1462,
+      "player_name": "Frodo",
+      "level": 19,
+      "planets": 16,
+      "points": 31948,
+      "avg_points": 1996,
+      "fleet_score": 2782,
       "empire_name": null,
       "empire_key": null,
-      "player_key": "8711da898e08",
+      "player_key": "5fd403fd0792",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 82,
-          "delta_rank": 1,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 46,
-          "fleet_per_hour": 44.48895633778844,
-          "points_per_hour": 79.30640042823156
-        }
-      },
-      "fleet_share": 0.15520169851380042,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 19,
-      "title": "帝国の一員",
-      "player_name": "マモル",
-      "level": 18,
-      "planets": 11,
-      "points": 31307,
-      "avg_points": 2846,
-      "fleet_score": 4090,
-      "empire_name": "スペースストーム",
-      "empire_key": "85a6ec98970a",
-      "player_key": "2ffb3de1a66a",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 77,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 135,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 74.4706443045589
+          "points_per_hour": 131.6129941063872
         }
       },
-      "fleet_share": 0.13064170952183218,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 18,
-      "title": "建設王",
-      "player_name": "nomorebeer",
-      "level": 19,
-      "planets": 22,
-      "points": 31699,
-      "avg_points": 1440,
-      "fleet_score": 6540,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "5c46feff0d22",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 72,
-          "delta_rank": -1,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 69.63488818088625
-        }
-      },
-      "fleet_share": 0.20631565664532003,
+      "fleet_share": 0.0870790033804933,
       "is_new_since_previous": false
     },
     {
@@ -1928,306 +1872,138 @@
       "player_name": "ハイデマリー・W・シュナウファー",
       "level": 16,
       "planets": 6,
-      "points": 17375,
-      "avg_points": 2895,
+      "points": 17466,
+      "avg_points": 2911,
       "fleet_score": 352,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "afc0cedec2ab",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 71,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 91,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 68.66773695615171
+          "points_per_hour": 88.71690713837951
         }
       },
-      "fleet_share": 0.020258992805755396,
+      "fleet_share": 0.02015344097102943,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 14,
-      "title": null,
-      "player_name": "ゼネトス",
-      "level": 20,
-      "planets": 25,
-      "points": 42922,
-      "avg_points": 1716,
-      "fleet_score": 8133,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "0cde3a0a778a",
+      "rank_position": 23,
+      "title": "建設王",
+      "player_name": "ねじれ",
+      "level": 16,
+      "planets": 1,
+      "points": 20712,
+      "avg_points": 20712,
+      "fleet_score": 9483,
+      "empire_name": "スペースストーム",
+      "empire_key": "85a6ec98970a",
+      "player_key": "16cf314ccc3d",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 58,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 84,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 56.094771034602815
+          "delta_fleet": 42,
+          "fleet_per_hour": 40.94626483309823,
+          "points_per_hour": 81.89252966619647
         }
       },
-      "fleet_share": 0.18948324868365873,
+      "fleet_share": 0.4578505214368482,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 30,
-      "title": "初心者",
-      "player_name": "TP",
-      "level": 15,
-      "planets": 9,
-      "points": 11086,
-      "avg_points": 1231,
-      "fleet_score": 728,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "87a0fb99758e",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 48,
-          "delta_rank": 1,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 46.4232587872575
-        }
-      },
-      "fleet_share": 0.06566841060797401,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 27,
-      "title": "初心者",
-      "player_name": "phovz",
-      "level": 15,
+      "rank_position": 32,
+      "title": "匠の業",
+      "player_name": "korota",
+      "level": 14,
       "planets": 5,
-      "points": 12390,
-      "avg_points": 2478,
-      "fleet_score": 751,
-      "empire_name": "abcd",
-      "empire_key": "e79f95058be4",
-      "player_key": "506a8fd961e2",
+      "points": 9495,
+      "avg_points": 1899,
+      "fleet_score": 1462,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "8711da898e08",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 41,
-          "delta_rank": 1,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 75,
+          "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 39.65320021411578
+          "points_per_hour": 73.118330059104
         }
       },
-      "fleet_share": 0.06061339790153349,
+      "fleet_share": 0.1539757767245919,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 36,
+      "rank_position": 19,
+      "title": "帝国の一員",
+      "player_name": "マモル",
+      "level": 18,
+      "planets": 11,
+      "points": 31369,
+      "avg_points": 2851,
+      "fleet_score": 4090,
+      "empire_name": "スペースストーム",
+      "empire_key": "85a6ec98970a",
+      "player_key": "2ffb3de1a66a",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 62,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 60.444486182192634
+        }
+      },
+      "fleet_share": 0.13038349963339602,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 35,
       "title": "匠の業",
       "player_name": "ゲオルク・メルカー",
       "level": 12,
       "planets": 1,
-      "points": 5128,
-      "avg_points": 5128,
-      "fleet_score": 321,
+      "points": 5187,
+      "avg_points": 5187,
+      "fleet_score": 331,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "3f0fba1a87e2",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 39,
-          "delta_rank": 0,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 59,
+          "delta_rank": 1,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 5,
-          "fleet_per_hour": 4.835756123672656,
-          "points_per_hour": 37.71889776464672
+          "delta_fleet": 10,
+          "fleet_per_hour": 9.749110674547198,
+          "points_per_hour": 57.519752979828475
         }
       },
-      "fleet_share": 0.062597503900156,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 39,
-      "title": "略奪者",
-      "player_name": "涼香",
-      "level": 12,
-      "planets": 1,
-      "points": 3892,
-      "avg_points": 3892,
-      "fleet_score": 138,
-      "empire_name": "スペースストーム",
-      "empire_key": "85a6ec98970a",
-      "player_key": "a9ba84e9e9f0",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 37,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 35.784595315177654
-        }
-      },
-      "fleet_share": 0.03545734840698869,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 45,
-      "title": "匠の業",
-      "player_name": "eutoreiy",
-      "level": 11,
-      "planets": 1,
-      "points": 2720,
-      "avg_points": 2720,
-      "fleet_score": 15,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "105556d504fe",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 37,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 35.784595315177654
-        }
-      },
-      "fleet_share": 0.0055147058823529415,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 42,
-      "title": "匠の業",
-      "player_name": "paxai1",
-      "level": 11,
-      "planets": 1,
-      "points": 2908,
-      "avg_points": 2908,
-      "fleet_score": 99,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "21c473be2405",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 35,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 33.850292865708596
-        }
-      },
-      "fleet_share": 0.03404401650618982,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 26,
-      "title": null,
-      "player_name": "ranran2",
-      "level": 16,
-      "planets": 10,
-      "points": 16958,
-      "avg_points": 1695,
-      "fleet_score": 2037,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "262cb1916a97",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 31,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 29.98168796677047
-        }
-      },
-      "fleet_share": 0.12012029720485906,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 50,
-      "title": "初心者",
-      "player_name": "Pトレーナー",
-      "level": 6,
-      "planets": 1,
-      "points": 620,
-      "avg_points": 620,
-      "fleet_score": 10,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "40632cc7da5f",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 23,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 22.24447816889422
-        }
-      },
-      "fleet_share": 0.016129032258064516,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 20,
-      "title": "達人",
-      "player_name": "Lanack",
-      "level": 18,
-      "planets": 10,
-      "points": 28139,
-      "avg_points": 2813,
-      "fleet_score": 2405,
-      "empire_name": "スペースストーム",
-      "empire_key": "85a6ec98970a",
-      "player_key": "623aad2c5322",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 6,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 5.802907348407188
-        }
-      },
-      "fleet_share": 0.08546856675788052,
+      "fleet_share": 0.06381337960285328,
       "is_new_since_previous": false
     },
     {
@@ -2236,54 +2012,222 @@
       "player_name": "bububu",
       "level": 12,
       "planets": 1,
-      "points": 5417,
-      "avg_points": 5417,
-      "fleet_score": 1026,
+      "points": 5469,
+      "avg_points": 5469,
+      "fleet_score": 1035,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "627addaa5b27",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 6,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 52,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": 5,
-          "fleet_per_hour": 4.835756123672656,
-          "points_per_hour": 5.802907348407188
+          "delta_fleet": 9,
+          "fleet_per_hour": 8.774199607092479,
+          "points_per_hour": 50.69537550764544
         }
       },
-      "fleet_share": 0.18940372900129224,
+      "fleet_share": 0.18924849149753153,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 38,
-      "title": null,
-      "player_name": "朱雀",
+      "rank_position": 42,
+      "title": "匠の業",
+      "player_name": "paxai1",
       "level": 11,
       "planets": 1,
-      "points": 3944,
-      "avg_points": 3944,
-      "fleet_score": 107,
-      "empire_name": "スペースストーム",
-      "empire_key": "85a6ec98970a",
-      "player_key": "d654b96eac46",
+      "points": 2952,
+      "avg_points": 2952,
+      "fleet_score": 99,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "21c473be2405",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 5,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 44,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 4.835756123672656
+          "points_per_hour": 42.89608696800767
         }
       },
-      "fleet_share": 0.02712981744421907,
+      "fleet_share": 0.03353658536585366,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 14,
+      "title": null,
+      "player_name": "ゼネトス",
+      "level": 20,
+      "planets": 25,
+      "points": 42963,
+      "avg_points": 1718,
+      "fleet_score": 8133,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "0cde3a0a778a",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 41,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 39.971353765643514
+        }
+      },
+      "fleet_share": 0.18930242301515257,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 39,
+      "title": "略奪者",
+      "player_name": "涼香",
+      "level": 12,
+      "planets": 1,
+      "points": 3932,
+      "avg_points": 3932,
+      "fleet_score": 138,
+      "empire_name": "スペースストーム",
+      "empire_key": "85a6ec98970a",
+      "player_key": "a9ba84e9e9f0",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 40,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 38.996442698188794
+        }
+      },
+      "fleet_share": 0.035096642929806715,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 31,
+      "title": null,
+      "player_name": "shizuku",
+      "level": 13,
+      "planets": 1,
+      "points": 10198,
+      "avg_points": 10198,
+      "fleet_score": 4755,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "9271b5bdc834",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 39,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 38.021531630734074
+        }
+      },
+      "fleet_share": 0.46626789566581683,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 20,
+      "title": "達人",
+      "player_name": "Lanack",
+      "level": 18,
+      "planets": 10,
+      "points": 28177,
+      "avg_points": 2817,
+      "fleet_score": 2405,
+      "empire_name": "スペースストーム",
+      "empire_key": "85a6ec98970a",
+      "player_key": "623aad2c5322",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 38,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 37.046620563279355
+        }
+      },
+      "fleet_share": 0.08535330233878695,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 45,
+      "title": "匠の業",
+      "player_name": "eutoreiy",
+      "level": 11,
+      "planets": 1,
+      "points": 2746,
+      "avg_points": 2746,
+      "fleet_score": 15,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "105556d504fe",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 26,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 25.34768775382272
+        }
+      },
+      "fleet_share": 0.005462490895848507,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 30,
+      "title": "初心者",
+      "player_name": "TP",
+      "level": 15,
+      "planets": 9,
+      "points": 11095,
+      "avg_points": 1232,
+      "fleet_score": 728,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "87a0fb99758e",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 9,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 8.774199607092479
+        }
+      },
+      "fleet_share": 0.06561514195583597,
       "is_new_since_previous": false
     },
     {
@@ -2292,26 +2236,110 @@
       "player_name": "タウリ",
       "level": 17,
       "planets": 9,
-      "points": 23435,
-      "avg_points": 2603,
+      "points": 23438,
+      "avg_points": 2604,
       "fleet_score": 4107,
       "empire_name": null,
       "empire_key": null,
       "player_key": "479bff803fee",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 3,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 2.901453674203594
+          "points_per_hour": 2.92473320236416
         }
       },
-      "fleet_share": 0.17525069340729676,
+      "fleet_share": 0.17522826179708167,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 26,
+      "title": null,
+      "player_name": "ranran2",
+      "level": 16,
+      "planets": 10,
+      "points": 16961,
+      "avg_points": 1696,
+      "fleet_score": 2037,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "262cb1916a97",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 3,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 2.92473320236416
+        }
+      },
+      "fleet_share": 0.1200990507635163,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 50,
+      "title": "初心者",
+      "player_name": "Pトレーナー",
+      "level": 6,
+      "planets": 1,
+      "points": 622,
+      "avg_points": 622,
+      "fleet_score": 10,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "40632cc7da5f",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 2,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 1.9498221349094398
+        }
+      },
+      "fleet_share": 0.01607717041800643,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 27,
+      "title": "初心者",
+      "player_name": "phovz",
+      "level": 15,
+      "planets": 5,
+      "points": 12391,
+      "avg_points": 2478,
+      "fleet_score": 751,
+      "empire_name": "abcd",
+      "empire_key": "e79f95058be4",
+      "player_key": "506a8fd961e2",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 1,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 0.9749110674547199
+        }
+      },
+      "fleet_share": 0.06060850617383585,
       "is_new_since_previous": false
     },
     {
@@ -2320,79 +2348,51 @@
       "player_name": "yqmato",
       "level": 11,
       "planets": 1,
-      "points": 3970,
-      "avg_points": 3970,
+      "points": 3971,
+      "avg_points": 3971,
       "fleet_score": 264,
       "empire_name": "スペースストーム",
       "empire_key": "85a6ec98970a",
       "player_key": "1ca9bcc13482",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 2,
-          "delta_rank": 0,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 1.9343024494690624
-        }
-      },
-      "fleet_share": 0.06649874055415617,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 40,
-      "title": "建設王",
-      "player_name": "syarunoiru",
-      "level": 11,
-      "planets": 1,
-      "points": 3824,
-      "avg_points": 3824,
-      "fleet_score": 70,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "fd36955d50e5",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 1,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
           "fleet_per_hour": 0.0,
-          "points_per_hour": 0.9671512247345312
+          "points_per_hour": 0.9749110674547199
         }
       },
-      "fleet_share": 0.018305439330543932,
+      "fleet_share": 0.0664819944598338,
       "is_new_since_previous": false
     },
     {
-      "rank_position": 46,
-      "title": "初心者",
-      "player_name": "藤宮澄夏",
-      "level": 9,
+      "rank_position": 41,
+      "title": null,
+      "player_name": "オペレータ",
+      "level": 11,
       "planets": 1,
-      "points": 2010,
-      "avg_points": 2010,
+      "points": 3799,
+      "avg_points": 3799,
       "fleet_score": null,
       "empire_name": null,
       "empire_key": null,
-      "player_key": "94c8efc70310",
+      "player_key": "708a2c724bec",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 1,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": null,
           "fleet_per_hour": null,
-          "points_per_hour": 0.9671512247345312
+          "points_per_hour": 0.9749110674547199
         }
       },
       "fleet_share": null,
@@ -2412,8 +2412,8 @@
       "player_key": "6761d55b10c5",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2440,10 +2440,10 @@
       "player_key": "850540a249a5",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
-          "delta_rank": 1,
+          "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
@@ -2468,10 +2468,10 @@
       "player_key": "5b11ad5d6d31",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
-          "delta_rank": 1,
+          "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
@@ -2483,35 +2483,7 @@
       "is_new_since_previous": false
     },
     {
-      "rank_position": 31,
-      "title": null,
-      "player_name": "shizuku",
-      "level": 13,
-      "planets": 1,
-      "points": 10159,
-      "avg_points": 10159,
-      "fleet_score": 4755,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "9271b5bdc834",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": 0,
-          "delta_rank": 1,
-          "delta_level": 0,
-          "delta_planets": 0,
-          "delta_fleet": 0,
-          "fleet_per_hour": 0.0,
-          "points_per_hour": 0.0
-        }
-      },
-      "fleet_share": 0.4680578797125701,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 35,
+      "rank_position": 36,
       "title": null,
       "player_name": "KK",
       "level": 12,
@@ -2524,10 +2496,10 @@
       "player_key": "13764851baae",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
-          "delta_rank": 0,
+          "delta_rank": -1,
           "delta_level": 0,
           "delta_planets": 0,
           "delta_fleet": 0,
@@ -2539,31 +2511,59 @@
       "is_new_since_previous": false
     },
     {
-      "rank_position": 41,
+      "rank_position": 38,
       "title": null,
-      "player_name": "オペレータ",
+      "player_name": "朱雀",
       "level": 11,
       "planets": 1,
-      "points": 3798,
-      "avg_points": 3798,
-      "fleet_score": null,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "708a2c724bec",
+      "points": 3944,
+      "avg_points": 3944,
+      "fleet_score": 107,
+      "empire_name": "スペースストーム",
+      "empire_key": "85a6ec98970a",
+      "player_key": "d654b96eac46",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": null,
-          "fleet_per_hour": null,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
           "points_per_hour": 0.0
         }
       },
-      "fleet_share": null,
+      "fleet_share": 0.02712981744421907,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 40,
+      "title": "建設王",
+      "player_name": "syarunoiru",
+      "level": 11,
+      "planets": 1,
+      "points": 3824,
+      "avg_points": 3824,
+      "fleet_score": 70,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "fd36955d50e5",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 0,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": 0,
+          "fleet_per_hour": 0.0,
+          "points_per_hour": 0.0
+        }
+      },
+      "fleet_share": 0.018305439330543932,
       "is_new_since_previous": false
     },
     {
@@ -2580,8 +2580,8 @@
       "player_key": "e1fc8a44960f",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2608,8 +2608,8 @@
       "player_key": "c5998088ff21",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2620,6 +2620,34 @@
         }
       },
       "fleet_share": 0.05646036916395222,
+      "is_new_since_previous": false
+    },
+    {
+      "rank_position": 46,
+      "title": "初心者",
+      "player_name": "藤宮澄夏",
+      "level": 9,
+      "planets": 1,
+      "points": 2010,
+      "avg_points": 2010,
+      "fleet_score": null,
+      "empire_name": null,
+      "empire_key": null,
+      "player_key": "94c8efc70310",
+      "comparisons": {
+        "1": {
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": 0,
+          "delta_rank": 0,
+          "delta_level": 0,
+          "delta_planets": 0,
+          "delta_fleet": null,
+          "fleet_per_hour": null,
+          "points_per_hour": 0.0
+        }
+      },
+      "fleet_share": null,
       "is_new_since_previous": false
     },
     {
@@ -2636,8 +2664,8 @@
       "player_key": "378889e252b7",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2664,8 +2692,8 @@
       "player_key": "29a98b245702",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2692,8 +2720,8 @@
       "player_key": "be4b165f67be",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2720,8 +2748,8 @@
       "player_key": "f506f6dcd5dd",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2748,8 +2776,8 @@
       "player_key": "d54227c1d9a2",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2776,8 +2804,8 @@
       "player_key": "84286024a3d8",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2804,8 +2832,8 @@
       "player_key": "a6aa6c594f3f",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2832,8 +2860,8 @@
       "player_key": "519a3cf4ec1a",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2860,8 +2888,8 @@
       "player_key": "9dc0219f361d",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2888,8 +2916,8 @@
       "player_key": "011c945f30ce",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2916,8 +2944,8 @@
       "player_key": "75ea71ee01dd",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2944,8 +2972,8 @@
       "player_key": "6f0e03a791c4",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -2972,8 +3000,8 @@
       "player_key": "22b537ac0caa",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -3000,8 +3028,8 @@
       "player_key": "5c2a07e79041",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
           "delta_points": 0,
           "delta_rank": 0,
           "delta_level": 0,
@@ -3015,59 +3043,31 @@
       "is_new_since_previous": false
     },
     {
-      "rank_position": 13,
-      "title": "建設王",
-      "player_name": "能面",
-      "level": 20,
-      "planets": 17,
-      "points": 44097,
-      "avg_points": 2593,
-      "fleet_score": 4273,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "a93ec1a0e5bc",
+      "rank_position": 1,
+      "title": "略奪者",
+      "player_name": "aaaa",
+      "level": 30,
+      "planets": 162,
+      "points": 1107048,
+      "avg_points": 6833,
+      "fleet_score": 444404,
+      "empire_name": "あ",
+      "empire_key": "4c224268dafd",
+      "player_key": "70c881d4a269",
       "comparisons": {
         "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": -38,
+          "snapshot_time_utc": "2026-03-28T17:18:20.099211+00:00",
+          "elapsed_hours": 1.0257345858333333,
+          "delta_points": -1404,
           "delta_rank": 0,
           "delta_level": 0,
           "delta_planets": 0,
-          "delta_fleet": -254,
-          "fleet_per_hour": -245.65641108257094,
-          "points_per_hour": -36.75174653991219
+          "delta_fleet": -3841,
+          "fleet_per_hour": -3744.633410093579,
+          "points_per_hour": -1368.7751387064268
         }
       },
-      "fleet_share": 0.09690001587409575,
-      "is_new_since_previous": false
-    },
-    {
-      "rank_position": 33,
-      "title": "初心者",
-      "player_name": "アオヤ",
-      "level": 15,
-      "planets": 1,
-      "points": 8149,
-      "avg_points": 8149,
-      "fleet_score": 1662,
-      "empire_name": null,
-      "empire_key": null,
-      "player_key": "a17dcb0da782",
-      "comparisons": {
-        "1": {
-          "snapshot_time_utc": "2026-03-28T16:16:17.827132+00:00",
-          "elapsed_hours": 1.033964466388889,
-          "delta_points": -4613,
-          "delta_rank": -6,
-          "delta_level": 0,
-          "delta_planets": -6,
-          "delta_fleet": 21,
-          "fleet_per_hour": 20.310175719425157,
-          "points_per_hour": -4461.468599700393
-        }
-      },
-      "fleet_share": 0.20395140508037796,
+      "fleet_share": 0.4014315549099949,
       "is_new_since_previous": false
     }
   ]
