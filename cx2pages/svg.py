@@ -40,8 +40,10 @@ def sparkline_svg(
 
     polyline = " ".join(svg_points)
     title_text = f"<title>{escape(title)}</title>" if title else ""
-    max_label_y = padding - 2
-    min_label_y = height - 4
+    top_label_y = padding - 2
+    bottom_label_y = height - 4
+    top_label = min_value if invert else max_value
+    bottom_label = max_value if invert else min_value
 
     svg = f"""
     <svg class="sparkline" viewBox="0 0 {width} {height}" role="img" aria-label="{escape(title)}">
@@ -50,8 +52,8 @@ def sparkline_svg(
       <line x1="{padding}" y1="{padding}" x2="{padding}" y2="{height - padding}" class="sparkline-axis"></line>
       <line x1="{padding}" y1="{height - padding}" x2="{width - padding}" y2="{height - padding}" class="sparkline-axis"></line>
       <polyline fill="none" points="{polyline}" class="sparkline-line"></polyline>
-      <text x="{padding}" y="{max_label_y}" class="sparkline-label">{max_value:,}</text>
-      <text x="{padding}" y="{min_label_y}" class="sparkline-label">{min_value:,}</text>
+      <text x="{padding}" y="{top_label_y}" class="sparkline-label">{top_label:,}</text>
+      <text x="{padding}" y="{bottom_label_y}" class="sparkline-label">{bottom_label:,}</text>
     </svg>
     """
     return Markup(svg)

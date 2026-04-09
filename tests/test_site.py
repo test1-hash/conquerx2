@@ -7,6 +7,7 @@ import unittest
 from cx2pages.models import FetchRun, RankRow, Snapshot
 from cx2pages.scraper import parse_rank_rows_from_text
 from cx2pages.site import Settings, build_board, build_empire_board, empire_key, get_fleet_rows, render_site
+from cx2pages.svg import sparkline_svg
 from cx2pages.state import add_fetch_run, add_or_replace_snapshot
 from cx2pages.utils import JST, to_utc
 
@@ -169,6 +170,12 @@ class SiteBuildTest(unittest.TestCase):
             self.assertIn('A', empires_html)
             self.assertIn('人数推移', empire_html)
             self.assertIn('2,080<span class="history-delta pos">(+180)</span>', empire_html)
+
+    def test_rank_sparkline_labels_follow_inverted_axis(self):
+        svg = str(sparkline_svg([5, 3, 1], invert=True, title='Rank history'))
+        self.assertIn('class="sparkline-label">1</text>', svg)
+        self.assertIn('class="sparkline-label">5</text>', svg)
+        self.assertLess(svg.index('class="sparkline-label">1</text>'), svg.index('class="sparkline-label">5</text>'))
 
 
 if __name__ == '__main__':
