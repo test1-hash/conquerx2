@@ -32,6 +32,15 @@ class Settings:
     source_label: str
 
 
+def _page_context(*, current_page: str, heading: str, kicker: str, summary: str) -> dict[str, str]:
+    return {
+        "current_page": current_page,
+        "page_heading": heading,
+        "page_kicker": kicker,
+        "page_summary": summary,
+    }
+
+
 def _env(template_dir: Path) -> Environment:
     env = Environment(
         loader=FileSystemLoader(str(template_dir)),
@@ -524,8 +533,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
 
     index_html = env.get_template("index.html").render(
         **context_base,
+        **_page_context(
+            current_page="index",
+            heading=f"{settings.server_label} Rankwatch",
+            kicker="Live Command View",
+            summary="総合順位、戦力、帝国、毎時差分を一画面で追えるライブボードです。",
+        ),
         page_title=f"{settings.server_label} Rankwatch",
-        current_page="index",
         latest=latest,
         board=board,
         show_title=_has_title(board),
@@ -538,8 +552,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
 
     empires_html = env.get_template("empires.html").render(
         **context_base,
+        **_page_context(
+            current_page="empires",
+            heading="Empire Overview",
+            kicker="Coalition Control",
+            summary="帝国単位の勢力図を、人数、惑星、戦力、伸び幅までまとめて比較できます。",
+        ),
         page_title=f"{settings.server_label} Empires",
-        current_page="empires",
         latest=latest_empires,
         board=empire_board,
         show_fleet=_has_fleet(empire_board),
@@ -549,8 +568,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
 
     fleet_html = env.get_template("fleet.html").render(
         **context_base,
+        **_page_context(
+            current_page="fleet",
+            heading="Fleet Pressure",
+            kicker="Military Index",
+            summary="戦力値そのものと増減速度に寄せて、艦隊規模の変化を追跡します。",
+        ),
         page_title=f"{settings.server_label} Fleet",
-        current_page="fleet",
         latest=latest_fleet,
         rows=fleet_rows,
         top_row=fleet_rows[0] if fleet_rows else None,
@@ -562,8 +586,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         latest_g, rows, comparison = get_growth_rows(state, window)
         growth_html = env.get_template("growth.html").render(
             **context_base,
+            **_page_context(
+                current_page="growth",
+                heading=f"{window}h Growth Ranking",
+                kicker="Velocity Board",
+                summary=f"{window}時間でどれだけ伸びたかを、ポイント速度と順位変化で比較します。",
+            ),
             page_title=f"{settings.server_label} Growth {window}h",
-            current_page="growth",
             latest=latest_g,
             rows=rows,
             show_fleet=_has_fleet(rows),
@@ -581,8 +610,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
     latest_c, previous_c, changes = get_recent_changes(state)
     changes_html = env.get_template("changes.html").render(
         **context_base,
+        **_page_context(
+            current_page="changes",
+            heading="Roster Changes",
+            kicker="Delta Monitor",
+            summary="前回取得からの新規ランクイン、圏外、帝国移籍を即座に確認できます。",
+        ),
         page_title=f"{settings.server_label} Changes",
-        current_page="changes",
         latest=latest_c,
         previous=previous_c,
         changeset=changes,
@@ -603,8 +637,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         fleet_history = [point["fleet_score"] for point in history if point.get("fleet_score") is not None]
         player_html = env.get_template("player.html").render(
             **context_base,
+            **_page_context(
+                current_page="player",
+                heading=player_name,
+                kicker="Player History",
+                summary="ポイント、順位、戦力の時系列をプレイヤー単位で確認できます。",
+            ),
             page_title=f"{player_name} | {settings.server_label}",
-            current_page="player",
             player={
                 "player_name": player_name,
                 "player_key": player_key(player_name),
@@ -652,8 +691,13 @@ def render_site(project_root: Path, out_dir: Path, settings: Settings, state: di
         fleet_history = [point["fleet_score"] for point in history if point.get("fleet_score") is not None]
         empire_html = env.get_template("empire.html").render(
             **context_base,
+            **_page_context(
+                current_page="empire",
+                heading=empire_name,
+                kicker="Empire History",
+                summary="帝国単位のポイント、順位、人数、戦力の推移をまとめて追跡できます。",
+            ),
             page_title=f"{empire_name} | {settings.server_label}",
-            current_page="empire",
             empire={
                 "empire_name": empire_name,
                 "empire_key": empire_key(empire_name),

@@ -1,4 +1,26 @@
 {% extends "base.html" %}
+{% block hero_meta %}
+  {% if latest and comparison_snapshot %}
+    <div class="hero-metric-grid">
+      <article class="hero-metric">
+        <span>Window</span>
+        <strong>{{ window }} hours</strong>
+      </article>
+      <article class="hero-metric">
+        <span>From</span>
+        <strong>{{ jst_string(comparison_snapshot['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>To</span>
+        <strong>{{ jst_string(latest['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Rows</span>
+        <strong>{{ rows|length }}</strong>
+      </article>
+    </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   <section class="card controls-card">
     <div class="page-tabs">

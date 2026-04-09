@@ -2,6 +2,28 @@
 {% block extra_head %}
   <script defer src="static/index.js"></script>
 {% endblock %}
+{% block hero_meta %}
+  {% if latest and rows %}
+    <div class="hero-metric-grid">
+      <article class="hero-metric">
+        <span>Latest Snapshot</span>
+        <strong>{{ jst_string(latest['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Fleet Observations</span>
+        <strong>{{ rows|length }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Highest Fleet</span>
+        <strong>{{ fmt_int(top_row.fleet_score) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Current Leader</span>
+        <strong>{{ top_row.player_name }}</strong>
+      </article>
+    </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   {% if latest and rows %}
     <section class="card-grid">

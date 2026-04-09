@@ -2,6 +2,28 @@
 {% block extra_head %}
   <script defer src="static/index.js"></script>
 {% endblock %}
+{% block hero_meta %}
+  {% if latest and board %}
+    <div class="hero-metric-grid">
+      <article class="hero-metric">
+        <span>Latest Snapshot</span>
+        <strong>{{ jst_string(latest['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Observed Empires</span>
+        <strong>{{ board|length }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Top Empire</span>
+        <strong>{{ board[0].empire_name }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Top Score</span>
+        <strong>{{ fmt_int(board[0].points) }}</strong>
+      </article>
+    </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   {% if latest and board %}
     <section class="card-grid">

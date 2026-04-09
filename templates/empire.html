@@ -1,4 +1,28 @@
 {% extends "base.html" %}
+{% block hero_meta %}
+  {% if latest_point %}
+    <div class="hero-metric-grid">
+      <article class="hero-metric">
+        <span>Current Rank</span>
+        <strong>#{{ latest_point.rank_position }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Current Points</span>
+        <strong>{{ fmt_int(latest_point.points) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Members</span>
+        <strong>{{ fmt_int(latest_point.member_count) }}</strong>
+      </article>
+      {% if latest_point.fleet_score is not none %}
+        <article class="hero-metric">
+          <span>Current Fleet</span>
+          <strong>{{ fmt_int(latest_point.fleet_score) }}</strong>
+        </article>
+      {% endif %}
+    </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   <section class="card-grid">
     <article class="card stat-card">

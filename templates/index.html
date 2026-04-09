@@ -2,6 +2,32 @@
 {% block extra_head %}
   <script defer src="static/index.js"></script>
 {% endblock %}
+{% block hero_meta %}
+  {% if latest %}
+    <div class="hero-metric-grid">
+      <article class="hero-metric">
+        <span>Latest Snapshot</span>
+        <strong>{{ jst_string(latest['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Observed Players</span>
+        <strong>{{ latest['row_count'] }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Source</span>
+        <strong>{{ source_label }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Compare Windows</span>
+        <strong>
+          {% for hours in windows %}
+            {% if comparison_snapshots.get(hours) %}{{ hours }}h{% else %}<span class="muted">{{ hours }}h</span>{% endif %}{% if not loop.last %} / {% endif %}
+          {% endfor %}
+        </strong>
+      </article>
+    </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   {% if latest %}
     <section class="card-grid">

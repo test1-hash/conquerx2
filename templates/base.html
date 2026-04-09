@@ -4,18 +4,25 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ page_title }}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ 'static/style.css' if current_page not in ('player', 'empire') else '../static/style.css' }}">
     {% block extra_head %}{% endblock %}
   </head>
-  <body>
+  <body class="page-{{ current_page }}">
+    {% set root = '.' if current_page not in ('player', 'empire') else '..' %}
     <header class="site-header">
       <div class="wrap">
-        <div>
-          <div class="eyebrow">CONQUERX2 Rankwatch</div>
-          <h1>{{ server_label }}</h1>
+        <div class="brand-lockup">
+          <a class="brand-mark" href="{{ root }}/index.html">CX2</a>
+          <div>
+            <div class="eyebrow">CONQUERX2 RANKWATCH</div>
+            <h1>{{ server_label }}</h1>
+            <p class="site-subtitle">{{ source_label }}</p>
+          </div>
         </div>
         <nav class="site-nav">
-          {% set root = '.' if current_page not in ('player', 'empire') else '..' %}
           <a href="{{ root }}/index.html" class="{% if current_page == 'index' %}is-active{% endif %}">最新ランキング</a>
           <a href="{{ root }}/empires.html" class="{% if current_page in ('empires', 'empire') %}is-active{% endif %}">帝国</a>
           <a href="{{ root }}/fleet.html" class="{% if current_page == 'fleet' %}is-active{% endif %}">戦力</a>
@@ -27,6 +34,16 @@
     </header>
 
     <main class="wrap main-content">
+      <section class="page-hero">
+        <div class="page-hero-copy">
+          <p class="page-kicker">{{ page_kicker }}</p>
+          <h2>{{ page_heading }}</h2>
+          <p class="page-summary">{{ page_summary }}</p>
+        </div>
+        <div class="page-hero-meta">
+          {% block hero_meta %}{% endblock %}
+        </div>
+      </section>
       {% block content %}{% endblock %}
     </main>
   </body>

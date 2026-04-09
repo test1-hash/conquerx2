@@ -1,4 +1,26 @@
 {% extends "base.html" %}
+{% block hero_meta %}
+  {% if latest and previous %}
+    <div class="hero-metric-grid">
+      <article class="hero-metric">
+        <span>Previous</span>
+        <strong>{{ jst_string(previous['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Latest</span>
+        <strong>{{ jst_string(latest['captured_at_utc']) }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Entered</span>
+        <strong>{{ changeset.entered|length }}</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Empire Moves</span>
+        <strong>{{ changeset.empire_changed|length }}</strong>
+      </article>
+    </div>
+  {% endif %}
+{% endblock %}
 {% block content %}
   <section class="card">
     <div class="section-head">
