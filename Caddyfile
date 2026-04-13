@@ -1,0 +1,16 @@
+{
+  admin off
+  auto_https off
+}
+
+:{$PORT:8000} {
+  @health path /healthz
+  handle @health {
+    header Content-Type application/json
+    respond "{\"ok\":true}" 200
+  }
+
+  root * {$CX2_DOCS_DIR:/data/docs}
+  encode zstd gzip
+  file_server
+}

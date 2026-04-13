@@ -12,7 +12,7 @@ from flask import Flask, abort, jsonify, send_from_directory
 
 from cx2pages.state import latest_snapshot, load_state
 from cx2pages.utils import JST, parse_iso_datetime
-from manage import DOCS_DIR, PROJECT_ROOT, STATE_PATH, command_build, command_update
+from manage import DOCS_DIR, PROJECT_ROOT, STATE_PATH, command_build, command_update_if_needed
 
 
 LOG = logging.getLogger("cx2pages.railway")
@@ -48,28 +48,8 @@ def _latest_snapshot_dt_jst() -> datetime | None:
     return parse_iso_datetime(latest["captured_at_utc"]).astimezone(JST)
 
 
-def _current_hour_already_fetched(now: datetime) -> bool:
-    latest_dt = _latest_snapshot_dt_jst()
-    if latest_dt is None:
-        return False
-    return (
-        latest_dt.year == now.year
-        and latest_dt.month == now.month
-        and latest_dt.day == now.day
-        and latest_dt.hour == now.hour
-    )
-
-
 def _run_update_if_needed() -> None:
-    now = datetime.now(tz=JST)
-    if now.minute < 5:
-        LOG.info("Skipping update before :05 JST (%s)", now.isoformat())
-        return
-    if _current_hour_already_fetched(now):
-        LOG.info("Skipping update; already fetched current JST hour (%s)", now.isoformat())
-        return
-    LOG.info("Running hourly update at %s", now.isoformat())
-    command_update()
+    command_update_if_needed()
 
 
 def _next_run_at(now: datetime) -> datetime:

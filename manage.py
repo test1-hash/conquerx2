@@ -9,8 +9,15 @@ from pathlib import Path
 from cx2pages.models import FetchRun, Snapshot
 from cx2pages.scraper import fetch_ranking, parse_rank_rows_from_text
 from cx2pages.site import Settings as SiteSettings, render_site
-from cx2pages.state import add_fetch_run, add_or_replace_snapshot, load_state, prune_snapshots, save_state
-from cx2pages.utils import JST, to_utc, utcnow
+from cx2pages.state import (
+    add_fetch_run,
+    add_or_replace_snapshot,
+    latest_snapshot,
+    load_state,
+    prune_snapshots,
+    save_state,
+)
+from cx2pages.utils import JST, parse_iso_datetime, to_utc, utcnow
 
 
 def _env_or_none(name: str) -> str | None:
@@ -79,6 +86,26 @@ def _site_settings() -> SiteSettings:
         server_label=DEFAULT_SERVER_LABEL,
         server_rank_url=DEFAULT_SITE_LINK_URL,
         source_label=_source_label(),
+    )
+
+
+def _latest_snapshot_dt_jst() -> datetime | None:
+    state = load_state(STATE_PATH)
+    latest = latest_snapshot(state)
+    if latest is None:
+        return None
+    return parse_iso_datetime(latest["captured_at_utc"]).astimezone(JST)
+
+
+def _current_hour_already_fetched(now: datetime) -> bool:
+    latest_dt = _latest_snapshot_dt_jst()
+    if latest_dt is None:
+        return False
+    return (
+        latest_dt.year == now.year
+        and latest_dt.month == now.month
+        and latest_dt.day == now.day
+        and latest_dt.hour == now.hour
     )
 
 
@@ -184,11 +211,23 @@ def command_update() -> int:
         return 0
 
 
+def command_update_if_needed() -> int:
+    now = datetime.now(tz=JST)
+    if now.minute < 5:
+        print(f"Skipping update before :05 JST ({now.isoformat()})")
+        return 0
+    if _current_hour_already_fetched(now):
+        print(f"Skipping update; already fetched current JST hour ({now.isoformat()})")
+        return 0
+    return command_update()
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="CX2 Jupiter-002 static GitHub Pages site")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("build", help="Build static site from current state.json")
     subparsers.add_parser("update", help="Fetch ranking, update state.json, rebuild docs/")
+    subparsers.add_parser("update-if-needed", help="Fetch ranking only if current JST hour has not been captured yet")
     import_parser = subparsers.add_parser("import-fixture", help="Import a local ranking file for testing")
     import_parser.add_argument("path")
     import_parser.add_argument("--captured-at", default="2026-03-08T00:00:00+09:00")
@@ -203,6 +242,8 @@ def main(argv: list[str] | None = None) -> int:
         return command_build()
     if args.command == "update":
         return command_update()
+    if args.command == "update-if-needed":
+        return command_update_if_needed()
     if args.command == "import-fixture":
         return command_import_fixture(args.path, args.captured_at)
     parser.error(f"Unknown command: {args.command}")
