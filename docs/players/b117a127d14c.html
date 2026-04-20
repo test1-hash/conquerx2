@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>うきびと | Jupiter-002</title>
+    <title>YUZRANIUM | Jupiter-002</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
@@ -37,7 +37,7 @@
       <section class="page-hero">
         <div class="page-hero-copy">
           <p class="page-kicker">Player History</p>
-          <h2>うきびと</h2>
+          <h2>YUZRANIUM</h2>
           <p class="page-summary">ポイント、順位、戦力の時系列をプレイヤー単位で確認できます。</p>
         </div>
         <div class="page-hero-meta">
@@ -46,16 +46,21 @@
     <div class="hero-metric-grid">
       <article class="hero-metric">
         <span>Current Rank</span>
-        <strong>#70</strong>
+        <strong>#63</strong>
       </article>
       <article class="hero-metric">
         <span>Current Points</span>
-        <strong>47</strong>
+        <strong>86</strong>
       </article>
+      
+        <article class="hero-metric">
+          <span>Current Fleet</span>
+          <strong>2</strong>
+        </article>
       
       <article class="hero-metric">
         <span>Observations</span>
-        <strong>8</strong>
+        <strong>1</strong>
       </article>
     </div>
   
@@ -66,11 +71,11 @@
   <section class="card-grid">
     <article class="card stat-card">
       <div class="stat-label">プレイヤー</div>
-      <div class="stat-value">うきびと</div>
+      <div class="stat-value">YUZRANIUM</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">初回観測</div>
-      <div class="stat-value small">2026-04-20 04:05 JST</div>
+      <div class="stat-value small">2026-04-20 16:27 JST</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">最終観測</div>
@@ -78,16 +83,25 @@
     </article>
     <article class="card stat-card">
       <div class="stat-label">最高順位</div>
-      <div class="stat-value">69</div>
+      <div class="stat-value">63</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">最大ポイント</div>
-      <div class="stat-value">47</div>
+      <div class="stat-value">86</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">総増加</div>
-      <div class="stat-value">0</div>
+      <div class="stat-value">-</div>
     </article>
+    
+      <article class="card stat-card">
+        <div class="stat-label">最新戦力</div>
+        <div class="stat-value">2</div>
+      </article>
+      <article class="card stat-card">
+        <div class="stat-label">最大戦力</div>
+        <div class="stat-value">2</div>
+      </article>
     
   </section>
 
@@ -101,9 +115,9 @@
       <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
       <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
       <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
-      <polyline fill="none" points="18.00,162.00 115.71,162.00 213.43,162.00 311.14,162.00 408.86,162.00 506.57,162.00 604.29,162.00 702.00,162.00" class="sparkline-line"></polyline>
-      <text x="18" y="16" class="sparkline-label">47</text>
-      <text x="18" y="176" class="sparkline-label">47</text>
+      <polyline fill="none" points="18.00,162.00 702.00,162.00" class="sparkline-line"></polyline>
+      <text x="18" y="16" class="sparkline-label">86</text>
+      <text x="18" y="176" class="sparkline-label">86</text>
     </svg>
     
       </article>
@@ -115,12 +129,27 @@
       <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
       <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
       <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
-      <polyline fill="none" points="18.00,18.00 115.71,18.00 213.43,18.00 311.14,18.00 408.86,18.00 506.57,18.00 604.29,18.00 702.00,162.00" class="sparkline-line"></polyline>
-      <text x="18" y="16" class="sparkline-label">69</text>
-      <text x="18" y="176" class="sparkline-label">70</text>
+      <polyline fill="none" points="18.00,18.00 702.00,18.00" class="sparkline-line"></polyline>
+      <text x="18" y="16" class="sparkline-label">63</text>
+      <text x="18" y="176" class="sparkline-label">63</text>
     </svg>
     
       </article>
+      
+        <article class="card chart-card">
+          <div class="section-head"><h2>戦力推移</h2></div>
+          
+    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Fleet history">
+      <title>Fleet history</title>
+      <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
+      <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
+      <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
+      <polyline fill="none" points="18.00,162.00 702.00,162.00" class="sparkline-line"></polyline>
+      <text x="18" y="16" class="sparkline-label">2</text>
+      <text x="18" y="176" class="sparkline-label">2</text>
+    </svg>
+    
+        </article>
       
     </section>
   
@@ -128,7 +157,7 @@
   <section class="card">
     <div class="section-head">
       <h2>履歴</h2>
-      <p class="muted">観測回数: 8</p>
+      <p class="muted">観測回数: 1</p>
     </div>
     <div class="table-wrap">
       <table class="data-table compact-table">
@@ -141,7 +170,7 @@
             <th>Lv</th>
             <th>惑星</th>
             <th>ポイント</th>
-            
+            <th>戦力</th>
             <th>平均</th>
           </tr>
         </thead>
@@ -149,114 +178,20 @@
           
             <tr>
               <td>2026-04-20 16:27 JST</td>
-              <td class="num">70</td>
+              <td class="num">63</td>
               <td>初心者</td>
               <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
-              </td>
-              
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 14:28 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
+              <td class="num">2</td>
               <td class="num">1</td>
               <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
+                86
               </td>
               
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 11:39 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
-              </td>
+                <td class="num">
+                  2
+                </td>
               
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 08:23 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
-              </td>
-              
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 07:05 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
-              </td>
-              
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 06:36 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
-              </td>
-              
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 05:20 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47<span class="history-delta muted">(0)</span>
-              </td>
-              
-              <td class="num">47</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-20 04:05 JST</td>
-              <td class="num">69</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">1</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                47
-              </td>
-              
-              <td class="num">47</td>
+              <td class="num">86</td>
             </tr>
           
         </tbody>
