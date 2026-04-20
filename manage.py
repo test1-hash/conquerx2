@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 import os
 import sys
-from datetime import datetime
+from datetime import datetime, timedelta
 from pathlib import Path
 
 from cx2pages.models import FetchRun, Snapshot
@@ -222,12 +222,29 @@ def command_update_if_needed() -> int:
     return command_update()
 
 
+def _next_update_check_delay_seconds(now: datetime | None = None) -> int:
+    now = now or datetime.now(tz=JST)
+    if _current_hour_already_fetched(now):
+        target = (now + timedelta(hours=1)).replace(minute=5, second=0, microsecond=0)
+    elif now.minute < 5:
+        target = now.replace(minute=5, second=0, microsecond=0)
+    else:
+        target = now + timedelta(seconds=15)
+    return max(int((target - now).total_seconds() + 0.999999), 0)
+
+
+def command_next_update_check_seconds() -> int:
+    print(_next_update_check_delay_seconds())
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="CX2 Jupiter-002 static GitHub Pages site")
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("build", help="Build static site from current state.json")
     subparsers.add_parser("update", help="Fetch ranking, update state.json, rebuild docs/")
     subparsers.add_parser("update-if-needed", help="Fetch ranking only if current JST hour has not been captured yet")
+    subparsers.add_parser("next-update-check-seconds", help="Print seconds until the next Railway update check")
     import_parser = subparsers.add_parser("import-fixture", help="Import a local ranking file for testing")
     import_parser.add_argument("path")
     import_parser.add_argument("--captured-at", default="2026-03-08T00:00:00+09:00")
@@ -244,6 +261,8 @@ def main(argv: list[str] | None = None) -> int:
         return command_update()
     if args.command == "update-if-needed":
         return command_update_if_needed()
+    if args.command == "next-update-check-seconds":
+        return command_next_update_check_seconds()
     if args.command == "import-fixture":
         return command_import_fixture(args.path, args.captured_at)
     parser.error(f"Unknown command: {args.command}")

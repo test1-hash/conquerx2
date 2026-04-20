@@ -34,25 +34,9 @@ catch_up_update() {
   python manage.py update-if-needed
 }
 
-sleep_until_next_run() {
-  python - <<'PY'
-import time
-from datetime import datetime, timedelta
-from zoneinfo import ZoneInfo
-
-jst = ZoneInfo("Asia/Tokyo")
-now = datetime.now(jst)
-target = now.replace(minute=5, second=0, microsecond=0)
-if now >= target:
-    target = (now + timedelta(hours=1)).replace(minute=5, second=0, microsecond=0)
-sleep_seconds = max((target - now).total_seconds(), 0)
-print(f"{int(sleep_seconds)}")
-PY
-}
-
 updater_loop() {
   while true; do
-    sleep_seconds="$(sleep_until_next_run)"
+    sleep_seconds="$(python manage.py next-update-check-seconds)"
     log "Sleeping ${sleep_seconds}s until next update window"
     sleep "$sleep_seconds"
     log "Running scheduled update"
