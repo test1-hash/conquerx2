@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>collie | Jupiter-002</title>
+    <title>ポパイ | Jupiter-002</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../static/style.css">
     
   </head>
-  <body class="page-player">
+  <body class="page-empire">
     
     <header class="site-header">
       <div class="wrap">
@@ -24,7 +24,7 @@
         </div>
         <nav class="site-nav">
           <a href="../index.html" class="">最新ランキング</a>
-          <a href="../empires.html" class="">帝国</a>
+          <a href="../empires.html" class="is-active">帝国</a>
           <a href="../fleet.html" class="">戦力</a>
           <a href="../growth-24h.html" class="">成長率</a>
           <a href="../changes.html" class="">出入り・変化</a>
@@ -36,9 +36,9 @@
     <main class="wrap main-content">
       <section class="page-hero">
         <div class="page-hero-copy">
-          <p class="page-kicker">Player History</p>
-          <h2>collie</h2>
-          <p class="page-summary">ポイント、順位、戦力の時系列をプレイヤー単位で確認できます。</p>
+          <p class="page-kicker">Empire History</p>
+          <h2>ポパイ</h2>
+          <p class="page-summary">帝国単位のポイント、順位、人数、戦力の推移をまとめて追跡できます。</p>
         </div>
         <div class="page-hero-meta">
           
@@ -46,22 +46,22 @@
     <div class="hero-metric-grid">
       <article class="hero-metric">
         <span>Current Rank</span>
-        <strong>#62</strong>
+        <strong>#10</strong>
       </article>
       <article class="hero-metric">
         <span>Current Points</span>
-        <strong>221</strong>
+        <strong>49,987</strong>
+      </article>
+      <article class="hero-metric">
+        <span>Members</span>
+        <strong>1</strong>
       </article>
       
         <article class="hero-metric">
           <span>Current Fleet</span>
-          <strong>4</strong>
+          <strong>16,154</strong>
         </article>
       
-      <article class="hero-metric">
-        <span>Observations</span>
-        <strong>2</strong>
-      </article>
     </div>
   
 
@@ -70,12 +70,12 @@
       
   <section class="card-grid">
     <article class="card stat-card">
-      <div class="stat-label">プレイヤー</div>
-      <div class="stat-value">collie</div>
+      <div class="stat-label">帝国</div>
+      <div class="stat-value">ポパイ</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">初回観測</div>
-      <div class="stat-value small">2026-04-22 21:52 JST</div>
+      <div class="stat-value small">2026-04-22 23:27 JST</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">最終観測</div>
@@ -83,24 +83,32 @@
     </article>
     <article class="card stat-card">
       <div class="stat-label">最高順位</div>
-      <div class="stat-value">62</div>
+      <div class="stat-value">10</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">最大ポイント</div>
-      <div class="stat-value">221</div>
+      <div class="stat-value">49,987</div>
     </article>
     <article class="card stat-card">
       <div class="stat-label">総増加</div>
-      <div class="stat-value">+143</div>
+      <div class="stat-value">-</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">最大人数</div>
+      <div class="stat-value">1</div>
+    </article>
+    <article class="card stat-card">
+      <div class="stat-label">最大惑星</div>
+      <div class="stat-value">21</div>
     </article>
     
       <article class="card stat-card">
         <div class="stat-label">最新戦力</div>
-        <div class="stat-value">4</div>
+        <div class="stat-value">16,154</div>
       </article>
       <article class="card stat-card">
         <div class="stat-label">最大戦力</div>
-        <div class="stat-value">4</div>
+        <div class="stat-value">16,154</div>
       </article>
     
   </section>
@@ -110,28 +118,42 @@
       <article class="card chart-card">
         <div class="section-head"><h2>ポイント推移</h2></div>
         
-    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Points history">
-      <title>Points history</title>
+    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Empire points history">
+      <title>Empire points history</title>
       <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
       <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
       <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
-      <polyline fill="none" points="18.00,162.00 702.00,18.00" class="sparkline-line"></polyline>
-      <text x="18" y="16" class="sparkline-label">221</text>
-      <text x="18" y="176" class="sparkline-label">78</text>
+      <polyline fill="none" points="18.00,162.00 702.00,162.00" class="sparkline-line"></polyline>
+      <text x="18" y="16" class="sparkline-label">49,987</text>
+      <text x="18" y="176" class="sparkline-label">49,987</text>
     </svg>
     
       </article>
       <article class="card chart-card">
         <div class="section-head"><h2>順位推移</h2></div>
         
-    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Rank history">
-      <title>Rank history</title>
+    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Empire rank history">
+      <title>Empire rank history</title>
       <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
       <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
       <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
-      <polyline fill="none" points="18.00,162.00 702.00,18.00" class="sparkline-line"></polyline>
-      <text x="18" y="16" class="sparkline-label">62</text>
-      <text x="18" y="176" class="sparkline-label">65</text>
+      <polyline fill="none" points="18.00,18.00 702.00,18.00" class="sparkline-line"></polyline>
+      <text x="18" y="16" class="sparkline-label">10</text>
+      <text x="18" y="176" class="sparkline-label">10</text>
+    </svg>
+    
+      </article>
+      <article class="card chart-card">
+        <div class="section-head"><h2>人数推移</h2></div>
+        
+    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Empire members history">
+      <title>Empire members history</title>
+      <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
+      <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
+      <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
+      <polyline fill="none" points="18.00,162.00 702.00,162.00" class="sparkline-line"></polyline>
+      <text x="18" y="16" class="sparkline-label">1</text>
+      <text x="18" y="176" class="sparkline-label">1</text>
     </svg>
     
       </article>
@@ -139,14 +161,14 @@
         <article class="card chart-card">
           <div class="section-head"><h2>戦力推移</h2></div>
           
-    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Fleet history">
-      <title>Fleet history</title>
+    <svg class="sparkline" viewBox="0 0 720 180" role="img" aria-label="Empire fleet history">
+      <title>Empire fleet history</title>
       <rect x="0" y="0" width="720" height="180" rx="10" ry="10" class="sparkline-bg"></rect>
       <line x1="18" y1="18" x2="18" y2="162" class="sparkline-axis"></line>
       <line x1="18" y1="162" x2="702" y2="162" class="sparkline-axis"></line>
       <polyline fill="none" points="18.00,162.00 702.00,162.00" class="sparkline-line"></polyline>
-      <text x="18" y="16" class="sparkline-label">4</text>
-      <text x="18" y="176" class="sparkline-label">4</text>
+      <text x="18" y="16" class="sparkline-label">16,154</text>
+      <text x="18" y="176" class="sparkline-label">16,154</text>
     </svg>
     
         </article>
@@ -157,7 +179,7 @@
   <section class="card">
     <div class="section-head">
       <h2>履歴</h2>
-      <p class="muted">観測回数: 2</p>
+      <p class="muted">観測回数: 1</p>
     </div>
     <div class="table-wrap">
       <table class="data-table compact-table">
@@ -165,51 +187,31 @@
           <tr>
             <th>時刻</th>
             <th>順位</th>
-            <th>称号</th>
-            <th>帝国</th>
-            <th>Lv</th>
+            <th>人数</th>
             <th>惑星</th>
             <th>ポイント</th>
             <th>戦力</th>
-            <th>平均</th>
+            <th>pt/人</th>
+            <th>代表</th>
           </tr>
         </thead>
         <tbody>
           
             <tr>
               <td>2026-04-22 23:27 JST</td>
-              <td class="num">62</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">4</td>
+              <td class="num">10</td>
               <td class="num">1</td>
+              <td class="num">21</td>
               <td class="num strong">
-                221<span class="history-delta pos">(+143)</span>
+                49,987
               </td>
               
                 <td class="num">
-                  4
+                  16,154
                 </td>
               
-              <td class="num">221</td>
-            </tr>
-          
-            <tr>
-              <td>2026-04-22 21:52 JST</td>
-              <td class="num">65</td>
-              <td>初心者</td>
-              <td>-</td>
-              <td class="num">2</td>
-              <td class="num">1</td>
-              <td class="num strong">
-                78
-              </td>
-              
-                <td class="num">
-                  -
-                </td>
-              
-              <td class="num">78</td>
+              <td class="num">49987.0</td>
+              <td>ポパイ</td>
             </tr>
           
         </tbody>
